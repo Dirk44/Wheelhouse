@@ -1,8 +1,11 @@
 import { StyleSheet, Text, View, SafeAreaView, StatusBar } from 'react-native';
+import { NavigationContainer, StackActions } from '@react-navigation/native';
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomePage from "./app/screens/HomePage";
+import GladiatorsLandingPage from "./app/screens/gladiatorsLandingPage";
 import { useDimensions, useDeviceOrientation } from "@react-native-community/hooks";
 
-
+const Stack = createNativeStackNavigator();
 
 export default function App() {
 
@@ -10,8 +13,14 @@ export default function App() {
 
   return (
 
+    <GladiatorsLandingPage />
 
-    <HomePage />
+    // <NavigationContainer>
+    //   <Stack.Navigator
+    // <HomePage />
+    // </NavigationContainer>
+
+
 
   );
 }

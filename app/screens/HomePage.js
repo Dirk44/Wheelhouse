@@ -6,9 +6,11 @@ import {
     Text,
     StatusBar,
     ImageBackground,
-    TouchableHighlight,
-    Image
+    TouchableOpacity
+
 } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import MenuText from "../components/MenuText";
 
@@ -27,9 +29,15 @@ function HomePage() {
                 </View>
                 <View style={styles.menuBar}>
                     <View style={styles.menu}>
-                        <MenuText>CLIPS</MenuText>
-                        <MenuText>GLADIATORS OF STEEL</MenuText>
-                        <MenuText>WATCH TRAILER</MenuText>
+                        <TouchableOpacity title="Watch Trailer" onPress={() => { console.log("Button Pressed") }}>
+                            <MenuText>WATCH TRAILER</MenuText>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <MenuText>GLADIATORS OF STEEL</MenuText>
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <MenuText>CLIPS</MenuText>
+                        </TouchableOpacity>
                     </View>
                 </View>
             </ImageBackground>
@@ -59,15 +67,15 @@ const styles = StyleSheet.create({
     },
 
     text: {
-        fontSize: 25,
+        fontSize: 20,
         fontWeight: "bold",
         color: "white",
-        paddingTop: 60,
-        paddingLeft: 140,
+        paddingTop: 150,
+        paddingLeft: 190,
         opacity: .8,
-        textShadowColor: "black",
-        textShadowOffset: { width: 10, height: -6 },
-        textShadowRadius: 7,
+        // textShadowColor: "black",
+        // textShadowOffset: { width: 10, height: -10 },
+        // textShadowRadius: 7,
         fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir"
     }
 
