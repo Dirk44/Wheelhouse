@@ -5,6 +5,10 @@ import HomePage from "./app/screens/HomePage";
 import GladiatorsLandingPage from "./app/screens/gladiatorsLandingPage";
 import { useDimensions, useDeviceOrientation } from "@react-native-community/hooks";
 
+import { Amplify } from 'aws-amplify'
+import awsconfig from './src/aws-exports'
+Amplify.configure(awsconfig)
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
