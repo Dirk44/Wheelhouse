@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-wheelhouse-dev-82159-authRole",
+      "UnauthRoleArn": "arn:aws:iam::648112997891:role/amplify-wheelhouse-dev-82159-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::648112997891:role/amplify-wheelhouse-dev-82159-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-wheelhouse-dev-82159-deployment",
+      "UnauthRoleName": "amplify-wheelhouse-dev-82159-unauthRole",
+      "StackName": "amplify-wheelhouse-dev-82159",
+      "StackId": "arn:aws:cloudformation:us-east-1:648112997891:stack/amplify-wheelhouse-dev-82159/51892c10-bfdb-11ec-991f-12282af50b2d",
+      "AmplifyAppId": "d13p089xxogrke"
+    }
+  }
+}
