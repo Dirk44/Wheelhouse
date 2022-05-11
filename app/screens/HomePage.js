@@ -1,84 +1,100 @@
-import React from 'react';
+import React from "react";
 import {
-    StyleSheet,
-    Platform,
-    View,
-    Text,
-    StatusBar,
-    ImageBackground,
-    TouchableOpacity
-
+  StyleSheet,
+  Platform,
+  ScrollView,
+  Text,
+  SafeAreaView,
+  StatusBar,
+  ImageBackground,
+  Image,
+  TouchableOpacity,
+  View,
 } from "react-native";
+
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import MenuText from "../components/MenuText";
-
+import NavBar from "../components/NavBar";
+import Carousel from "../components/Carousel";
 
 function HomePage() {
-    return (
-
-
-        <View style={styles.container}>
-            <ImageBackground
-                resizeMode="contain"
-                style={styles.background}
-                source={require("../assets/WheelhouseOpener.png")}>
-                <View>
-                    <Text style={styles.text}>Check back for future updates!</Text>
-                </View>
-                <View style={styles.menuBar}>
-                    <View style={styles.menu}>
-                        <TouchableOpacity title="Watch Trailer" onPress={() => { console.log("Button Pressed") }}>
-                            <MenuText>WATCH TRAILER</MenuText>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <MenuText>GLADIATORS OF STEEL</MenuText>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <MenuText>CLIPS</MenuText>
-                        </TouchableOpacity>
-                    </View>
-                </View>
-            </ImageBackground>
-        </View>
-    )
+  return (
+    <SafeAreaView style={styles.container}>
+      <NavBar />
+      <ScrollView>
+        <ImageBackground
+          style={styles.background}
+          source={require("../assets/landing-page-background.jpg")}
+        >
+          <Image
+            source={require("../assets/wh-logo.png")}
+            style={styles.whLogo}
+          />
+          <Image
+            source={require("../assets/cars-wh-landing.png")}
+            style={styles.carsImage}
+          />
+          <Text numberOfLines={4} style={styles.text}>
+            Lorem ipsum dolor sit amet{"\n"}
+            v, consectetur adipiscing elit. Aenean{"\n"} pulvinar erat odio, non
+            tempus leo mattis nec.{"\n"} Fusce rhoncus et tortor non tincidunt.
+          </Text>
+          <Carousel />
+        </ImageBackground>
+      </ScrollView>
+    </SafeAreaView>
+  );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        backgroundColor: "#000",
-        flex: 1,
-        resizeMode: "contain",
-        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
-    },
-    background: {
-        flex: 1,
-        width: "100%",
-        height: "100%"
-    },
-    menu: {
-        flexDirection: "row",
-        justifyContent: "space-evenly"
-    },
-    menuBar: {
-        flex: 2,
-        justifyContent: "flex-end"
-    },
-
-    text: {
-        fontSize: 20,
-        fontWeight: "bold",
-        color: "white",
-        paddingTop: 150,
-        paddingLeft: 190,
-        opacity: .8,
-        // textShadowColor: "black",
-        // textShadowOffset: { width: 10, height: -10 },
-        // textShadowRadius: 7,
-        fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir"
-    }
-
+  container: {
+    backgroundColor: "#000",
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center",
+    // alignItems: "center",
+    // top: 70
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+  },
+  background: {
+    flex: 1,
+    width: "100%",
+    height: "auto",
+    alignItems: "center",
+    // resizeMode: "cover",
+  },
+  carsImage: {
+    flex: 1,
+    // aspectRatio: 1.5,
+    width: "100%",
+    height: 294,
+    marginTop: "45%",
+    resizeMode: "contain",
+  },
+  text: {
+    flex: 1,
+    fontSize: 16,
+    fontWeight: "500",
+    lineHeight: 30,
+    color: "white",
+    paddingLeft: 30,
+    paddingRight: 30,
+    marginTop: 0,
+    // opacity: .8,
+    // fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir"
+    // fontFamily: "HelveticaRegular"
+  },
+  whLogo: {
+    // flex: 1,
+    width: "80%",
+    height: 130,
+    resizeMode: "contain",
+    position: "absolute",
+    marginTop: "10%",
+    // marginLeft: "10%",
+  },
 });
 
-export default HomePage
+export default HomePage;
