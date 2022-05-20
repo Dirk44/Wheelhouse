@@ -41,7 +41,19 @@ function HomePage() {
             v, consectetur adipiscing elit. Aenean{"\n"} pulvinar erat odio, non
             tempus leo mattis nec.{"\n"} Fusce rhoncus et tortor non tincidunt.
           </Text>
-          <Carousel />
+          <View style={styles.carouselContainer}>
+            <Image
+              style={styles.redline}
+              source={require("../assets/redline-horizontal.png")}
+            />
+            <View style={styles.carousel}>
+              <Carousel />
+            </View>
+            <Image
+              style={styles.redline}
+              source={require("../assets/redline-horizontal.png")}
+            />
+          </View>
         </ImageBackground>
       </ScrollView>
     </SafeAreaView>
@@ -54,8 +66,6 @@ const styles = StyleSheet.create({
     flex: 1,
     resizeMode: "cover",
     justifyContent: "center",
-    // alignItems: "center",
-    // top: 70
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   background: {
@@ -65,6 +75,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     // resizeMode: "cover",
   },
+  carousel: {
+    width: "100%",
+  },
+  carouselContainer: {
+    width: "100%",
+    alignItems: "center",
+  },
   carsImage: {
     flex: 1,
     // aspectRatio: 1.5,
@@ -72,6 +89,23 @@ const styles = StyleSheet.create({
     height: 294,
     marginTop: "45%",
     resizeMode: "contain",
+  },
+  clip: {
+    resizeMode: "contain",
+    width: "10%",
+    height: 175,
+  },
+  image: {
+    resizeMode: "contain",
+    width: "40%",
+    height: 175,
+  },
+  redline: {
+    // flex: 1,
+    width: "100%",
+    height: 26,
+    resizeMode: "contain",
+    marginBottom: "3%",
   },
   text: {
     flex: 1,

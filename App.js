@@ -4,6 +4,7 @@ import { NavigationContainer, StackActions } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomePage from "./app/screens/homePage";
 import HomeStack from "./app/routes/drawer";
+import LogIn from "./app/screens/login";
 import Carousel from "./app/components/Carousel";
 import {
   useDimensions,
@@ -13,7 +14,6 @@ import Navigator from "./app/routes/drawer";
 import { useFonts } from "expo-font";
 // import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
-import Drawer from "./app/routes/drawer";
 
 // console.log(useDeviceOrientation());
 

@@ -8,6 +8,7 @@ import GladiatorsLandingPage from "../screens/gladiatorsLandingPage";
 import Store from "../screens/store";
 import WaitList from "../screens/waitList";
 import NavBar from "../components/NavBar";
+import Login from "../screens/login";
 
 const WIDTH = Dimensions.get("window").width;
 
@@ -43,6 +44,12 @@ const RootDrawerNavigator = createDrawerNavigator(
     },
     Store: {
       screen: Store,
+      navigationOptions: {
+        headerTitle: () => <NavBar />,
+      },
+    },
+    Login: {
+      screen: Login,
       navigationOptions: {
         headerTitle: () => <NavBar />,
       },
