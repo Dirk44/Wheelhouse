@@ -14,6 +14,10 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginTop: 12,
     paddingLeft: 8,
+    shadowColor: "black",
+    shadowOffset: { width: 5, height: 5 },
+    shadowOpacity: 0.9,
+    shadowRadius: 10,
   },
 });
 

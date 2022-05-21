@@ -64,8 +64,13 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 30,
     fontFamily: "HelveticaRegular",
+    opacity: 0.9,
     paddingTop: "5%",
     marginTop: "18%",
+    shadowColor: "black",
+    shadowOffset: { width: 5, height: 5 },
+    shadowOpacity: 1,
+    shadowRadius: 10,
   },
   signUpContainer: {},
   signupText: {
@@ -73,6 +78,8 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontFamily: "HelveticaRegular",
     marginTop: "15%",
+    opacity: 0.9,
+
     // justifyContent: "center",
     // alignItems: "center",
   },
@@ -81,7 +88,7 @@ const styles = StyleSheet.create({
     height: 130,
     resizeMode: "contain",
     // position: "absolute",
-    marginTop: "10%",
+    marginTop: "12%",
   },
 });
 

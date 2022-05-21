@@ -9,6 +9,7 @@ import Store from "../screens/store";
 import WaitList from "../screens/waitList";
 import NavBar from "../components/NavBar";
 import Login from "../screens/login";
+import Signup from "../screens/signUp";
 
 const WIDTH = Dimensions.get("window").width;
 
@@ -50,6 +51,12 @@ const RootDrawerNavigator = createDrawerNavigator(
     },
     Login: {
       screen: Login,
+      navigationOptions: {
+        headerTitle: () => <NavBar />,
+      },
+    },
+    Signup: {
+      screen: Signup,
       navigationOptions: {
         headerTitle: () => <NavBar />,
       },

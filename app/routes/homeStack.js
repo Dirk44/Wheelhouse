@@ -8,6 +8,7 @@ import GladiatorsLandingPage from "../screens/gladiatorsLandingPage";
 import Store from "../screens/store";
 import NavBar from "../components/NavBar";
 import Login from "../screens/login";
+import Signup from "../screens/signUp";
 
 const screens = {
   Home: {
@@ -46,6 +47,12 @@ const screens = {
   },
   Login: {
     screen: Login,
+    navigationOptions: {
+      headerTitle: () => <NavBar />,
+    },
+  },
+  Signup: {
+    screen: Signup,
     navigationOptions: {
       headerTitle: () => <NavBar />,
     },
