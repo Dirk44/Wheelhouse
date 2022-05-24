@@ -1,12 +1,20 @@
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  Pressable,
+  View,
+} from "react-native";
 
 function WhButton(props) {
   return (
-    <TouchableOpacity style={styles.buttonStyle}>
-      <View>
-        <Text style={styles.buttonText}> {props.title} </Text>
-      </View>
+    <TouchableOpacity style={styles.buttonStyle} onPress={props.onPress}>
+      <Pressable>
+        <Text style={styles.buttonText} onPress={props.onPress}>
+          {props.title}
+        </Text>
+      </Pressable>
     </TouchableOpacity>
   );
 }

@@ -1,13 +1,15 @@
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, SafeAreaView, ScrollView } from "react-native";
 import NavBar from "../components/NavBar";
 
 function Store() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <NavBar />
-      <Text style={styles.text}>Store</Text>
-    </View>
+      <ScrollView>
+        <Text style={styles.text}>Store</Text>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 

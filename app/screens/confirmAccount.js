@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   StyleSheet,
   Platform,
@@ -14,7 +14,20 @@ import {
 import InputField from "../components/InputField";
 import WhButton from "../components/WhButton";
 
-function Login({ props }) {
+function ConfirmAccount({ props }) {
+  const [code, setCode] = useState("");
+
+  const onResendCodePressed = () => {
+    console.warn("onResendCodePressed");
+  };
+  const onVerifyPressed = () => {
+    console.warn("onVerifyPressed");
+  };
+
+  const onBackToSigninPressed = () => {
+    console.warn("onBackToSigninPressed");
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <ImageBackground
@@ -25,18 +38,21 @@ function Login({ props }) {
           source={require("../assets/wh-logo.png")}
           style={styles.whLogo}
         />
-        <Text style={styles.loginText}>Login</Text>
+        <Text style={styles.loginText}>Verify Account</Text>
         <View style={styles.inputs}>
-          <InputField placeholder="Email" />
-          <InputField placeholder="Password" />
-          <WhButton title="Login" />
-          {/* <View style={styles.signUpContainer}> */}
+          <InputField
+            placeholder="Input Verification code"
+            value={code}
+            setValue={setCode}
+          />
 
-          <Text style={styles.signupText}>Forgot Password?</Text>
-          <Button title="Click Here" />
+          <WhButton title="Verify" onPress={onVerifyPressed} />
 
-          <Text style={styles.signupText}>Haven't signed up?</Text>
-          <Button title="Sign up here" />
+          <Text style={styles.signupText}>Resend Code</Text>
+          <Button title="Click Here" onPress={onResendCodePressed} />
+
+          <Text style={styles.signupText}>Back to Sign In</Text>
+          <Button title="Sign in here" onPress={onBackToSigninPressed} />
         </View>
       </ImageBackground>
     </SafeAreaView>
@@ -92,4 +108,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Login;
+export default ConfirmAccount;

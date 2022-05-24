@@ -22,8 +22,8 @@ import Carousel from "../components/Carousel";
 function HomePage() {
   return (
     <SafeAreaView style={styles.container}>
-      <NavBar />
       <ScrollView>
+        <NavBar />
         <ImageBackground
           style={styles.background}
           source={require("../assets/landing-page-background.jpg")}

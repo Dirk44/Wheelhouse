@@ -2,7 +2,13 @@ import React from "react";
 import { StyleSheet, TextInput } from "react-native";
 
 function InputField(props) {
-  return <TextInput style={styles.input} placeholder={props.placeholder} />;
+  return (
+    <TextInput
+      style={styles.input}
+      placeholder={props.placeholder}
+      secureTextEntry={props.secureTextEntry}
+    />
+  );
 }
 
 const styles = StyleSheet.create({

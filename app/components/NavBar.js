@@ -1,5 +1,8 @@
+import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+
 import Hamburger from "./Hamburger";
 
 export default function NavBar() {
@@ -16,9 +19,10 @@ const styles = StyleSheet.create({
   hamburger: {
     marginLeft: "6%",
     opacity: 0.7,
-    // justifyContent: "flex-start"
+    justifyContent: "flex-start",
   },
   header: {
+    // flex: 1,
     flexDirection: "row",
     width: "100%",
     height: 60,
