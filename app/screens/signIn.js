@@ -10,32 +10,56 @@ import {
   TouchableOpacity,
   View,
   Button,
+  Alert,
 } from "react-native";
+
+import { Auth } from "aws-amplify";
+
 import InputField from "../components/InputField";
 import WhButton from "../components/WhButton";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { useNavigation } from "@react-navigation/native";
+import { useForm, Controller } from "react-hook-form";
+
+const EMAIL_REGEX =
+  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9]+)*$/;
 
 function SignIn({ props }) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
   const navigation = useNavigation();
+  const [loading, setLoading] = useState(false);
 
-  const onLoginPressed = () => {
-    console.warn("onLoginPressed");
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-    navigation.navigate("Home");
+  console.log(errors);
+
+  const onLoginPressed = async (data) => {
+    if (loading) {
+      return;
+    }
+    setLoading(true);
+    try {
+      const response = await Auth.signIn(data.email, data.password);
+      console.log(response);
+      navigation.navigate("Home");
+    } catch (e) {
+      Alert.alert("Oopsie, ", e.message);
+    }
+    setLoading(false);
   };
 
   const onForgotPasswordPressed = () => {
-    console.warn("onForgotPasswordPressed");
+    navigation.navigate("ForgotPassword");
   };
-
   const onSignUpPressed = () => {
-    console.warn("onSignUpPressed");
+    navigation.navigate("SignUp");
   };
-
   return (
     <SafeAreaView style={styles.container}>
       <ImageBackground
@@ -48,20 +72,47 @@ function SignIn({ props }) {
         />
         <Text style={styles.loginText}>Login</Text>
         <View style={styles.inputs}>
-          <InputField placeholder="Email" value={email} setValue={setEmail} />
           <InputField
-            placeholder="Password"
-            value={password}
-            setValue={setPassword}
+            name="email"
+            placeholder="Email"
+            control={control}
+            rules={{
+              required: "Email is required",
+              pattern: { value: EMAIL_REGEX, message: "Must be a valid Email" },
+            }}
+            autoCapitalize="none"
+            keyboardType="email-address"
           />
-          <WhButton title="Login" onPress={onLoginPressed} />
+
+          <InputField
+            name="password"
+            placeholder="Password"
+            control={control}
+            rules={{
+              required: "Password is required",
+              minLength: {
+                value: 8,
+                message: "Password minimum length is 8 characters",
+              },
+            }}
+            secureTextEntry
+          />
+          <WhButton
+            title={loading ? "loading..." : "Login"}
+            onPress={handleSubmit(onLoginPressed)}
+          />
           {/* <View style={styles.signUpContainer}> */}
 
           <Text style={styles.signupText}>Forgot Password?</Text>
           <Button title="Click Here" onPress={onForgotPasswordPressed} />
-
-          <Text style={styles.signupText}>Haven't signed up?</Text>
-          <Button title="Sign up here" onPress={onSignUpPressed} />
+          <View>
+            <Text style={styles.signupText}>Haven't signed up?</Text>
+            <Button
+              style={styles.signupText}
+              title="Sign up here"
+              onPress={onSignUpPressed}
+            />
+          </View>
         </View>
       </ImageBackground>
     </SafeAreaView>
@@ -84,6 +135,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "50%",
     alignItems: "center",
+    marginTop: "5%",
   },
   loginText: {
     color: "white",
@@ -92,17 +144,12 @@ const styles = StyleSheet.create({
     opacity: 0.9,
     paddingTop: "5%",
     marginTop: "18%",
-    shadowColor: "black",
-    shadowOffset: { width: 5, height: 5 },
-    shadowOpacity: 1,
-    shadowRadius: 10,
   },
-  signUpContainer: {},
   signupText: {
     color: "white",
     fontSize: 18,
     fontFamily: "HelveticaRegular",
-    marginTop: "15%",
+    marginTop: "8%",
     opacity: 0.9,
 
     // justifyContent: "center",

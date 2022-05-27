@@ -3,16 +3,16 @@
   "cognitoConfig": {
     "identityPoolName": "testAuthIdentityPool",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "wheelhae76c1e1",
+    "resourceNameTruncated": "wheelh608399b2",
     "userPoolName": "Wheelhouse",
     "autoVerifiedAttributes": [
       "email"
     ],
-    "mfaConfiguration": "OFF",
+    "mfaConfiguration": "OPTIONAL",
     "mfaTypes": [
       "SMS Text Message"
     ],
-    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsAuthenticationMessage": "Your login code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
     "emailVerificationSubject": "Verification code: {####}",
     "emailVerificationMessage": "Verification code: {####}",
@@ -25,19 +25,23 @@
     ],
     "requiredAttributes": [
       "email",
-      "name"
+      "phone_number"
     ],
     "aliasAttributes": [],
     "userpoolClientGenerateSecret": false,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [],
     "userpoolClientReadAttributes": [],
-    "userpoolClientLambdaRole": "Wheelhae76c1e1_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "Wheelh608399b2_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "ae76c1e1",
+    "sharedId": "608399b2",
     "resourceName": "Wheelhouse",
     "authSelections": "identityPoolAndUserPool",
     "serviceName": "Cognito",
+    "usernameAttributes": [
+      "email",
+      "phone_number"
+    ],
     "useDefault": "manual",
     "userPoolGroups": false,
     "userPoolGroupList": [],
@@ -45,21 +49,6 @@
     "thirdPartyAuth": false,
     "authProviders": [],
     "usernameCaseSensitive": false,
-    "useEnabledMfas": true,
-    "authRoleArn": {
-      "Fn::GetAtt": [
-        "AuthRole",
-        "Arn"
-      ]
-    },
-    "unauthRoleArn": {
-      "Fn::GetAtt": [
-        "UnauthRole",
-        "Arn"
-      ]
-    },
-    "breakCircularDependency": true,
-    "dependsOn": [],
-    "hostedUI": false
+    "useEnabledMfas": true
   }
 }

@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import {
   StyleSheet,
@@ -11,18 +12,28 @@ import {
   View,
   Button,
 } from "react-native";
+
+import { useForm, Controller } from "react-hook-form";
+
 import InputField from "../components/InputField";
 import WhButton from "../components/WhButton";
 
 function ForgotPassword({ props }) {
   const [email, setEmail] = useState("");
+  const navigation = useNavigation();
+
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   const onSendCodePressed = () => {
-    console.warn("onSendCodePressed");
+    navigation.navigate("ResetPassword");
   };
 
   const onBackToSigninPressed = () => {
-    console.warn("onBackToSigninPressed");
+    navigation.navigate("SignIn");
   };
 
   return (
@@ -37,9 +48,18 @@ function ForgotPassword({ props }) {
         />
         <Text style={styles.loginText}>Forgot Password</Text>
         <View style={styles.inputs}>
-          <InputField placeholder="Email" value={email} setValue={setEmail} />
+          <InputField
+            name="Email"
+            placeholder="Email"
+            control={control}
+            rules={{ required: "Email is required" }}
+            autoCapitalize="none"
+          />
 
-          <WhButton title="Send Code" onPress={onSendCodePressed} />
+          <WhButton
+            title="Send Code"
+            onPress={handleSubmit(onSendCodePressed)}
+          />
 
           <Text style={styles.signupText}>Back to Sign In</Text>
           <Button title="Sign in here" onPress={onBackToSigninPressed} />

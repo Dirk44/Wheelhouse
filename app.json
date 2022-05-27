@@ -28,6 +28,7 @@
     "web": {
       "favicon": "./app/assets/favicon.png"
     },
-    "description": "The Home For Motorsports"
+    "description": "The Home For Motorsports",
+    "githubUrl": "https://github.com/Dirk44/Wheelhouse"
   }
 }

@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import {
   StyleSheet,
@@ -17,13 +18,16 @@ import WhButton from "../components/WhButton";
 function ResetPassword({ props }) {
   const [code, setCode] = useState("");
   const [newPassword, setNewPassword] = useState("");
+  const navigation = useNavigation();
 
   const onSubmitNewPassword = () => {
     console.warn("onVerifyPressed");
+    navigation.navigate("Home");
   };
 
   const onBackToSigninPressed = () => {
     console.warn("onBackToSigninPressed");
+    navigation.navigate("SignIn");
   };
 
   return (
@@ -36,7 +40,7 @@ function ResetPassword({ props }) {
           source={require("../assets/wh-logo.png")}
           style={styles.whLogo}
         />
-        <Text style={styles.loginText}>Verify Account</Text>
+        <Text style={styles.loginText}>Reset Password</Text>
         <View style={styles.inputs}>
           <InputField
             placeholder="Input Verification code"

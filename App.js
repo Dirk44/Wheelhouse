@@ -1,14 +1,21 @@
-import React from "react";
-import { StyleSheet, Text, View, SafeAreaView, StatusBar } from "react-native";
+import React, { useState } from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  StatusBar,
+  Keyboard,
+  TouchableWithoutFeedback,
+} from "react-native";
 import { NavigationContainer, StackActions } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Amplify, { Auth } from "aws-amplify";
+import Amplify from "aws-amplify";
 import config from "./src/aws-exports";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
 
-import HomeStack from "./app/routes/drawer";
-import SignIn from "./app/screens/signIn";
+import AuthStack from "./app/routes/AuthStack";
 import Navigator from "./app/routes/drawer";
 
 // console.log(useDeviceOrientation());
@@ -22,7 +29,15 @@ Amplify.configure({
 const Stack = createNativeStackNavigator();
 
 const App = () => {
-  Auth.signOut();
+  // Auth.signOut();
+
+  const [auth, setAuth] = useState(null);
+
+  // const DismissKeyboard = ({ children }) => (
+  //   <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+  //     {children}
+  //   </TouchableWithoutFeedback>
+  // );
 
   let [fontsLoaded] = useFonts({
     HelveticaRegular: require("./app/assets/fonts/Yantramanav-Black.ttf"),
@@ -32,13 +47,26 @@ const App = () => {
   if (!fontsLoaded) {
     return <AppLoading />;
   }
+
   return (
-    <HomeStack />
-    // <NavigationContainer>
-    //   <Stack.HomeStack>
-    //     <Stack.Screen name="SignIn" component={SignIn} />
-    //   </Stack.HomeStack>
-    // </NavigationContainer>
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      <View style={{ flex: 1 }}>
+        <NavigationContainer>
+          {auth ? <Navigator /> : <AuthStack />}
+        </NavigationContainer>
+      </View>
+    </TouchableWithoutFeedback>
+    /* <NavigationContainer>
+       <Stack.Navigator screenOptions={{ headerShown: false }}>
+         <Stack.Screen name="SignIn" component={SignIn} />
+        <Stack.Screen name="SignUp" component={SignUp} />
+        <Stack.Screen name="SignOut" component={SignOut} />
+         <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
+         <Stack.Screen name="ConfirmAccount" component={ConfirmAccount} />
+         <Stack.Screen name="ResetPassword" component={ResetPassword} />
+         <Stack.Screen name="Home" component={HomePage} />
+       </Stack.Navigator>
+     </NavigationContainer>  */
   );
 };
 

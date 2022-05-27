@@ -13,19 +13,27 @@ import {
 } from "react-native";
 import InputField from "../components/InputField";
 import WhButton from "../components/WhButton";
+import { useNavigation } from "@react-navigation/native";
+import { useForm } from "react-hook-form";
 
 function ConfirmAccount({ props }) {
-  const [code, setCode] = useState("");
+  // const [code, setCode] = useState("");
+  const navigation = useNavigation();
 
-  const onResendCodePressed = () => {
-    console.warn("onResendCodePressed");
-  };
-  const onVerifyPressed = () => {
-    console.warn("onVerifyPressed");
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onResendCodePressed = () => {};
+  const onVerifyPressed = (data) => {
+    console.warn(data);
+    navigation.navigate("Home");
   };
 
   const onBackToSigninPressed = () => {
-    console.warn("onBackToSigninPressed");
+    navigation.navigate("SignIn");
   };
 
   return (
@@ -41,12 +49,14 @@ function ConfirmAccount({ props }) {
         <Text style={styles.loginText}>Verify Account</Text>
         <View style={styles.inputs}>
           <InputField
+            name="Verification code"
             placeholder="Input Verification code"
-            value={code}
-            setValue={setCode}
+            control={control}
+            rules={{ required: "Must enter Verification code" }}
+            keyboardType="decimal-pad"
           />
 
-          <WhButton title="Verify" onPress={onVerifyPressed} />
+          <WhButton title="Verify" onPress={handleSubmit(onVerifyPressed)} />
 
           <Text style={styles.signupText}>Resend Code</Text>
           <Button title="Click Here" onPress={onResendCodePressed} />

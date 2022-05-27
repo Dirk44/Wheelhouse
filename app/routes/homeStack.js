@@ -14,19 +14,19 @@ import ConfirmAccount from "../screens/confirmAccount";
 import ResetPassword from "../screens/resetPassword";
 
 const screens = {
-  Home: {
-    screen: HomePage,
-    // navigationOptions: {
-    //   headerTitle: () => <NavBar />,
-    // },
-  },
+  // Home: {
+  //   screen: HomePage,
+  //   navigationOptions: {
+  //     headerTitle: () => <NavBar />,
+  //   },
+  // },
 
-  UpcomingShows: {
-    screen: UpcomingShows,
-    // navigationOptions: {
-    //   headerTitle: () => <NavBar />,
-    // },
-  },
+  // UpcomingShows: {
+  //   screen: UpcomingShows,
+  //   navigationOptions: {
+  //     headerTitle: () => <NavBar />,
+  //   },
+  // },
 
   // Waitlist: {
   //   screen: WaitList,
@@ -66,9 +66,9 @@ const screens = {
 };
 
 const HomeStack = createStackNavigator(screens, {
-  // defautNavigationOptions: {
-  //   headerStyle: {},
-  // },
+  defautNavigationOptions: {
+    headerStyle: { backgroundColor: "black" },
+  },
 });
 
 export default HomeStack;

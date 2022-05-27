@@ -2,7 +2,6 @@ import React from "react";
 import { Platform, Dimensions } from "react-native";
 import { createDrawerNavigator } from "react-navigation-drawer";
 import { createAppContainer } from "react-navigation";
-import HomeStack from "../routes/homeStack";
 import HomePage from "../screens/homePage";
 import UpcomingShows from "../screens/upcomingShows";
 import GladiatorsLandingPage from "../screens/gladiatorsLandingPage";
@@ -16,12 +15,12 @@ import ConfirmAccount from "../screens/confirmAccount";
 import ResetPassword from "../screens/resetPassword";
 
 const WIDTH = Dimensions.get("window").width;
-// const HEIGHT = Dimensions.get("window").height;
+const HEIGHT = Dimensions.get("window").height;
 
 const DrawerConfig = {
   drawerWidth: WIDTH * 0.75,
-  // drawerHeight: HEIGHT * 0,
-  // drawerPosition: "",
+  drawerHeight: HEIGHT * 0,
+  drawerPosition: "",
 };
 
 const RootDrawerNavigator = createDrawerNavigator(
@@ -55,21 +54,6 @@ const RootDrawerNavigator = createDrawerNavigator(
       // navigationOptions: {
       //   headerTitle: () => <NavBar />,
       // },
-    },
-    SignIn: {
-      screen: SignIn,
-    },
-    Signup: {
-      screen: Signup,
-    },
-    ForgotPassword: {
-      screen: ForgotPassword,
-    },
-    ConfirmAccount: {
-      screen: ConfirmAccount,
-    },
-    ResetPassword: {
-      screen: ResetPassword,
     },
   },
   DrawerConfig

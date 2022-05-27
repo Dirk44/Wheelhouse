@@ -10,11 +10,9 @@ import {
 function WhButton(props) {
   return (
     <TouchableOpacity style={styles.buttonStyle} onPress={props.onPress}>
-      <Pressable>
-        <Text style={styles.buttonText} onPress={props.onPress}>
-          {props.title}
-        </Text>
-      </Pressable>
+      {/* <Pressable> */}
+      <Text style={styles.buttonText}>{props.title}</Text>
+      {/* </Pressable> */}
     </TouchableOpacity>
   );
 }
