@@ -8,13 +8,13 @@
   {
     "id": 2,
     "title": "CLIP 2",
-    "poster": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/clip.png",
+    "poster": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/clip1Thumb.jpg",
     "playBtn": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/playBtn.png"
   },
   {
     "id": 3,
     "title": "CLIP 3",
-    "poster": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/clip.png",
+    "poster": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/clip2Thumb.jpg",
     "playBtn": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/playBtn.png"
   }
 ]

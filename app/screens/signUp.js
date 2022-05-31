@@ -20,36 +20,32 @@ import { useForm } from "react-hook-form";
 import InputField from "../components/InputField";
 import WhButton from "../components/WhButton";
 
-function Signup({ props }) {
+function Signup() {
   // const [email, setEmail] = useState("");
   // const [password, setPassword] = useState("");
   // const [confirmPassword, setConfirmPassword] = useState("");
   // const [phoneNumber, setPhoneNumber] = useState("");
   const navigation = useNavigation();
 
-  const {
-    control,
-    handleSubmit,
-    formState: { errors },
-    watch,
-  } = useForm();
+  const { control, handleSubmit, watch } = useForm();
 
-  const pWord = watch("Password");
+  const pWord = watch("password");
 
   const onSignUpPressed = async (data) => {
-    const { email, password, phone_number } = data;
+    const { username, email, password, phone_number } = data;
     try {
-      const response = await Auth.signup({
-        email,
+      const response = await Auth.signUp({
+        username,
         password,
-        phone_number,
+        attributes: { email, phone_number },
       });
       console.log(response);
-    } catch (error) {
-      Alert.alert("Oopsie", error.message);
+    } catch (e) {
+      Alert.alert("Oopsie", e.message);
+      console.log(e);
     }
 
-    // navigation.navigate("ConfirmAccount");
+    navigation.navigate("ConfirmAccount", { username });
   };
 
   const onBackToLoginPressed = () => {
@@ -69,7 +65,13 @@ function Signup({ props }) {
         <Text style={styles.signupText}>Signup</Text>
         <View style={styles.inputs}>
           <InputField
-            name="Email"
+            name="username"
+            placeholder="Username"
+            control={control}
+            rules={{ required: "Username is required" }}
+          />
+          <InputField
+            name="email"
             placeholder="Email"
             control={control}
             rules={{ required: "Email is required" }}
@@ -77,7 +79,7 @@ function Signup({ props }) {
             keyboardType="email-address"
           />
           <InputField
-            name="Password"
+            name="password"
             placeholder="Password"
             control={control}
             rules={{
@@ -90,7 +92,7 @@ function Signup({ props }) {
             secureTextEntry={true}
           />
           <InputField
-            name="Confirm Password"
+            name="confirm password"
             placeholder="Confirm Password"
             control={control}
             rules={{
@@ -104,8 +106,9 @@ function Signup({ props }) {
             secureTextEntry={true}
           />
           <InputField
-            name="Phone Number"
+            name="phone_number"
             placeholder="Phone Number"
+            dialCode="+1"
             control={control}
             keyboardType="decimal-pad"
             rules={{

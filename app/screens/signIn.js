@@ -45,7 +45,8 @@ function SignIn({ props }) {
     }
     setLoading(true);
     try {
-      const response = await Auth.signIn(data.email, data.password);
+      const response = await Auth.signIn(data.username, data.password);
+      Alert.alert("Success!");
       console.log(response);
       navigation.navigate("Home");
     } catch (e) {
@@ -73,6 +74,28 @@ function SignIn({ props }) {
         <Text style={styles.loginText}>Login</Text>
         <View style={styles.inputs}>
           <InputField
+            name="username"
+            placeholder="Username"
+            control={control}
+            rules={{
+              required: "Username is required",
+            }}
+          />
+          <InputField
+            name="password"
+            placeholder="Password"
+            control={control}
+            rules={{
+              required: "Password is required",
+              minLength: {
+                value: 8,
+                message: "Password minimum length is 8 characters",
+              },
+            }}
+            secureTextEntry
+          />
+          {/* <Text style={styles.or}>Or</Text> */}
+          {/* <InputField
             name="email"
             placeholder="Email"
             control={control}
@@ -96,12 +119,11 @@ function SignIn({ props }) {
               },
             }}
             secureTextEntry
-          />
+          /> */}
           <WhButton
             title={loading ? "loading..." : "Login"}
             onPress={handleSubmit(onLoginPressed)}
           />
-          {/* <View style={styles.signUpContainer}> */}
 
           <Text style={styles.signupText}>Forgot Password?</Text>
           <Button title="Click Here" onPress={onForgotPasswordPressed} />
@@ -145,11 +167,18 @@ const styles = StyleSheet.create({
     paddingTop: "5%",
     marginTop: "18%",
   },
+  or: {
+    color: "white",
+    fontSize: 20,
+    fontFamily: "HelveticaRegular",
+    opacity: 0.9,
+    paddingTop: "5%",
+  },
   signupText: {
     color: "white",
     fontSize: 18,
     fontFamily: "HelveticaRegular",
-    marginTop: "8%",
+    marginTop: "12%",
     opacity: 0.9,
 
     // justifyContent: "center",
@@ -160,7 +189,7 @@ const styles = StyleSheet.create({
     height: 130,
     resizeMode: "contain",
     // position: "absolute",
-    marginTop: "12%",
+    marginTop: "10%",
   },
 });
 

@@ -16,21 +16,23 @@ function Carousel() {
       style={{
         justifyContent: "center",
         flexDirection: "row",
-        marginLeft: "25%",
+        marginLeft: "7%",
       }}
     >
-      {movies.map((movie) => {
-        return (
-          <View key={movie.id}>
-            <Card
-              key={movie.id}
-              poster={movie.poster}
-              title={movie.title}
-              playBtn={movie.playBtn}
-            />
-          </View>
-        );
-      })}
+      <ScrollView horizontal={true}>
+        {movies.map((movie) => {
+          return (
+            <View key={movie.id}>
+              <Card
+                key={movie.id}
+                poster={movie.poster}
+                title={movie.title}
+                playBtn={movie.playBtn}
+              />
+            </View>
+          );
+        })}
+      </ScrollView>
     </View>
   );
 }

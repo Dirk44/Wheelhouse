@@ -3,12 +3,12 @@
   "cognitoConfig": {
     "identityPoolName": "testAuthIdentityPool",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "wheelh608399b2",
+    "resourceNameTruncated": "wheelhf6e2ba06",
     "userPoolName": "Wheelhouse",
     "autoVerifiedAttributes": [
       "email"
     ],
-    "mfaConfiguration": "OPTIONAL",
+    "mfaConfiguration": "ON",
     "mfaTypes": [
       "SMS Text Message"
     ],
@@ -32,16 +32,12 @@
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [],
     "userpoolClientReadAttributes": [],
-    "userpoolClientLambdaRole": "Wheelh608399b2_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "Wheelhf6e2ba06_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "608399b2",
+    "sharedId": "f6e2ba06",
     "resourceName": "Wheelhouse",
     "authSelections": "identityPoolAndUserPool",
     "serviceName": "Cognito",
-    "usernameAttributes": [
-      "email",
-      "phone_number"
-    ],
     "useDefault": "manual",
     "userPoolGroups": false,
     "userPoolGroupList": [],

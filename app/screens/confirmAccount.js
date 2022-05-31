@@ -10,25 +10,46 @@ import {
   TouchableOpacity,
   View,
   Button,
+  Alert,
 } from "react-native";
 import InputField from "../components/InputField";
 import WhButton from "../components/WhButton";
 import { useNavigation } from "@react-navigation/native";
 import { useForm } from "react-hook-form";
+import { useRoute } from "@react-navigation/native";
+import { Auth } from "aws-amplify";
 
 function ConfirmAccount({ props }) {
+  const route = useRoute();
   // const [code, setCode] = useState("");
   const navigation = useNavigation();
 
-  const {
-    control,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const { control, handleSubmit, watch } = useForm({
+    defaultValues: { username: route?.params?.username },
+  });
 
-  const onResendCodePressed = () => {};
-  const onVerifyPressed = (data) => {
-    console.warn(data);
+  const username = watch("username");
+
+  const onResendCodePressed = async () => {
+    try {
+      await Auth.resendSignUp(username);
+      Alert.alert("Verification code was sent to your email");
+    } catch (e) {
+      Alert.alert("Oppsie", e.message);
+    }
+  };
+
+  const onVerifyPressed = async (data) => {
+    try {
+      const response = await Auth.confirmSignUp(
+        data.username,
+        data.verificationCode
+      );
+      Alert.alert("Your account has been verified");
+      console.log(response);
+    } catch (e) {
+      Alert.alert("Oopsie", e.message);
+    }
     navigation.navigate("Home");
   };
 
@@ -49,7 +70,14 @@ function ConfirmAccount({ props }) {
         <Text style={styles.loginText}>Verify Account</Text>
         <View style={styles.inputs}>
           <InputField
-            name="Verification code"
+            name="username"
+            placeholder="Input Verification code"
+            control={control}
+            rules={{ required: "Must enter Verification code" }}
+            keyboardType="decimal-pad"
+          />
+          <InputField
+            name="verificationCode"
             placeholder="Input Verification code"
             control={control}
             rules={{ required: "Must enter Verification code" }}

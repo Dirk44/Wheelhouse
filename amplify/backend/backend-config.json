@@ -7,9 +7,7 @@
       "customAuth": false,
       "frontendAuthConfig": {
         "socialProviders": [],
-        "usernameAttributes": [
-          "EMAIL"
-        ],
+        "usernameAttributes": [],
         "signupAttributes": [
           "EMAIL",
           "PHONE_NUMBER"
@@ -22,7 +20,7 @@
             "REQUIRES_UPPERCASE"
           ]
         },
-        "mfaConfiguration": "OPTIONAL",
+        "mfaConfiguration": "ON",
         "mfaTypes": [
           "SMS"
         ],

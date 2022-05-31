@@ -18,7 +18,7 @@ const WIDTH = Dimensions.get("window").width;
 const HEIGHT = Dimensions.get("window").height;
 
 const DrawerConfig = {
-  drawerWidth: WIDTH * 0.75,
+  drawerWidth: WIDTH * 0.6,
   drawerHeight: HEIGHT * 0,
   drawerPosition: "",
 };
@@ -27,15 +27,15 @@ const RootDrawerNavigator = createDrawerNavigator(
   {
     Home: {
       screen: HomePage,
-      navigationOptions: {
-        headerTitle: () => <NavBar />,
-      },
+      // navigationOptions: {
+      //   headerTitle: () => <NavBar />,
+      // },
     },
     UpcomingShows: {
       screen: UpcomingShows,
-      navigationOptions: {
-        headerTitle: () => <NavBar />,
-      },
+      // navigationOptions: {
+      //   headerTitle: () => <NavBar />,
+      // },
     },
     Waitlist: {
       screen: WaitList,

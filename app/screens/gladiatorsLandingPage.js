@@ -9,6 +9,7 @@ import {
   TouchableHighlight,
   SafeAreaView,
   Image,
+  ScrollView,
 } from "react-native";
 
 import MenuText from "../components/MenuText";
@@ -18,33 +19,16 @@ import NavBar from "../components/NavBar";
 function GladiatorsLandingPage() {
   return (
     <SafeAreaView style={styles.container}>
-      <NavBar />
-      <ImageBackground
-        resizeMode="contain"
-        style={styles.background}
-        source={require("../assets/GladiatorsBackground.jpg")}
-      >
-        <View style={styles.cardLayout}>
-          <Card
-            title="PLAY TRAILER"
-            image={require("../assets/trailerThumb.jpg")}
-          />
-          <Card
-            title="PLAY CLIP 1"
-            image={require("../assets/playClip1.jpg")}
-          />
-          <Card title="WATCH FILM" image={require("../assets/watchFilm.jpg")} />
-        </View>
-
-        <View style={styles.menuBar}>
-          <View style={styles.menu}>
-            <MenuText>UPCOMING SHOWS</MenuText>
-            <MenuText>WAITLIST</MenuText>
-            <MenuText>GLADIATORS OF STEEL</MenuText>
-            <MenuText>STORE</MenuText>
-          </View>
-        </View>
-      </ImageBackground>
+      <ScrollView>
+        <ImageBackground
+          style={styles.background}
+          source={{
+            uri: "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/gladiatorsBgImage.jpg",
+          }}
+        >
+          <NavBar />
+        </ImageBackground>
+      </ScrollView>
     </SafeAreaView>
   );
 }
@@ -55,17 +39,22 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
     flex: 1,
     justifyContent: "center",
-    alignItems: "center",
+    // alignItems: "center",
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   background: {
     flex: 1,
     width: "100%",
-    height: "100%",
-    // flexDirection: "row"
+    height: "auto",
+    alignItems: "center",
+  },
+  cardImage: {
+    flex: 1,
+    width: 390,
+    height: 240,
   },
   cardLayout: {
-    flexDirection: "row",
+    // flexDirection: "row",
     justifyContent: "space-evenly",
     fontSize: 18,
     fontWeight: "bold",

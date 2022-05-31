@@ -14,55 +14,55 @@ import ConfirmAccount from "../screens/confirmAccount";
 import ResetPassword from "../screens/resetPassword";
 
 const screens = {
-  // Home: {
-  //   screen: HomePage,
-  //   navigationOptions: {
-  //     headerTitle: () => <NavBar />,
-  //   },
-  // },
+  Home: {
+    screen: HomePage,
+    // navigationOptions: {
+    //   headerTitle: () => <NavBar />,
+    // },
+  },
 
-  // UpcomingShows: {
-  //   screen: UpcomingShows,
-  //   navigationOptions: {
-  //     headerTitle: () => <NavBar />,
-  //   },
-  // },
+  UpcomingShows: {
+    screen: UpcomingShows,
+    // navigationOptions: {
+    //   headerTitle: () => <NavBar />,
+    // },
+  },
 
-  // Waitlist: {
-  //   screen: WaitList,
-  //   navigationOptions: {
-  //     headerTitle: () => <NavBar />,
-  //   },
-  // },
+  Waitlist: {
+    screen: WaitList,
+    // navigationOptions: {
+    //   headerTitle: () => <NavBar />,
+    // },
+  },
 
-  // GladiatorsOfSteel: {
-  //   screen: GladiatorsLandingPage,
-  //   navigationOptions: {
-  //     headerTitle: () => <NavBar />,
-  //   },
-  // },
+  GladiatorsOfSteel: {
+    screen: GladiatorsLandingPage,
+    // navigationOptions: {
+    //   headerTitle: () => <NavBar />,
+    // },
+  },
 
-  // Store: {
-  //   screen: Store,
-  //   navigationOptions: {
-  //     headerTitle: () => <NavBar />,
-  //   },
+  Store: {
+    screen: Store,
+    // navigationOptions: {
+    //   headerTitle: () => <NavBar />,
+    // },
+  },
+  // SignIn: {
+  //   screen: SignIn,
   // },
-  SignIn: {
-    screen: SignIn,
-  },
-  Signup: {
-    screen: Signup,
-  },
-  ForgotPassword: {
-    screen: ForgotPassword,
-  },
-  ConfirmAccount: {
-    screen: ConfirmAccount,
-  },
-  ResetPassword: {
-    screen: ResetPassword,
-  },
+  // Signup: {
+  //   screen: Signup,
+  // },
+  // ForgotPassword: {
+  //   screen: ForgotPassword,
+  // },
+  // ConfirmAccount: {
+  //   screen: ConfirmAccount,
+  // },
+  // ResetPassword: {
+  //   screen: ResetPassword,
+  // },
 };
 
 const HomeStack = createStackNavigator(screens, {

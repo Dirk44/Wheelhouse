@@ -20,7 +20,6 @@ const AuthStack = (props) => {
   //     </TouchableWithoutFeedback>
   //   );
   return (
-    // <DismissKeyboard>
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="SignIn" component={SignIn} />
       <Stack.Screen name="SignUp" component={SignUp} />
@@ -30,7 +29,6 @@ const AuthStack = (props) => {
       <Stack.Screen name="ResetPassword" component={ResetPassword} />
       <Stack.Screen name="Home" component={HomePage} />
     </Stack.Navigator>
-    // </DismissKeyboard>
   );
 };
 

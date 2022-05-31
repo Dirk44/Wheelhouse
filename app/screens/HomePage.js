@@ -22,8 +22,8 @@ import Carousel from "../components/Carousel";
 function HomePage() {
   return (
     <SafeAreaView style={styles.container}>
+      <NavBar />
       <ScrollView>
-        <NavBar />
         <ImageBackground
           style={styles.background}
           source={require("../assets/landing-page-background.jpg")}
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   background: {
-    flex: 1,
+    // flex: 1,
     width: "100%",
     height: "auto",
     alignItems: "center",
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
     height: 130,
     resizeMode: "contain",
     position: "absolute",
-    marginTop: "10%",
+    marginTop: "20%",
     // marginLeft: "10%",
   },
 });
