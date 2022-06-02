@@ -18,6 +18,7 @@ import AppLoading from "expo-app-loading";
 import AuthStack from "./app/routes/AuthStack";
 import Navigator from "./app/routes/drawer";
 import HomePage from "./app/screens/homePage";
+import HomeStack from "./app/routes/homeStack";
 
 // console.log(useDeviceOrientation());
 Amplify.configure({
@@ -53,7 +54,7 @@ const App = () => {
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       {/* <View style={{ flex: 1 }}> */}
       <NavigationContainer>
-        {!auth ? <AuthStack /> : <Navigator />}
+        {auth ? <Navigator /> : <AuthStack />}
       </NavigationContainer>
       {/* </View> */}
     </TouchableWithoutFeedback>

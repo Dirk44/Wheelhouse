@@ -8,6 +8,7 @@ import {
   TouchableWithoutFeedback,
 } from "react-native";
 import { Controller } from "react-hook-form";
+import PhoneInput from "react-native-phone-number-input";
 
 const InputField = ({
   control,
@@ -17,7 +18,6 @@ const InputField = ({
   secureTextEntry,
   autoCapitalize,
   keyboardType,
-  placeholderTextColor,
 }) => {
   // const DismissKeyboard = ({ children }) => (
   //   <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
@@ -47,6 +47,7 @@ const InputField = ({
               fontSize="18"
             />
           </View>
+
           {error && (
             <Text style={{ color: "red" }}>{error.message || "Error"}</Text>
           )}
@@ -64,7 +65,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#f2f3f5",
     borderRadius: 10,
     borderColor: "rgba(37,37,37,255)",
-    fontSize: 20,
     marginTop: 12,
     paddingLeft: 8,
     shadowColor: "black",

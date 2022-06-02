@@ -33,7 +33,9 @@ function HomePage() {
             style={styles.whLogo}
           />
           <Image
-            source={require("../assets/cars-wh-landing.png")}
+            source={{
+              uri: "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/racecars.jpg",
+            }}
             style={styles.carsImage}
           />
           <Text numberOfLines={4} style={styles.text}>
@@ -73,7 +75,6 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "auto",
     alignItems: "center",
-    // resizeMode: "cover",
   },
   carousel: {
     width: "100%",
@@ -109,13 +110,12 @@ const styles = StyleSheet.create({
   },
   text: {
     flex: 1,
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: "500",
     lineHeight: 30,
     color: "white",
     paddingLeft: 30,
     paddingRight: 30,
-    marginTop: 0,
     // opacity: .8,
     // fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir"
     // fontFamily: "HelveticaRegular"
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
     height: 130,
     resizeMode: "contain",
     position: "absolute",
-    marginTop: "20%",
+    marginTop: "10%",
     // marginLeft: "10%",
   },
 });

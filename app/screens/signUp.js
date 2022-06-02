@@ -19,6 +19,7 @@ import { useForm } from "react-hook-form";
 
 import InputField from "../components/InputField";
 import WhButton from "../components/WhButton";
+import PhoneInputField from "../components/PhoneInputField";
 
 function Signup() {
   // const [email, setEmail] = useState("");
@@ -33,6 +34,7 @@ function Signup() {
 
   const onSignUpPressed = async (data) => {
     const { username, email, password, phone_number } = data;
+    console.log(data);
     try {
       const response = await Auth.signUp({
         username,
@@ -45,7 +47,7 @@ function Signup() {
       console.log(e);
     }
 
-    navigation.navigate("ConfirmAccount", { username });
+    // navigation.navigate("ConfirmAccount", { username });
   };
 
   const onBackToLoginPressed = () => {
@@ -105,16 +107,16 @@ function Signup() {
             }}
             secureTextEntry={true}
           />
-          <InputField
+          <PhoneInputField
             name="phone_number"
-            placeholder="Phone Number"
-            dialCode="+1"
+            // placeholder="Phone Number"
             control={control}
             keyboardType="decimal-pad"
+            // defaultCode="US"
             rules={{
               required: "Please enter Phone Number",
               minLength: {
-                value: 10,
+                value: 12,
                 message: "Phone Number must be at least 10 characters",
               },
             }}
@@ -150,6 +152,21 @@ const styles = StyleSheet.create({
     height: "50%",
     alignItems: "center",
   },
+  input: {
+    justifyContent: "center",
+    width: "75%",
+    height: "10%",
+    backgroundColor: "#f2f3f5",
+    borderRadius: 10,
+    borderColor: "rgba(37,37,37,255)",
+    fontSize: 20,
+    marginTop: 12,
+    paddingLeft: 8,
+    shadowColor: "black",
+    shadowOffset: { width: 5, height: 5 },
+    shadowOpacity: 0.9,
+    shadowRadius: 10,
+  },
   signupText: {
     color: "white",
     fontSize: 30,
@@ -166,7 +183,7 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 18,
     fontFamily: "HelveticaRegular",
-    marginTop: "15%",
+    marginTop: "10%",
     opacity: 0.9,
 
     // justifyContent: "center",
