@@ -18,6 +18,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MenuText from "../components/MenuText";
 import NavBar from "../components/NavBar";
 import Carousel from "../components/Carousel";
+import movies from "../components/movies.json";
 
 function HomePage() {
   return (
@@ -68,7 +69,7 @@ const styles = StyleSheet.create({
     flex: 1,
     resizeMode: "cover",
     justifyContent: "center",
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    // paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   background: {
     // flex: 1,
@@ -126,7 +127,7 @@ const styles = StyleSheet.create({
     height: 130,
     resizeMode: "contain",
     position: "absolute",
-    marginTop: "10%",
+    marginTop: "8%",
     // marginLeft: "10%",
   },
 });

@@ -35,12 +35,6 @@ const App = () => {
 
   const [auth, setAuth] = useState(null);
 
-  // const DismissKeyboard = ({ children }) => (
-  //   <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-  //     {children}
-  //   </TouchableWithoutFeedback>
-  // );
-
   let [fontsLoaded] = useFonts({
     HelveticaRegular: require("./app/assets/fonts/Yantramanav-Black.ttf"),
     Helvetica87Bold: require("./app/assets/fonts/Montserrat-Black.ttf"),
@@ -51,13 +45,14 @@ const App = () => {
   }
 
   return (
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-      {/* <View style={{ flex: 1 }}> */}
-      <NavigationContainer>
-        {auth ? <Navigator /> : <AuthStack />}
-      </NavigationContainer>
-      {/* </View> */}
-    </TouchableWithoutFeedback>
+    <>
+      <StatusBar barStyle="light-content" translucent={true} />
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+        <NavigationContainer>
+          {!auth ? <Navigator /> : <AuthStack />}
+        </NavigationContainer>
+      </TouchableWithoutFeedback>
+    </>
     /* <NavigationContainer>
        <Stack.Navigator screenOptions={{ headerShown: false }}>
          <Stack.Screen name="SignIn" component={SignIn} />

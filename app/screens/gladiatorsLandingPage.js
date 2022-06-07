@@ -19,14 +19,37 @@ import NavBar from "../components/NavBar";
 function GladiatorsLandingPage() {
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView>
+      <NavBar />
+      <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <ImageBackground
           style={styles.background}
           source={{
             uri: "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/gladiatorsBgImage.jpg",
           }}
         >
-          <NavBar />
+          <Image
+            style={styles.gladiatorsLogo}
+            source={require("../assets/gladiatorsLogo.png")}
+          />
+          <Image
+            style={styles.thumb}
+            source={require("../assets/playTrailerThumb.png")}
+          />
+          <Text style={styles.thumbText}>PLAY TRAILER</Text>
+          <Image
+            style={styles.thumb}
+            source={require("../assets/playClipThumb.png")}
+          />
+          <Text style={styles.thumbText}>PLAY CLIP 1</Text>
+          <Image
+            style={styles.thumb}
+            source={require("../assets/watchFilmThumb.png")}
+          />
+          <Text style={styles.thumbText}>WATCH FILM</Text>
+          <Image
+            style={styles.whLogo}
+            source={require("../assets/wh-logo.png")}
+          />
         </ImageBackground>
       </ScrollView>
     </SafeAreaView>
@@ -36,39 +59,50 @@ function GladiatorsLandingPage() {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#000",
-    resizeMode: "contain",
+    resizeMode: "cover",
     flex: 1,
     justifyContent: "center",
     // alignItems: "center",
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    // paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   background: {
     flex: 1,
     width: "100%",
-    height: "auto",
+    height: 850,
     alignItems: "center",
+    justifyContent: "center",
+    paddingTop: "8%",
+    // resizeMode: "contain",
+    // flexGrow: 1,
   },
-  cardImage: {
-    flex: 1,
-    width: 390,
-    height: 240,
+  gladiatorsLogo: {
+    // flex: 1,
+    width: "55%",
+    height: "auto",
+    aspectRatio: 1.64 / 1,
+    // marginTop: "8%",
+    marginBottom: "7%",
   },
-  cardLayout: {
-    // flexDirection: "row",
-    justifyContent: "space-evenly",
-    fontSize: 18,
-    fontWeight: "bold",
+  thumb: {
+    width: "65%",
+    height: 135,
+    // marginTop: "10%",
+    borderColor: "white",
+    borderWidth: 2,
+    borderRadius: 2,
+    marginBottom: "1%",
+  },
+  thumbText: {
+    fontFamily: "HelveticaRegular",
     color: "white",
-    marginTop: "22%",
+    marginTop: 10,
+    marginBottom: "4%",
   },
-  menu: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-  },
-  menuBar: {
-    flex: 1,
-    justifyContent: "flex-end",
-    paddingTop: 20,
+  whLogo: {
+    width: "40%",
+    height: 58,
+    marginTop: 10,
+    paddingBottom: "10%",
   },
 });
 

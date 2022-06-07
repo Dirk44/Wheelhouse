@@ -109,10 +109,10 @@ function Signup() {
           />
           <PhoneInputField
             name="phone_number"
-            // placeholder="Phone Number"
+            placeholder="Phone Number"
             control={control}
             keyboardType="decimal-pad"
-            // defaultCode="US"
+            defaultCode="US"
             rules={{
               required: "Please enter Phone Number",
               minLength: {
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#000",
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    // paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   background: {
     flex: 1,

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   StyleSheet,
@@ -6,21 +6,25 @@ import {
   TouchableOpacity,
   Text,
   ImageBackground,
+  Pressable,
 } from "react-native";
+import PlayVideoScreen from "../screens/playVideoScreen";
+import VideoPlayer from "./VideoPlayer";
 import MenuText from "./MenuText";
+import movies from "../components/movies.json";
+import { Video } from "expo-av";
 
-function Card(props) {
-  console.log(props);
+function Card(props, { navigation }) {
+  // const [videos, setVideos] = useState([movies]);
+
   return (
-    // <TouchableOpacity>
-    //
-    // </TouchableOpacity>
-    // <View style={styles.container}>
-    <View
-    // style={styles.container}
-    >
+    <View>
       <ImageBackground style={styles.image} source={{ uri: props.poster }}>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            console.warn("Play Button Pressed", props.title);
+          }}
+        >
           <Image
             style={{ height: 65, width: 65, opacity: 0.7 }}
             source={{ uri: props.playBtn }}

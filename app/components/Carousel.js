@@ -6,11 +6,16 @@ import {
   Text,
   FlatList,
   ScrollView,
+  Pressable,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
 import Card from "./Card";
 import movies from "../components/movies.json";
 
 function Carousel() {
+  // const navigation = useNavigation();
+
   return (
     <View
       style={{
@@ -19,15 +24,16 @@ function Carousel() {
         marginLeft: "7%",
       }}
     >
-      <ScrollView horizontal={true}>
+      <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         {movies.map((movie) => {
           return (
             <View key={movie.id}>
               <Card
                 key={movie.id}
-                poster={movie.poster}
+                poster={movie.thumb}
                 title={movie.title}
                 playBtn={movie.playBtn}
+                video={movie.video}
               />
             </View>
           );

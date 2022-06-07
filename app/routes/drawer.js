@@ -13,6 +13,7 @@ import Signup from "../screens/signUp";
 import ForgotPassword from "../screens/forgotPassword";
 import ConfirmAccount from "../screens/confirmAccount";
 import ResetPassword from "../screens/resetPassword";
+import PlayVideoScreen from "../screens/playVideoScreen";
 
 const WIDTH = Dimensions.get("window").width;
 const HEIGHT = Dimensions.get("window").height;
@@ -20,16 +21,19 @@ const HEIGHT = Dimensions.get("window").height;
 const DrawerConfig = {
   drawerWidth: WIDTH * 0.6,
   drawerHeight: HEIGHT * 0,
-  drawerPosition: "",
+  edgeWidth: "50",
 };
 
 const RootDrawerNavigator = createDrawerNavigator(
   {
     Home: {
       screen: HomePage,
-      // navigationOptions: {
-      //   headerTitle: () => <NavBar />,
-      // },
+      headerShown: true,
+      navigationOptions: ({ navigation }) => {
+        return {
+          headerTitle: () => <NavBar navigation={navigation} />,
+        };
+      },
     },
     UpcomingShows: {
       screen: UpcomingShows,
@@ -51,6 +55,13 @@ const RootDrawerNavigator = createDrawerNavigator(
     },
     Store: {
       screen: Store,
+      // navigationOptions: {
+      //   headerTitle: () => <NavBar />,
+      // },
+    },
+    VideoScreen: {
+      screen: PlayVideoScreen,
+      name: "Video Screen",
       // navigationOptions: {
       //   headerTitle: () => <NavBar />,
       // },
