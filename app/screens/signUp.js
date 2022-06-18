@@ -33,13 +33,13 @@ function Signup() {
   const pWord = watch("password");
 
   const onSignUpPressed = async (data) => {
-    const { username, email, password, phone_number } = data;
+    const { username, email, password } = data;
     console.log(data);
     try {
       const response = await Auth.signUp({
         username,
         password,
-        attributes: { email, phone_number },
+        attributes: { email },
       });
       console.log(response);
     } catch (e) {
@@ -47,7 +47,7 @@ function Signup() {
       console.log(e);
     }
 
-    // navigation.navigate("ConfirmAccount", { username });
+    navigation.navigate("ConfirmAccount", { username });
   };
 
   const onBackToLoginPressed = () => {
@@ -107,7 +107,7 @@ function Signup() {
             }}
             secureTextEntry={true}
           />
-          <PhoneInputField
+          {/* <PhoneInputField
             name="phone_number"
             placeholder="Phone Number"
             control={control}
@@ -120,7 +120,7 @@ function Signup() {
                 message: "Phone Number must be at least 10 characters",
               },
             }}
-          />
+          /> */}
 
           <WhButton title="Signup" onPress={handleSubmit(onSignUpPressed)} />
           {/* copy props from Whbutton to other buttons */}

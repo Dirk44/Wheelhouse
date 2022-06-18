@@ -28,7 +28,11 @@ Amplify.configure({
   },
 });
 
-const Stack = createNativeStackNavigator();
+const DismissKeyboard = ({ children }) => (
+  <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+    {children}
+  </TouchableWithoutFeedback>
+);
 
 const App = () => {
   // Auth.signOut();
@@ -47,11 +51,12 @@ const App = () => {
   return (
     <>
       <StatusBar barStyle="light-content" translucent={true} />
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      <DismissKeyboard>
         <NavigationContainer>
+          {/* <AuthStack /> */}
           {!auth ? <Navigator /> : <AuthStack />}
         </NavigationContainer>
-      </TouchableWithoutFeedback>
+      </DismissKeyboard>
     </>
     /* <NavigationContainer>
        <Stack.Navigator screenOptions={{ headerShown: false }}>

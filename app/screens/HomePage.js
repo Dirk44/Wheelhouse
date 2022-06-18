@@ -11,6 +11,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { ScaledSheet } from "react-native-size-matters";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -39,10 +40,10 @@ function HomePage() {
             }}
             style={styles.carsImage}
           />
-          <Text numberOfLines={4} style={styles.text}>
-            Lorem ipsum dolor sit amet{"\n"}
-            v, consectetur adipiscing elit. Aenean{"\n"} pulvinar erat odio, non
-            tempus leo mattis nec.{"\n"} Fusce rhoncus et tortor non tincidunt.
+          <Text style={styles.text}>
+            Lorem ipsum dolor sit amet v, consectetur adipiscing elit. Aenean
+            pulvinar erat odio, non tempus leo mattis nec. Fusce rhoncus et
+            tortor non tincidunt.
           </Text>
           <View style={styles.carouselContainer}>
             <Image
@@ -63,7 +64,7 @@ function HomePage() {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = ScaledSheet.create({
   container: {
     backgroundColor: "#000",
     flex: 1,
@@ -88,35 +89,26 @@ const styles = StyleSheet.create({
     flex: 1,
     // aspectRatio: 1.5,
     width: "100%",
-    height: 294,
+    height: "294@s",
     marginTop: "45%",
     resizeMode: "contain",
   },
-  clip: {
-    resizeMode: "contain",
-    width: "10%",
-    height: 175,
-  },
-  image: {
-    resizeMode: "contain",
-    width: "40%",
-    height: 175,
-  },
+
   redline: {
     // flex: 1,
-    width: "100%",
-    height: 26,
+    width: "90%",
+    height: "26@s",
     resizeMode: "contain",
     marginBottom: "3%",
   },
   text: {
     flex: 1,
-    fontSize: 14,
+    fontSize: "14@s",
     fontWeight: "500",
-    lineHeight: 30,
+    lineHeight: "30@s",
     color: "white",
-    paddingLeft: 30,
-    paddingRight: 30,
+    paddingLeft: "30@s",
+    paddingRight: "30@s",
     // opacity: .8,
     // fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir"
     // fontFamily: "HelveticaRegular"
@@ -124,7 +116,7 @@ const styles = StyleSheet.create({
   whLogo: {
     // flex: 1,
     width: "80%",
-    height: 130,
+    height: "130@s",
     resizeMode: "contain",
     position: "absolute",
     marginTop: "8%",

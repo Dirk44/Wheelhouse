@@ -7,6 +7,7 @@ import {
   Keyboard,
   TouchableWithoutFeedback,
 } from "react-native";
+import { ScaledSheet } from "react-native-size-matters";
 import { Controller } from "react-hook-form";
 import PhoneInput from "react-native-phone-number-input";
 
@@ -44,7 +45,7 @@ const InputField = ({
               autoCapitalize={autoCapitalize}
               keyboardType={keyboardType}
               placeholderTextColor="#b3b3b3"
-              fontSize="18"
+              fontSize="18@s"
             />
           </View>
 
@@ -57,16 +58,16 @@ const InputField = ({
   );
 };
 
-const styles = StyleSheet.create({
+const styles = ScaledSheet.create({
   input: {
     justifyContent: "center",
     width: "75%",
     height: "10%",
     backgroundColor: "#f2f3f5",
-    borderRadius: 10,
+    borderRadius: "10@s",
     borderColor: "rgba(37,37,37,255)",
-    marginTop: 12,
-    paddingLeft: 8,
+    marginTop: "12@s",
+    paddingLeft: "8@s",
     shadowColor: "black",
     shadowOffset: { width: 5, height: 5 },
     shadowOpacity: 0.9,

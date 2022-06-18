@@ -7,11 +7,11 @@ import {
   StatusBar,
   ImageBackground,
   Image,
-  TouchableOpacity,
   View,
   Button,
   Alert,
 } from "react-native";
+import { ScaledSheet } from "react-native-size-matters";
 
 import { Auth } from "aws-amplify";
 
@@ -141,7 +141,7 @@ function SignIn({ props }) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = ScaledSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#000",
@@ -157,28 +157,28 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "50%",
     alignItems: "center",
-    marginTop: "5%",
+    marginTop: "20@s",
   },
   loginText: {
     color: "white",
-    fontSize: 30,
+    fontSize: "30@s",
     fontFamily: "HelveticaRegular",
     opacity: 0.9,
-    paddingTop: "5%",
-    marginTop: "18%",
+    paddingTop: "20@s",
+    marginTop: "60@s",
   },
   or: {
     color: "white",
-    fontSize: 20,
+    fontSize: "20@s",
     fontFamily: "HelveticaRegular",
     opacity: 0.9,
     paddingTop: "5%",
   },
   signupText: {
     color: "white",
-    fontSize: 18,
+    fontSize: "18@s",
     fontFamily: "HelveticaRegular",
-    marginTop: "12%",
+    marginTop: "40@s",
     opacity: 0.9,
 
     // justifyContent: "center",
@@ -186,7 +186,7 @@ const styles = StyleSheet.create({
   },
   whLogo: {
     width: "80%",
-    height: 130,
+    height: "130@s",
     resizeMode: "contain",
     // position: "absolute",
     marginTop: "10%",

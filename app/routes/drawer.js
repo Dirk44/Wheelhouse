@@ -1,5 +1,4 @@
-import React from "react";
-import { Platform, Dimensions } from "react-native";
+import { Dimensions } from "react-native";
 import { createDrawerNavigator } from "react-navigation-drawer";
 import { createAppContainer } from "react-navigation";
 import HomePage from "../screens/homePage";
@@ -8,12 +7,8 @@ import GladiatorsLandingPage from "../screens/gladiatorsLandingPage";
 import Store from "../screens/store";
 import WaitList from "../screens/waitList";
 import NavBar from "../components/NavBar";
-import SignIn from "../screens/signIn";
-import Signup from "../screens/signUp";
-import ForgotPassword from "../screens/forgotPassword";
-import ConfirmAccount from "../screens/confirmAccount";
-import ResetPassword from "../screens/resetPassword";
 import PlayVideoScreen from "../screens/playVideoScreen";
+import HomeStack from "./homeStack";
 
 const WIDTH = Dimensions.get("window").width;
 const HEIGHT = Dimensions.get("window").height;
@@ -27,13 +22,12 @@ const DrawerConfig = {
 const RootDrawerNavigator = createDrawerNavigator(
   {
     Home: {
-      screen: HomePage,
-      headerShown: true,
-      navigationOptions: ({ navigation }) => {
-        return {
-          headerTitle: () => <NavBar navigation={navigation} />,
-        };
-      },
+      screen: HomeStack,
+      // navigationOptions: ({ navigation }) => {
+      //   return {
+      //     headerTitle: () => <NavBar navigation={navigation} />,
+      //   };
+      // },
     },
     UpcomingShows: {
       screen: UpcomingShows,
@@ -61,7 +55,6 @@ const RootDrawerNavigator = createDrawerNavigator(
     },
     VideoScreen: {
       screen: PlayVideoScreen,
-      name: "Video Screen",
       // navigationOptions: {
       //   headerTitle: () => <NavBar />,
       // },

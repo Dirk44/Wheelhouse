@@ -8,21 +8,28 @@ import {
   ImageBackground,
   Pressable,
 } from "react-native";
+import { ScaledSheet } from "react-native-size-matters";
+import { useNavigation } from "@react-navigation/native";
+
 import PlayVideoScreen from "../screens/playVideoScreen";
 import VideoPlayer from "./VideoPlayer";
 import MenuText from "./MenuText";
 import movies from "../components/movies.json";
 import { Video } from "expo-av";
 
-function Card(props, { navigation }) {
+function Card(props) {
   // const [videos, setVideos] = useState([movies]);
+  const navigation = useNavigation();
 
   return (
     <View>
       <ImageBackground style={styles.image} source={{ uri: props.poster }}>
         <TouchableOpacity
           onPress={() => {
-            console.warn("Play Button Pressed", props.title);
+            console.warn("Play Button Pressed", props.playVideo);
+            navigation.navigate("VideoScreen");
+
+            return <VideoPlayer />;
           }}
         >
           <Image
@@ -36,7 +43,7 @@ function Card(props, { navigation }) {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = ScaledSheet.create({
   container: {
     width: "70%",
     // height: 170,
@@ -44,9 +51,9 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   image: {
-    width: 133,
-    height: 180,
-    marginRight: 15,
+    width: "133@s",
+    height: "180@s",
+    marginRight: "15@s",
     justifyContent: "center",
     alignItems: "center",
     // marginTop: 5,
@@ -55,7 +62,7 @@ const styles = StyleSheet.create({
     textAlign: "left",
     color: "white",
     opacity: 1,
-    fontSize: 15,
+    fontSize: "15@s",
     fontWeight: "600",
     marginLeft: 5,
     // paddingTop: 2,

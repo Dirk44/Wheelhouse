@@ -8,6 +8,7 @@ import {
   ScrollView,
   Pressable,
 } from "react-native";
+import { ScaledSheet } from "react-native-size-matters";
 import { useNavigation } from "@react-navigation/native";
 
 import Card from "./Card";
@@ -17,13 +18,7 @@ function Carousel() {
   // const navigation = useNavigation();
 
   return (
-    <View
-      style={{
-        justifyContent: "center",
-        flexDirection: "row",
-        marginLeft: "7%",
-      }}
-    >
+    <View style={styles.container}>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         {movies.map((movie) => {
           return (
@@ -33,7 +28,7 @@ function Carousel() {
                 poster={movie.thumb}
                 title={movie.title}
                 playBtn={movie.playBtn}
-                video={movie.video}
+                playVideo={movie.playVideo}
               />
             </View>
           );
@@ -43,13 +38,16 @@ function Carousel() {
   );
 }
 
-const styles = StyleSheet.create({
-  // container: {
-  // flex: 1,
-  // width: "40%",
-  // justifyContent: "center",
-  // flexDirection: "row",
-  // },
+const styles = ScaledSheet.create({
+  container: {
+    // flex: 1,
+    // width: "40%",
+    // justifyContent: "center",
+    // flexDirection: "row",
+    justifyContent: "center",
+    flexDirection: "row",
+    marginLeft: "25@s",
+  },
   // carousel: {
   //   width: "80%",
   // },

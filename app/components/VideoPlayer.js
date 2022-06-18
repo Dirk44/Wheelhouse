@@ -12,15 +12,18 @@ function VideoPlayer(props) {
         ref={video}
         style={styles.video}
         source={{
-          uri: "",
+          uri: movies.playVideo,
         }}
-        posterSource={{}}
-        usePoster={true}
+        posterSource={{
+          uri: "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/playClipPoster.png",
+        }}
+        shouldPlay
         useNativeControls
+        usePoster
         resizeMode="contain"
         onPlaybackStatusUpdate={(status) => setStatus(() => status)}
       />
-      <View style={styles.buttons}>
+      {/* <View style={styles.buttons}>
         <Button
           title={status.isPlaying ? "Pause" : "Play"}
           onPress={() =>
@@ -29,7 +32,7 @@ function VideoPlayer(props) {
               : video.current.playAsync()
           }
         />
-      </View>
+      </View> */}
     </View>
   );
 }

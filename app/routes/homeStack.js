@@ -1,24 +1,17 @@
-import React from "react";
 import { createStackNavigator } from "react-navigation-stack";
-import { createAppContainer } from "react-navigation";
 import HomePage from "../screens/homePage";
 import UpcomingShows from "../screens/upcomingShows";
 import WaitList from "../screens/waitList";
 import GladiatorsLandingPage from "../screens/gladiatorsLandingPage";
 import Store from "../screens/store";
-import NavBar from "../components/NavBar";
-import SignIn from "../screens/signIn";
-import Signup from "../screens/signUp";
-import ForgotPassword from "../screens/forgotPassword";
-import ConfirmAccount from "../screens/confirmAccount";
-import ResetPassword from "../screens/resetPassword";
 
 const screens = {
   Home: {
     screen: HomePage,
-    // navigationOptions: {
-    //   headerTitle: () => <NavBar />,
-    // },
+    navigationOptions: {
+      headerShown: false,
+      // headerTitle: () => <NavBar />,
+    },
   },
 
   UpcomingShows: {
