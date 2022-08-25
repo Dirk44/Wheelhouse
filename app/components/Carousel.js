@@ -7,7 +7,10 @@ import {
   FlatList,
   ScrollView,
   Pressable,
+  TouchableOpacity,
 } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+
 import { ScaledSheet } from "react-native-size-matters";
 import { useNavigation } from "@react-navigation/native";
 
@@ -19,6 +22,13 @@ function Carousel() {
 
   return (
     <View style={styles.container}>
+      {/* <LinearGradient
+        style={styles.gradient}
+        colors={["transparent", "black"]}
+        start={[0.0, 0.0]}
+        end={[1.0, 0.0]}
+        locations={[0.0, 1.0]}
+      /> */}
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         {movies.map((movie) => {
           return (
@@ -47,6 +57,10 @@ const styles = ScaledSheet.create({
     justifyContent: "center",
     flexDirection: "row",
     marginLeft: "25@s",
+  },
+  gradient: {
+    width: "100%",
+    height: "100%",
   },
   // carousel: {
   //   width: "80%",

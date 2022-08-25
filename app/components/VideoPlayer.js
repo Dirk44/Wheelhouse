@@ -3,7 +3,7 @@ import { View, StyleSheet, Button } from "react-native";
 import { Video, AVPlaybackStatus } from "expo-av";
 import movies from "../components/movies.json";
 
-function VideoPlayer(props) {
+function VideoPlayer() {
   const video = React.useRef(null);
   const [status, setStatus] = React.useState({});
   return (

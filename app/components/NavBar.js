@@ -1,16 +1,16 @@
 import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 import Hamburger from "./Hamburger";
 
-export default function NavBar() {
+export default function NavBar({ navigation }) {
   return (
     <View style={styles.header}>
-      <View>
+      <TouchableOpacity>
         <Hamburger style={styles.hamburger} />
-      </View>
+      </TouchableOpacity>
       <Text style={styles.navBar}>WheelHouse</Text>
     </View>
   );

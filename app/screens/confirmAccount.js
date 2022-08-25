@@ -141,8 +141,12 @@ const styles = StyleSheet.create({
     width: "80%",
     height: 130,
     resizeMode: "contain",
-    // position: "absolute",
+    overflow: "visible",
     marginTop: "12%",
+    shadowColor: "black",
+    shadowOffset: { width: 10, height: 10 },
+    shadowOpacity: 0.8,
+    shadowRadius: 15,
   },
 });
 

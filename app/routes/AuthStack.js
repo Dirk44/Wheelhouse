@@ -1,6 +1,6 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createStackNavigator } from "@react-navigation/stack";
 import { TouchableWithoutFeedback, Keyboard } from "react-native";
 
 import SignIn from "../screens/signIn";
@@ -11,7 +11,7 @@ import ResetPassword from "../screens/resetPassword";
 import SignOut from "../screens/signOut";
 import HomePage from "../screens/homePage";
 
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
 
 const AuthStack = (props) => {
   //   const DismissKeyboard = ({ children }) => (
@@ -27,7 +27,7 @@ const AuthStack = (props) => {
       <Stack.Screen name="ConfirmAccount" component={ConfirmAccount} />
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
       <Stack.Screen name="ResetPassword" component={ResetPassword} />
-      <Stack.Screen name="Home" component={HomePage} />
+      {/* <Stack.Screen name="Home" component={HomePage} /> */}
     </Stack.Navigator>
   );
 };

@@ -76,12 +76,13 @@ const styles = StyleSheet.create({
     // flexGrow: 1,
   },
   gladiatorsLogo: {
-    // flex: 1,
+    flex: 1,
     width: "55%",
     height: "auto",
-    aspectRatio: 1.64 / 1,
+    resizeMode: "contain",
+    // aspectRatio: 1.64 / 1,
     // marginTop: "8%",
-    marginBottom: "7%",
+    // marginBottom: "7%",
   },
   thumb: {
     width: "65%",

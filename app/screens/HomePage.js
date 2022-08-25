@@ -11,6 +11,8 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+
 import { ScaledSheet } from "react-native-size-matters";
 
 import { NavigationContainer } from "@react-navigation/native";
@@ -21,14 +23,14 @@ import NavBar from "../components/NavBar";
 import Carousel from "../components/Carousel";
 import movies from "../components/movies.json";
 
-function HomePage() {
+const HomePage = () => {
   return (
     <SafeAreaView style={styles.container}>
       <NavBar />
       <ScrollView>
         <ImageBackground
           style={styles.background}
-          source={require("../assets/landing-page-background.jpg")}
+          source={require("../assets/wheelhouseElements/wheelhouseLanding.jpg")}
         >
           <Image
             source={require("../assets/wh-logo.png")}
@@ -41,18 +43,18 @@ function HomePage() {
             style={styles.carsImage}
           />
           <Text style={styles.text}>
-            Lorem ipsum dolor sit amet v, consectetur adipiscing elit. Aenean
-            pulvinar erat odio, non tempus leo mattis nec. Fusce rhoncus et
-            tortor non tincidunt.
+            WHEELHOUSE is the home for exclusive high-quality motorsports
+            content. With new shows in the pipeline, WHEELHOUSE proudly presents
+            the six part Limited-Series, GLADIATORS OF STEEL
           </Text>
-          <View style={styles.carouselContainer}>
+          <View style={styles.logoContainer}>
+            <TouchableOpacity>
+              <Text style={styles.click}> CLICK HERE FOR THE PREMIERE OF </Text>
+            </TouchableOpacity>
             <Image
-              style={styles.redline}
-              source={require("../assets/redline-horizontal.png")}
+              style={styles.gladiatorsLogo}
+              source={require("../assets/gladiatorsLogo.png")}
             />
-            <View style={styles.carousel}>
-              <Carousel />
-            </View>
             <Image
               style={styles.redline}
               source={require("../assets/redline-horizontal.png")}
@@ -62,64 +64,76 @@ function HomePage() {
       </ScrollView>
     </SafeAreaView>
   );
-}
+};
 
 const styles = ScaledSheet.create({
   container: {
     backgroundColor: "#000",
     flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center",
+    resizeMode: "contain",
     // paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   background: {
     // flex: 1,
     width: "100%",
+    height: 1200,
+    alignItems: "center",
+    marginTop: "-51@s",
+  },
+  carsImage: {
+    width: "100%",
+    height: "294@s",
+    marginTop: "175@s",
+    resizeMode: "contain",
+  },
+  click: {
+    color: "#07fbb9",
+    fontWeight: "800",
+    fontSize: "14@s",
+    marginTop: "25@s",
+    letterSpacing: 1,
+  },
+  gladiatorsLogo: {
+    flex: 1,
+    width: "60%",
+    // height: "auto",
+    resizeMode: "contain",
+    marginTop: "-210@s",
+  },
+  logoContainer: {
+    flex: 1,
+    width: "100%",
     height: "auto",
     alignItems: "center",
   },
-  carousel: {
-    width: "100%",
-  },
-  carouselContainer: {
-    width: "100%",
-    alignItems: "center",
-  },
-  carsImage: {
-    flex: 1,
-    // aspectRatio: 1.5,
-    width: "100%",
-    height: "294@s",
-    marginTop: "45%",
-    resizeMode: "contain",
-  },
-
   redline: {
-    // flex: 1,
-    width: "90%",
+    width: "80%",
     height: "26@s",
     resizeMode: "contain",
-    marginBottom: "3%",
+    // marginBottom: "3%",
   },
   text: {
-    flex: 1,
     fontSize: "14@s",
-    fontWeight: "500",
-    lineHeight: "30@s",
+    fontWeight: "400",
+    lineHeight: "25@s",
     color: "white",
     paddingLeft: "30@s",
     paddingRight: "30@s",
-    // opacity: .8,
-    // fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir"
-    // fontFamily: "HelveticaRegular"
+    textAlign: "center",
+    marginTop: "-25@s",
   },
   whLogo: {
     // flex: 1,
     width: "80%",
     height: "130@s",
+    overflow: "visible",
     resizeMode: "contain",
     position: "absolute",
-    marginTop: "8%",
+    marginTop: "70@s",
+    shadowColor: "black",
+    shadowOffset: { width: 10, height: 10 },
+    shadowOpacity: 0.8,
+    shadowRadius: 15,
     // marginLeft: "10%",
   },
 });

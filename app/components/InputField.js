@@ -44,8 +44,10 @@ const InputField = ({
               secureTextEntry={secureTextEntry}
               autoCapitalize={autoCapitalize}
               keyboardType={keyboardType}
-              placeholderTextColor="#b3b3b3"
+              placeholderTextColor="#00aeef"
               fontSize="18@s"
+              fontWeight="bold"
+              color="white"
             />
           </View>
 
@@ -63,8 +65,8 @@ const styles = ScaledSheet.create({
     justifyContent: "center",
     width: "75%",
     height: "10%",
-    backgroundColor: "#f2f3f5",
-    borderRadius: "10@s",
+    backgroundColor: "rgba(37,37,37,255)",
+    // borderRadius: "10@s",
     borderColor: "rgba(37,37,37,255)",
     marginTop: "12@s",
     paddingLeft: "8@s",

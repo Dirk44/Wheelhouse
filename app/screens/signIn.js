@@ -75,7 +75,7 @@ function SignIn({ props }) {
         <View style={styles.inputs}>
           <InputField
             name="username"
-            placeholder="Username"
+            placeholder="USERNAME | "
             control={control}
             rules={{
               required: "Username is required",
@@ -83,7 +83,7 @@ function SignIn({ props }) {
           />
           <InputField
             name="password"
-            placeholder="Password"
+            placeholder="PASSWORD | "
             control={control}
             rules={{
               required: "Password is required",
@@ -188,8 +188,13 @@ const styles = ScaledSheet.create({
     width: "80%",
     height: "130@s",
     resizeMode: "contain",
+    overflow: "visible",
     // position: "absolute",
     marginTop: "10%",
+    shadowColor: "black",
+    shadowOffset: { width: 10, height: 10 },
+    shadowOpacity: 0.8,
+    shadowRadius: 15,
   },
 });
 

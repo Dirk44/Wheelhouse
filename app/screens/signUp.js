@@ -23,6 +23,7 @@ import PhoneInputField from "../components/PhoneInputField";
 
 function Signup() {
   // const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   // const [password, setPassword] = useState("");
   // const [confirmPassword, setConfirmPassword] = useState("");
   // const [phoneNumber, setPhoneNumber] = useState("");
@@ -68,13 +69,13 @@ function Signup() {
         <View style={styles.inputs}>
           <InputField
             name="username"
-            placeholder="Username"
+            placeholder="USERNAME |"
             control={control}
             rules={{ required: "Username is required" }}
           />
           <InputField
             name="email"
-            placeholder="Email"
+            placeholder="EMAIL |"
             control={control}
             rules={{ required: "Email is required" }}
             autoCapitalize="none"
@@ -82,7 +83,7 @@ function Signup() {
           />
           <InputField
             name="password"
-            placeholder="Password"
+            placeholder="PASSWORD |"
             control={control}
             rules={{
               required: "Password is required",
@@ -95,7 +96,7 @@ function Signup() {
           />
           <InputField
             name="confirm password"
-            placeholder="Confirm Password"
+            placeholder="CONFIRM PASSWORD |"
             control={control}
             rules={{
               validate: (value) => value === pWord || "Passwords do not match",
@@ -185,16 +186,17 @@ const styles = StyleSheet.create({
     fontFamily: "HelveticaRegular",
     marginTop: "10%",
     opacity: 0.9,
-
-    // justifyContent: "center",
-    // alignItems: "center",
   },
   whLogo: {
     width: "80%",
     height: 130,
     resizeMode: "contain",
-    // position: "absolute",
+    overflow: "visible",
     marginTop: "12%",
+    shadowColor: "black",
+    shadowOffset: { width: 10, height: 10 },
+    shadowOpacity: 0.8,
+    shadowRadius: 15,
   },
 });
 

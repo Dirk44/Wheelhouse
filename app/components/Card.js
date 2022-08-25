@@ -19,6 +19,8 @@ import { Video } from "expo-av";
 
 function Card(props) {
   // const [videos, setVideos] = useState([movies]);
+  const video = React.useRef(null);
+  const [status, setStatus] = React.useState({});
   const navigation = useNavigation();
 
   return (
@@ -26,10 +28,11 @@ function Card(props) {
       <ImageBackground style={styles.image} source={{ uri: props.poster }}>
         <TouchableOpacity
           onPress={() => {
+            // navigation.navigate("Video");
             console.warn("Play Button Pressed", props.playVideo);
-            navigation.navigate("VideoScreen");
-
-            return <VideoPlayer />;
+            navigation.navigate("Video", {
+              videoUrl: props.playVideo,
+            });
           }}
         >
           <Image

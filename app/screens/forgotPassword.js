@@ -50,7 +50,7 @@ function ForgotPassword({ props }) {
         <View style={styles.inputs}>
           <InputField
             name="Email"
-            placeholder="Email"
+            placeholder="EMAIL |"
             control={control}
             rules={{ required: "Email is required" }}
             autoCapitalize="none"
@@ -113,8 +113,12 @@ const styles = StyleSheet.create({
     width: "80%",
     height: 130,
     resizeMode: "contain",
-    // position: "absolute",
     marginTop: "12%",
+    overflow: "visible",
+    shadowColor: "black",
+    shadowOffset: { width: 10, height: 10 },
+    shadowOpacity: 0.8,
+    shadowRadius: 15,
   },
 });
 

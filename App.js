@@ -1,3 +1,4 @@
+import "react-native-gesture-handler";
 import React, { useState } from "react";
 import {
   StyleSheet,
@@ -50,7 +51,11 @@ const App = () => {
 
   return (
     <>
-      <StatusBar barStyle="light-content" translucent={true} />
+      <StatusBar
+        barStyle="light-content"
+        translucent={true}
+        backgroundColor="black"
+      />
       <DismissKeyboard>
         <NavigationContainer>
           {/* <AuthStack /> */}
