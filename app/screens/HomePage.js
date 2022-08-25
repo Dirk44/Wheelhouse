@@ -55,10 +55,10 @@ const HomePage = () => {
               style={styles.gladiatorsLogo}
               source={require("../assets/gladiatorsLogo.png")}
             />
-            <Image
+            {/* <Image
               style={styles.redline}
               source={require("../assets/redline-horizontal.png")}
-            />
+            /> */}
           </View>
         </ImageBackground>
       </ScrollView>
@@ -95,10 +95,11 @@ const styles = ScaledSheet.create({
   },
   gladiatorsLogo: {
     flex: 1,
-    width: "60%",
+    justifyContent: "space-around",
+    width: "85%",
     // height: "auto",
     resizeMode: "contain",
-    marginTop: "-210@s",
+    marginTop: "-195@s",
   },
   logoContainer: {
     flex: 1,
@@ -107,9 +108,11 @@ const styles = ScaledSheet.create({
     alignItems: "center",
   },
   redline: {
+    flex: 1,
     width: "80%",
     height: "26@s",
     resizeMode: "contain",
+    justifyContent: "flex-start",
     // marginBottom: "3%",
   },
   text: {
