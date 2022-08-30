@@ -18,14 +18,13 @@ import { Auth } from "aws-amplify";
 import InputField from "../components/InputField";
 import WhButton from "../components/WhButton";
 
-import { NavigationContainer } from "@react-navigation/native";
 import { useNavigation } from "@react-navigation/native";
 import { useForm, Controller } from "react-hook-form";
 
 const EMAIL_REGEX =
   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9]+)*$/;
 
-function SignIn({ props }) {
+function SignIn() {
   // const [email, setEmail] = useState("");
   // const [password, setPassword] = useState("");
   const navigation = useNavigation();
@@ -75,7 +74,7 @@ function SignIn({ props }) {
         <View style={styles.inputs}>
           <InputField
             name="username"
-            placeholder="USERNAME | "
+            placeholder="USERNAME "
             control={control}
             rules={{
               required: "Username is required",
@@ -83,7 +82,7 @@ function SignIn({ props }) {
           />
           <InputField
             name="password"
-            placeholder="PASSWORD | "
+            placeholder="PASSWORD "
             control={control}
             rules={{
               required: "Password is required",
@@ -167,34 +166,19 @@ const styles = ScaledSheet.create({
     paddingTop: "20@s",
     marginTop: "60@s",
   },
-  or: {
-    color: "white",
-    fontSize: "20@s",
-    fontFamily: "HelveticaRegular",
-    opacity: 0.9,
-    paddingTop: "5%",
-  },
   signupText: {
     color: "white",
     fontSize: "18@s",
     fontFamily: "HelveticaRegular",
-    marginTop: "40@s",
+    marginTop: "35@s",
     opacity: 0.9,
-
-    // justifyContent: "center",
-    // alignItems: "center",
   },
   whLogo: {
-    width: "80%",
-    height: "130@s",
-    resizeMode: "contain",
+    flex: 1,
     overflow: "visible",
-    // position: "absolute",
-    marginTop: "10%",
-    shadowColor: "black",
-    shadowOffset: { width: 10, height: 10 },
-    shadowOpacity: 0.8,
-    shadowRadius: 15,
+    width: "80%",
+    height: "auto",
+    marginRight: "6%",
   },
 });
 

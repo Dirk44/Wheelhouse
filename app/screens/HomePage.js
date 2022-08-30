@@ -1,29 +1,22 @@
 import React from "react";
 import {
-  StyleSheet,
-  Platform,
   ScrollView,
   Text,
   SafeAreaView,
-  StatusBar,
   ImageBackground,
   Image,
   TouchableOpacity,
   View,
 } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
+
+import { useNavigation } from "@react-navigation/native";
 
 import { ScaledSheet } from "react-native-size-matters";
 
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
-import MenuText from "../components/MenuText";
 import NavBar from "../components/NavBar";
-import Carousel from "../components/Carousel";
-import movies from "../components/movies.json";
 
 const HomePage = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
       <NavBar />
@@ -32,34 +25,41 @@ const HomePage = () => {
           style={styles.background}
           source={require("../assets/wheelhouseElements/wheelhouseLanding.jpg")}
         >
-          <Image
-            source={require("../assets/wh-logo.png")}
-            style={styles.whLogo}
-          />
-          <Image
-            source={{
-              uri: "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/racecars.jpg",
-            }}
-            style={styles.carsImage}
-          />
-          <Text style={styles.text}>
-            WHEELHOUSE is the home for exclusive high-quality motorsports
-            content. With new shows in the pipeline, WHEELHOUSE proudly presents
-            the six part Limited-Series, GLADIATORS OF STEEL
-          </Text>
-          <View style={styles.logoContainer}>
-            <TouchableOpacity>
-              <Text style={styles.click}> CLICK HERE FOR THE PREMIERE OF </Text>
-            </TouchableOpacity>
+          <View style={styles.whLogoContainer}>
             <Image
-              style={styles.gladiatorsLogo}
-              source={require("../assets/gladiatorsLogo.png")}
+              source={require("../assets/wh-logo.png")}
+              style={styles.whLogo}
             />
-            {/* <Image
-              style={styles.redline}
-              source={require("../assets/redline-horizontal.png")}
-            /> */}
           </View>
+          <View style={styles.carsImageContainer}>
+            <Image
+              source={require("../assets/wheelhouseLandingImage.jpg")}
+              style={styles.carsImage}
+            />
+          </View>
+          <View>
+            <Text style={styles.text}>
+              WHEELHOUSE is the home for exclusive high-quality motorsports
+              content. With new shows in the pipeline, WHEELHOUSE proudly
+              presents the six part Limited-Series, GLADIATORS OF STEEL
+            </Text>
+          </View>
+          <View style={{ flex: 1, marginTop: -200 }}>
+            <TouchableOpacity
+              // style={{ flex: 1 }}
+              onPress={() => navigation.navigate("Gladiators of Steel")}
+            >
+              <Text style={styles.click}>CLICK HERE FOR THE PREMIERE OF</Text>
+
+              {/* <View> */}
+              <Image
+                style={styles.gladiatorsLogo}
+                source={require("../assets/gladiatorsLogo.png")}
+                onPress={() => navigation.navigate("Gladiators of Steel")}
+              />
+            </TouchableOpacity>
+          </View>
+          {/* </View> */}
         </ImageBackground>
       </ScrollView>
     </SafeAreaView>
@@ -75,45 +75,40 @@ const styles = ScaledSheet.create({
   },
   background: {
     // flex: 1,
-    width: "100%",
+    // width: "100%",
     height: 1200,
     alignItems: "center",
-    marginTop: "-51@s",
+    marginTop: "-45@s",
+  },
+  carsImageContainer: {
+    flex: 1,
+    width: "100%",
+    height: "auto%",
+    // marginTop: "-310@s",
+    // alignItems: "flex-start",
   },
   carsImage: {
+    // flex: 1,
     width: "100%",
-    height: "294@s",
-    marginTop: "175@s",
+    height: "215@s",
+    marginTop: "-55@s",
     resizeMode: "contain",
   },
   click: {
+    // flex: 1,
     color: "#07fbb9",
     fontWeight: "800",
     fontSize: "14@s",
-    marginTop: "25@s",
+    marginTop: "15@s",
     letterSpacing: 1,
   },
   gladiatorsLogo: {
-    flex: 1,
-    justifyContent: "space-around",
-    width: "85%",
-    // height: "auto",
-    resizeMode: "contain",
-    marginTop: "-195@s",
-  },
-  logoContainer: {
-    flex: 1,
+    // flex: 1,
     width: "100%",
-    height: "auto",
-    alignItems: "center",
-  },
-  redline: {
-    flex: 1,
-    width: "80%",
-    height: "26@s",
-    resizeMode: "contain",
-    justifyContent: "flex-start",
-    // marginBottom: "3%",
+    height: "210@s",
+    // resizeMode: "contain",
+    marginTop: "25@s",
+    // resizeMode: "contain",
   },
   text: {
     fontSize: "14@s",
@@ -123,21 +118,24 @@ const styles = ScaledSheet.create({
     paddingLeft: "30@s",
     paddingRight: "30@s",
     textAlign: "center",
-    marginTop: "-25@s",
+    marginTop: "-315@s",
   },
   whLogo: {
-    // flex: 1,
-    width: "80%",
-    height: "130@s",
-    overflow: "visible",
+    width: "90%",
+    // overflow: "visible",
     resizeMode: "contain",
-    position: "absolute",
-    marginTop: "70@s",
-    shadowColor: "black",
-    shadowOffset: { width: 10, height: 10 },
-    shadowOpacity: 0.8,
-    shadowRadius: 15,
-    // marginLeft: "10%",
+    // position: "absolute",
+    paddingRight: "25@s",
+  },
+  whLogoContainer: {
+    // flex: 1,
+    overflow: "visible",
+    width: "100%",
+    height: "25%",
+    justifyContent: "center",
+    // alignItems: "center",
+    // paddingBottom: "63@s",
+    // marginBottom: "25@s",
   },
 });
 

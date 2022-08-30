@@ -16,6 +16,7 @@ import { useNavigation } from "@react-navigation/native";
 
 import Card from "./Card";
 import movies from "../components/movies.json";
+import { TouchableHighlight } from "react-native-gesture-handler";
 
 function Carousel() {
   // const navigation = useNavigation();
@@ -29,7 +30,7 @@ function Carousel() {
         end={[1.0, 0.0]}
         locations={[0.0, 1.0]}
       /> */}
-      <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+      <TouchableHighlight horizontal={false}>
         {movies.map((movie) => {
           return (
             <View key={movie.id}>
@@ -43,7 +44,7 @@ function Carousel() {
             </View>
           );
         })}
-      </ScrollView>
+      </TouchableHighlight>
     </View>
   );
 }
@@ -55,7 +56,7 @@ const styles = ScaledSheet.create({
     // justifyContent: "center",
     // flexDirection: "row",
     justifyContent: "center",
-    flexDirection: "row",
+    // flexDirection: "row",
     marginLeft: "25@s",
   },
   gradient: {

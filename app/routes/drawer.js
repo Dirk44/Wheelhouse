@@ -12,16 +12,16 @@ import WaitList from "../screens/waitList";
 import NavBar from "../components/NavBar";
 import PlayVideoScreen from "../screens/playVideoScreen";
 import HomeStack from "./homeStack";
+import RentSeries from "../screens/rentSeries";
 
 const WIDTH = Dimensions.get("window").width;
 
-const headerStyles = {
-  navigationOptions: () => {
-    return {
-      headerTitle: () => <NavBar />,
-    };
-  },
+const navigationOptions = () => {
+  return {
+    headerTitle: () => <NavBar />,
+  };
 };
+
 const Drawer = createDrawerNavigator();
 
 const DrawerNav = () => {
@@ -36,33 +36,67 @@ const DrawerNav = () => {
       }}
       // useLegacyImplementation={true}
     >
-      {/* {auth && <HomeStack />} */}
-      <Drawer.Screen name="Home" component={HomeStack} options={headerStyles} />
+      {/* {!auth && <HomeStack />} */}
+      <Drawer.Screen
+        name="Home"
+        component={HomeStack}
+        options={{
+          navigationOptions: navigationOptions,
+          title: "Home",
+        }}
+      />
 
       <Drawer.Screen
-        name="Upcoming Shows"
+        name="UpcomingShows"
         component={UpcomingShows}
-        options={headerStyles}
+        options={{
+          navigationOptions: navigationOptions,
+          title: "Upcoming Shows",
+        }}
       />
 
       <Drawer.Screen
         name="Gladiators of Steel"
         component={GladiatorsLandingPage}
-        options={headerStyles}
+        options={{
+          navigationOptions: navigationOptions,
+          title: "Gladiators of Steel",
+        }}
       />
 
-      <Drawer.Screen name="Store" component={Store} options={headerStyles} />
+      <Drawer.Screen
+        name="Store"
+        component={Store}
+        options={{
+          navigationOptions: navigationOptions,
+          title: "Store",
+        }}
+      />
 
       <Drawer.Screen
         name="WaitList"
         component={WaitList}
-        options={headerStyles}
+        options={{
+          navigationOptions: navigationOptions,
+          title: "Waitlist",
+        }}
+      />
+      <Drawer.Screen
+        name="Rental"
+        component={RentSeries}
+        options={{
+          navigationOptions: navigationOptions,
+          title: "Rental",
+        }}
       />
 
       <Drawer.Screen
         name="Video"
         component={PlayVideoScreen}
-        options={headerStyles}
+        options={{
+          navigationOptions: navigationOptions,
+          title: "Video",
+        }}
       />
     </Drawer.Navigator>
   );

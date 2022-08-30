@@ -1,4 +1,4 @@
-import * as React from "react";
+import { React, useState } from "react";
 import { View, StyleSheet, Button } from "react-native";
 import { Video, AVPlaybackStatus } from "expo-av";
 import movies from "../components/movies.json";
@@ -23,7 +23,7 @@ function VideoPlayer() {
         resizeMode="contain"
         onPlaybackStatusUpdate={(status) => setStatus(() => status)}
       />
-      {/* <View style={styles.buttons}>
+      <View style={styles.buttons}>
         <Button
           title={status.isPlaying ? "Pause" : "Play"}
           onPress={() =>
@@ -32,7 +32,7 @@ function VideoPlayer() {
               : video.current.playAsync()
           }
         />
-      </View> */}
+      </View>
     </View>
   );
 }

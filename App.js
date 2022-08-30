@@ -58,22 +58,11 @@ const App = () => {
       />
       <DismissKeyboard>
         <NavigationContainer>
-          {/* <AuthStack /> */}
           {!auth ? <Navigator /> : <AuthStack />}
+          {/* <AuthStack /> */}
         </NavigationContainer>
       </DismissKeyboard>
     </>
-    /* <NavigationContainer>
-       <Stack.Navigator screenOptions={{ headerShown: false }}>
-         <Stack.Screen name="SignIn" component={SignIn} />
-        <Stack.Screen name="SignUp" component={SignUp} />
-        <Stack.Screen name="SignOut" component={SignOut} />
-         <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
-         <Stack.Screen name="ConfirmAccount" component={ConfirmAccount} />
-         <Stack.Screen name="ResetPassword" component={ResetPassword} />
-         <Stack.Screen name="Home" component={HomePage} />
-       </Stack.Navigator>
-     </NavigationContainer>  */
   );
 };
 

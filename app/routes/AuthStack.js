@@ -14,11 +14,11 @@ import HomePage from "../screens/homePage";
 const Stack = createStackNavigator();
 
 const AuthStack = (props) => {
-  //   const DismissKeyboard = ({ children }) => (
-  //     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-  //       {children}
-  //     </TouchableWithoutFeedback>
-  //   );
+  const DismissKeyboard = ({ children }) => (
+    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+      {children}
+    </TouchableWithoutFeedback>
+  );
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="SignIn" component={SignIn} />
@@ -27,7 +27,7 @@ const AuthStack = (props) => {
       <Stack.Screen name="ConfirmAccount" component={ConfirmAccount} />
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
       <Stack.Screen name="ResetPassword" component={ResetPassword} />
-      {/* <Stack.Screen name="Home" component={HomePage} /> */}
+      <Stack.Screen name="Home" component={HomePage} />
     </Stack.Navigator>
   );
 };

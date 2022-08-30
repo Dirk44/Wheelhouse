@@ -69,13 +69,13 @@ function Signup() {
         <View style={styles.inputs}>
           <InputField
             name="username"
-            placeholder="USERNAME |"
+            placeholder="USERNAME "
             control={control}
             rules={{ required: "Username is required" }}
           />
           <InputField
             name="email"
-            placeholder="EMAIL |"
+            placeholder="EMAIL "
             control={control}
             rules={{ required: "Email is required" }}
             autoCapitalize="none"
@@ -83,7 +83,7 @@ function Signup() {
           />
           <InputField
             name="password"
-            placeholder="PASSWORD |"
+            placeholder="PASSWORD "
             control={control}
             rules={{
               required: "Password is required",
@@ -96,7 +96,7 @@ function Signup() {
           />
           <InputField
             name="confirm password"
-            placeholder="CONFIRM PASSWORD |"
+            placeholder="CONFIRM PASSWORD "
             control={control}
             rules={{
               validate: (value) => value === pWord || "Passwords do not match",
@@ -190,13 +190,10 @@ const styles = StyleSheet.create({
   whLogo: {
     width: "80%",
     height: 130,
-    resizeMode: "contain",
+    // resizeMode: "contain",
     overflow: "visible",
     marginTop: "12%",
-    shadowColor: "black",
-    shadowOffset: { width: 10, height: 10 },
-    shadowOpacity: 0.8,
-    shadowRadius: 15,
+    marginRight: "7%",
   },
 });
 

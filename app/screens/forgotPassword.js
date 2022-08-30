@@ -50,7 +50,7 @@ function ForgotPassword({ props }) {
         <View style={styles.inputs}>
           <InputField
             name="Email"
-            placeholder="EMAIL |"
+            placeholder="EMAIL "
             control={control}
             rules={{ required: "Email is required" }}
             autoCapitalize="none"
@@ -110,15 +110,17 @@ const styles = StyleSheet.create({
     // alignItems: "center",
   },
   whLogo: {
+    flex: 1,
     width: "80%",
-    height: 130,
-    resizeMode: "contain",
-    marginTop: "12%",
-    overflow: "visible",
-    shadowColor: "black",
-    shadowOffset: { width: 10, height: 10 },
-    shadowOpacity: 0.8,
-    shadowRadius: 15,
+    height: "auto",
+    marginRight: "6%",
+    // resizeMode: "contain",
+    // marginTop: "6%",
+    // overflow: "visible",
+    // shadowColor: "black",
+    // shadowOffset: { width: 10, height: 10 },
+    // shadowOpacity: 0.8,
+    // shadowRadius: 15,
   },
 });
 
