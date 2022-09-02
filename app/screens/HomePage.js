@@ -76,7 +76,7 @@ const styles = ScaledSheet.create({
   background: {
     // flex: 1,
     // width: "100%",
-    height: 1200,
+    height: "1200@s",
     alignItems: "center",
     marginTop: "-45@s",
   },

@@ -1,23 +1,20 @@
+import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
 import {
-  ScrollView,
-  Text,
-  SafeAreaView,
   ImageBackground,
+  SafeAreaView,
+  ScrollView,
+  View,
   Image,
   TouchableOpacity,
-  View,
-  Button,
+  Text,
 } from "react-native";
 
 import { useNavigation } from "@react-navigation/native";
-
 import { ScaledSheet } from "react-native-size-matters";
-
 import NavBar from "../components/NavBar";
-import WhButton from "../components/WhButton";
 
-const RentSeries = (props) => {
+function GladiatorsLanding(props) {
   const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
@@ -25,27 +22,15 @@ const RentSeries = (props) => {
       <ScrollView>
         <ImageBackground
           style={styles.background}
-          source={require("../assets/rentNowBg.jpg")}
+          source={require("../assets/gladiatorsLandingBg.jpg")}
         >
           <View
             style={{
-              height: 300,
               width: "100%",
-              // backgroundColor: "red",
-              marginTop: 52,
-            }}
-          >
-            <Image
-              source={require("../assets/rentalCarImage.png")}
-              style={styles.carsImage}
-            />
-          </View>
-          <View
-            style={{
-              height: 200,
-              width: "100%",
+              height: 125,
               alignItems: "center",
-              // backgroundColor: "red",
+              marginTop: 230,
+              //   backgroundColor: "red",
             }}
           >
             <Image
@@ -54,17 +39,20 @@ const RentSeries = (props) => {
             />
           </View>
           <View>
-            <TouchableOpacity style={styles.buttonStyle} onPress={""}>
-              <Text style={styles.buttonText}>RENT NOW $11.99</Text>
+            <TouchableOpacity
+              style={styles.buttonStyle}
+              onPress={() => navigation.navigate("Clips")}
+            >
+              <Text style={styles.buttonText}>PLAY CLIPS</Text>
             </TouchableOpacity>
           </View>
           <View
             style={{
               height: 30,
-              width: "60%",
+              width: "72%",
               alignItems: "center",
-              // backgroundColor: "red",
-              marginTop: 25,
+              //   backgroundColor: "red",
+              marginTop: 5,
             }}
           >
             <Image
@@ -72,39 +60,47 @@ const RentSeries = (props) => {
               source={require("../assets/4kDolbyDigital.png")}
             />
           </View>
-          <View style={{ width: "80%", marginTop: 5 }}>
+          <View style={{ width: "80%", marginTop: 30 }}>
             <Text style={styles.descriptionText}>
-              Watch all six-episodes of GLADIATORS OF STEEL with this world
-              premiere exclusive and receive FREE BONUS CONTENT only on
-              WHEELHOUSE MOTORSPORTS.
+              GLADIATORS OF STEEL is an in-depth look at one of America's most
+              dangerous sports: Demolition Derby. {"\n"} {"\n"} GLADIATORS OF
+              STEEL is an unswerving look at the incredible journey “Derby
+              Drivers” take to make it into the arena. From the unique culture,
+              family dynamics and car building, to the brutal action inside the
+              stadium, these drivers have one goal in mind: To feel the energy
+              and rush of hitting another car full-speed in front of 20,000
+              screaming fans. It's legal road rage.
             </Text>
           </View>
+
           <View style={{ width: "50%", alignItems: "center" }}>
             <Image
               style={styles.whLogo}
               source={require("../assets/wh-logo.png")}
-            />
+            ></Image>
           </View>
         </ImageBackground>
       </ScrollView>
     </SafeAreaView>
   );
-};
+}
 
 const styles = ScaledSheet.create({
   container: {
     backgroundColor: "#000",
     flex: 1,
-    resizeMode: "contain",
-    // paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  },
-
-  background: {
-    // flex: 1,
     width: "100%",
-    height: "800@s",
-    alignItems: "center",
+    height: "auto",
+    // resizeMode: "contain",
+  },
+  background: {
+    flex: 1,
+    width: "100%",
+    height: "850@s",
     marginTop: "-55@s",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingTop: "15%",
   },
   buttonStyle: {
     justifyContent: "center",
@@ -113,43 +109,30 @@ const styles = ScaledSheet.create({
     height: "30@s",
     width: "300@s",
     borderRadius: 4,
-    marginTop: "-20@s",
+    marginTop: "50@s",
   },
   buttonText: {
     color: "black",
-    fontSize: 20,
-    fontWeight: "600",
+    fontSize: 16,
+    fontWeight: "400",
     letterSpacing: 2,
   },
-  carsImageContainer: {
-    flex: 1,
-    width: "100%",
-    height: "200@s",
-  },
-  carsImage: {
-    flex: 1,
-    width: "100%",
-    resizeMode: "cover",
-    marginTop: "35@s",
-  },
   descriptionText: {
-    fontSize: 15,
+    fontSize: 13,
     color: "white",
     fontWeight: "500",
     textAlign: "center",
-    lineHeight: "20@s",
+    lineHeight: "14@s",
   },
   dolby: {
-    width: "65%",
+    width: "50%",
     height: "7@s",
-    // marginTop: "3@s",
+    marginTop: "15@s",
   },
   gladiatorsLogo: {
-    width: "65%",
-    height: "170@s",
-    // padding: "5@s",
-    resizeMode: "contain",
-    marginTop: "-20@s",
+    width: "50%",
+    height: "150@s",
+    // backgroundColor: "red",
   },
   whLogo: {
     width: "75%",
@@ -158,4 +141,4 @@ const styles = ScaledSheet.create({
   },
 });
 
-export default RentSeries;
+export default GladiatorsLanding;

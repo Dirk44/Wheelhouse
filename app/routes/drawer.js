@@ -6,13 +6,15 @@ import { Entypo } from "@expo/vector-icons";
 
 import HomePage from "../screens/homePage";
 import UpcomingShows from "../screens/upcomingShows";
-import GladiatorsLandingPage from "../screens/gladiatorsLandingPage";
+import Clips from "../screens/clips";
 import Store from "../screens/store";
 import WaitList from "../screens/waitList";
 import NavBar from "../components/NavBar";
 import PlayVideoScreen from "../screens/playVideoScreen";
 import HomeStack from "./homeStack";
 import RentSeries from "../screens/rentSeries";
+import GladiatorsLanding from "../screens/gladiatorsLanding";
+import Episodes from "../screens/episodes";
 
 const WIDTH = Dimensions.get("window").width;
 
@@ -47,20 +49,36 @@ const DrawerNav = () => {
       />
 
       <Drawer.Screen
+        name="GladiatorsLanding"
+        component={GladiatorsLanding}
+        options={{
+          navigationOptions: navigationOptions,
+          title: "Gladiators",
+        }}
+      />
+
+      <Drawer.Screen
+        name="Clips"
+        component={Clips}
+        options={{
+          navigationOptions: navigationOptions,
+          title: "Clips",
+        }}
+      />
+      <Drawer.Screen
+        name="Episodes"
+        component={Episodes}
+        options={{
+          navigationOptions: navigationOptions,
+          title: "Episodes",
+        }}
+      />
+      <Drawer.Screen
         name="UpcomingShows"
         component={UpcomingShows}
         options={{
           navigationOptions: navigationOptions,
           title: "Upcoming Shows",
-        }}
-      />
-
-      <Drawer.Screen
-        name="Gladiators of Steel"
-        component={GladiatorsLandingPage}
-        options={{
-          navigationOptions: navigationOptions,
-          title: "Gladiators of Steel",
         }}
       />
 

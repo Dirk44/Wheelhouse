@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  View,
-  Image,
-  StyleSheet,
-  Text,
-  FlatList,
-  ScrollView,
-  Pressable,
-  TouchableOpacity,
-} from "react-native";
+import { View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 import { ScaledSheet } from "react-native-size-matters";
@@ -23,28 +14,19 @@ function Carousel() {
 
   return (
     <View style={styles.container}>
-      {/* <LinearGradient
-        style={styles.gradient}
-        colors={["transparent", "black"]}
-        start={[0.0, 0.0]}
-        end={[1.0, 0.0]}
-        locations={[0.0, 1.0]}
-      /> */}
-      <TouchableHighlight horizontal={false}>
-        {movies.map((movie) => {
-          return (
-            <View key={movie.id}>
-              <Card
-                key={movie.id}
-                poster={movie.thumb}
-                title={movie.title}
-                playBtn={movie.playBtn}
-                playVideo={movie.playVideo}
-              />
-            </View>
-          );
-        })}
-      </TouchableHighlight>
+      {movies.map((movie) => {
+        return (
+          <View key={movie.id}>
+            <Card
+              key={movie.id}
+              poster={movie.thumb}
+              title={movie.title}
+              playBtn={movie.playBtn}
+              playVideo={movie.playVideo}
+            />
+          </View>
+        );
+      })}
     </View>
   );
 }
@@ -57,7 +39,7 @@ const styles = ScaledSheet.create({
     // flexDirection: "row",
     justifyContent: "center",
     // flexDirection: "row",
-    marginLeft: "25@s",
+    // marginLeft: "25@s",
   },
   gradient: {
     width: "100%",
