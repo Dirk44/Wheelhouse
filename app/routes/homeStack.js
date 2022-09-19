@@ -1,6 +1,6 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import HomePage from "../screens/homePage";
+import HomePage from "../screens/HomePage/homePage";
 import UpcomingShows from "../screens/upcomingShows";
 import WaitList from "../screens/waitList";
 import Clips from "../screens/clips";
@@ -9,10 +9,11 @@ import PlayVideoScreen from "../screens/playVideoScreen";
 import RentSeries from "../screens/rentSeries";
 import GladiatorsLanding from "../screens/gladiatorsLanding";
 import Episodes from "../screens/episodes";
+import AuthStack from "./AuthStack";
 
 const Stack = createStackNavigator();
 
-function HomeStack({ navigation }) {
+function HomeStack() {
   return (
     <Stack.Navigator
       initialRouteName="Home"
@@ -27,6 +28,7 @@ function HomeStack({ navigation }) {
           gestureResponseDistance: 50,
         }}
       />
+
       <Stack.Screen name="UpcomingShows" component={UpcomingShows} />
       <Stack.Screen name="Clips" component={Clips} />
       <Stack.Screen name="Gladiators of Steel" component={GladiatorsLanding} />

@@ -18,7 +18,7 @@ import AppLoading from "expo-app-loading";
 
 import AuthStack from "./app/routes/AuthStack";
 import Navigator from "./app/routes/drawer";
-import HomePage from "./app/screens/homePage";
+import HomePage from "./app/screens/HomePage/homePage";
 import HomeStack from "./app/routes/homeStack";
 
 // console.log(useDeviceOrientation());
@@ -58,8 +58,8 @@ const App = () => {
       />
       <DismissKeyboard>
         <NavigationContainer>
-          {!auth ? <Navigator /> : <AuthStack />}
-          {/* <AuthStack /> */}
+          {/* {!auth ? <Navigator /> : <AuthStack />} */}
+          <Navigator />
         </NavigationContainer>
       </DismissKeyboard>
     </>

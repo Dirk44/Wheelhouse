@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -18,6 +18,9 @@ import NavBar from "../components/NavBar";
 import { NavigationContainerRefContext } from "@react-navigation/native";
 
 function Clips({ route }) {
+  const [clickState, setClickState] = useState({
+    style: (borderColor = "#07fbb9"),
+  });
   const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
@@ -50,8 +53,9 @@ function Clips({ route }) {
               activeOpacity={0.6}
               underlayColor="#07fbb9"
               onPress={() =>
+                // setClickState({style})
                 navigation.navigate("Video", {
-                  // videoUrl
+                  // videoUrl,
                 })
               }
               style={{
@@ -118,7 +122,7 @@ const styles = StyleSheet.create({
     height: 140,
     borderWidth: 2,
     borderColor: "white",
-    backgroundColor: "red",
+    // backgroundColor: "red",
   },
   thumbText: {
     fontFamily: "HelveticaRegular",

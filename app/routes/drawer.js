@@ -1,10 +1,8 @@
 import React from "react";
 import { Dimensions } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import { createAppContainer } from "react-navigation";
-import { Entypo } from "@expo/vector-icons";
 
-import HomePage from "../screens/homePage";
+import HomePage from "../screens/HomePage/homePage";
 import UpcomingShows from "../screens/upcomingShows";
 import Clips from "../screens/clips";
 import Store from "../screens/store";
@@ -15,6 +13,7 @@ import HomeStack from "./homeStack";
 import RentSeries from "../screens/rentSeries";
 import GladiatorsLanding from "../screens/gladiatorsLanding";
 import Episodes from "../screens/episodes";
+import AuthStack from "./AuthStack";
 
 const WIDTH = Dimensions.get("window").width;
 
@@ -29,6 +28,7 @@ const Drawer = createDrawerNavigator();
 const DrawerNav = () => {
   return (
     <Drawer.Navigator
+      initialRouteName="Home"
       screenOptions={{
         headerShown: false,
         swipeEdgeWidth: 0,
@@ -39,6 +39,7 @@ const DrawerNav = () => {
       // useLegacyImplementation={true}
     >
       {/* {!auth && <HomeStack />} */}
+
       <Drawer.Screen
         name="Home"
         component={HomeStack}
@@ -47,6 +48,7 @@ const DrawerNav = () => {
           title: "Home",
         }}
       />
+      {/* <Drawer.Screen name="SignUp" component={AuthStack} /> */}
 
       <Drawer.Screen
         name="GladiatorsLanding"

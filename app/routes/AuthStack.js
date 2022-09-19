@@ -9,7 +9,7 @@ import ForgotPassword from "../screens/forgotPassword";
 import ConfirmAccount from "../screens/confirmAccount";
 import ResetPassword from "../screens/resetPassword";
 import SignOut from "../screens/signOut";
-import HomePage from "../screens/homePage";
+import HomePage from "../screens/HomePage/homePage";
 
 const Stack = createStackNavigator();
 

@@ -72,15 +72,15 @@ function PlayVideoScreen({ route, navigation }) {
               onPlaybackStatusUpdate={(status) => setStatus(() => status)}
             />
             {/* <View style={styles.buttons}>
-            <Button
-              title={status.isPlaying ? "Pause" : "Play"}
-              onPress={() =>
-                status.isPlaying
-                  ? video.current.pauseAsync()
-                  : video.current.playAsync()
-              }
-            />
-          </View> */}
+              <Button
+                title={status.isPlaying ? "Pause" : "Play"}
+                onPress={() =>
+                  status.isPlaying
+                    ? video.current.pauseAsync()
+                    : video.current.playAsync()
+                }
+              />
+            </View> */}
           </View>
           <View>
             <Text style={styles.titleText}>{videoTitle}</Text>
