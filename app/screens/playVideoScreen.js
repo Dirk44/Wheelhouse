@@ -64,7 +64,7 @@ function PlayVideoScreen({ route, navigation }) {
               posterSource={{
                 uri: videoPoster,
               }}
-              // shouldPlay
+              shouldPlay
               staysActiveInBackground={false}
               useNativeControls={true}
               usePoster

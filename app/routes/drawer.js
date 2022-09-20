@@ -4,15 +4,15 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 
 import HomePage from "../screens/HomePage/homePage";
 import UpcomingShows from "../screens/upcomingShows";
-import Clips from "../screens/clips";
+import Clips from "../screens/Clips/clips";
 import Store from "../screens/store";
 import WaitList from "../screens/waitList";
 import NavBar from "../components/NavBar";
 import PlayVideoScreen from "../screens/playVideoScreen";
 import HomeStack from "./homeStack";
-import RentSeries from "../screens/rentSeries";
-import GladiatorsLanding from "../screens/gladiatorsLanding";
-import Episodes from "../screens/episodes";
+import RentSeries from "../screens/RentSeries/rentSeries";
+import GladiatorsLanding from "../screens/GladiatorsLanding/gladiatorsLanding";
+import Episodes from "../screens/Episodes/episodes";
 import AuthStack from "./AuthStack";
 
 const WIDTH = Dimensions.get("window").width;
@@ -110,14 +110,14 @@ const DrawerNav = () => {
         }}
       />
 
-      <Drawer.Screen
+      {/* <Drawer.Screen
         name="Video"
         component={PlayVideoScreen}
         options={{
           navigationOptions: navigationOptions,
           title: "Video",
         }}
-      />
+      /> */}
     </Drawer.Navigator>
   );
 };

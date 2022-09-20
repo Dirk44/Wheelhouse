@@ -27,7 +27,7 @@ const AuthStack = (props) => {
       <Stack.Screen name="ConfirmAccount" component={ConfirmAccount} />
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
       <Stack.Screen name="ResetPassword" component={ResetPassword} />
-      <Stack.Screen name="Home" component={HomePage} />
+      {/* <Stack.Screen name="Home" component={HomePage} /> */}
     </Stack.Navigator>
   );
 };

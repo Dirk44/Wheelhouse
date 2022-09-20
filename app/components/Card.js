@@ -35,9 +35,9 @@ function Card(props) {
               // navigation.navigate("Video");
               console.warn("Play Button Pressed", props.playVideo);
               navigation.navigate("Video", {
-                videoUrl: props.playVideo,
                 videoPoster: props.poster,
                 videoTitle: props.title,
+                videoUrl: props.playVideo,
               });
             }}
           >
