@@ -15,8 +15,7 @@ import {
 
 import { useForm, Controller } from "react-hook-form";
 
-import InputField from "../components/InputField";
-import WhButton from "../components/WhButton";
+import { InputField, WhButton } from "../components/";
 
 function ForgotPassword({ props }) {
   const [email, setEmail] = useState("");

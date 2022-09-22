@@ -7,9 +7,10 @@ import {
   Keyboard,
   TouchableWithoutFeedback,
 } from "react-native";
-import { ScaledSheet } from "react-native-size-matters";
+
 import { Controller } from "react-hook-form";
 import PhoneInput from "react-native-phone-number-input";
+import { inputFieldStyles } from "../stylesheets/";
 
 const InputField = ({
   control,
@@ -35,7 +36,7 @@ const InputField = ({
         fieldState: { error },
       }) => (
         <>
-          <View style={styles.input}>
+          <View style={inputFieldStyles.input}>
             <TextInput
               value={value}
               onChangeText={onChange}
@@ -60,21 +61,6 @@ const InputField = ({
   );
 };
 
-const styles = ScaledSheet.create({
-  input: {
-    justifyContent: "center",
-    width: "75%",
-    height: "10%",
-    backgroundColor: "rgba(37,37,37,255)",
-    // borderRadius: "10@s",
-    borderColor: "rgba(37,37,37,255)",
-    marginTop: "12@s",
-    paddingLeft: "8@s",
-    shadowColor: "black",
-    shadowOffset: { width: 5, height: 5 },
-    shadowOpacity: 0.9,
-    shadowRadius: 10,
-  },
-});
 
-export default InputField;
+
+module.exports = InputField;

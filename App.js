@@ -12,22 +12,22 @@ import {
 import { NavigationContainer, StackActions } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Amplify from "aws-amplify";
-import config from "./src/aws-exports";
+// import config from "./src/aws-exports";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
 
-import AuthStack from "./app/routes/AuthStack";
+// import AuthStack from "./app/routes/AuthStack";
 import Navigator from "./app/routes/drawer";
 import HomePage from "./app/screens/HomePage/homePage";
 import HomeStack from "./app/routes/homeStack";
 
 // console.log(useDeviceOrientation());
-Amplify.configure({
-  ...config,
-  Analytics: {
-    disabled: true,
-  },
-});
+// Amplify.configure({
+//   ...config,
+//   Analytics: {
+//     disabled: true,
+//   },
+// });
 
 const DismissKeyboard = ({ children }) => (
   <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
@@ -38,7 +38,7 @@ const DismissKeyboard = ({ children }) => (
 const App = () => {
   // Auth.signOut();
 
-  const [auth, setAuth] = useState(null);
+  // const [auth, setAuth] = useState(null);
 
   let [fontsLoaded] = useFonts({
     HelveticaRegular: require("./app/assets/fonts/Yantramanav-Black.ttf"),

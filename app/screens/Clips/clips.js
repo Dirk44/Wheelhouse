@@ -13,9 +13,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 // import Carousel from "../../components/Carousel";
 import { ClipsStyles } from "./clipsStyles";
-import MenuText from "../../components/MenuText";
-import Card from "../../components/Card";
-import NavBar from "../../components/NavBar";
+import { Card, MenuText, NavBar } from "../../components";
 import { NavigationContainerRefContext } from "@react-navigation/native";
 
 function Clips({ route }) {

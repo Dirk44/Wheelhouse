@@ -1,37 +1,22 @@
 import React from "react";
 import {
-  StyleSheet,
   Text,
   TouchableOpacity,
   Pressable,
   View,
 } from "react-native";
+import { whButtonStyles } from "../stylesheets/";
 
 function WhButton(props) {
   return (
-    <TouchableOpacity style={styles.buttonStyle} onPress={props.onPress}>
+    <TouchableOpacity style={whButtonStyles.buttonStyle} onPress={props.onPress}>
       {/* <Pressable> */}
-      <Text style={styles.buttonText}>{props.title}</Text>
+      <Text style={whButtonStyles.buttonText}>{props.title}</Text>
       {/* </Pressable> */}
     </TouchableOpacity>
   );
 }
 
-const styles = StyleSheet.create({
-  buttonStyle: {
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#59f0a9",
-    height: 40,
-    width: 190,
-    borderRadius: 5,
-    marginTop: 30,
-  },
-  buttonText: {
-    color: "black",
-    fontSize: 23,
-    fontFamily: "HelveticaRegular",
-  },
-});
 
-export default WhButton;
+
+module.exports = WhButton;

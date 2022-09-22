@@ -11,8 +11,7 @@ import {
   View,
   Button,
 } from "react-native";
-import InputField from "../components/InputField";
-import WhButton from "../components/WhButton";
+import { InputField, WhButton } from "../components/";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { useNavigation } from "@react-navigation/native";
