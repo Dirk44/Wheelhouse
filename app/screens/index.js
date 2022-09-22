@@ -1,0 +1,17 @@
+module.exports = {
+    Clips: require('./clips'),
+    ConfirmAccount: require('./confirmAccount'),
+    Episodes: require('./episodes'),
+    ForgotPassword: require('./forgotPassword'),
+    GladiatorsLanding: require('./gladiatorsLanding'),
+    HomePage: require('./homePage'),
+    PlayVideoScreen: require('./playVideoScreen'),
+    RentSeries: require('./rentSeries'),
+    ResetPassword: require('./resetPassword'),
+    SignIn: require('./signIn'),
+    SignOut: require('./signOut'),
+    Signup: require('./signUp'),
+    Store: require('./store'),
+    UpcomingShows: require('./upcomingShows'),
+    WaitList: require('./waitList'),
+}
