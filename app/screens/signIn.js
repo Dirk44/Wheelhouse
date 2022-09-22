@@ -181,4 +181,4 @@ const styles = ScaledSheet.create({
   },
 });
 
-export default SignIn;
+module.exports = SignIn;

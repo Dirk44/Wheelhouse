@@ -16,10 +16,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
 
-// import AuthStack from "./app/routes/AuthStack";
-import Navigator from "./app/routes/drawer";
-import HomePage from "./app/screens/HomePage/homePage";
-import HomeStack from "./app/routes/homeStack";
+// import { AuthStack } from "./app/routes";
+import { Navigator, HomeStack } from "./app/routes";
+import { HomePage } from "./app/screens";
 
 // console.log(useDeviceOrientation());
 // Amplify.configure({

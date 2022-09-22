@@ -2,17 +2,9 @@ import React from "react";
 import { Dimensions } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 
-import HomePage from "../screens/HomePage/homePage";
-import UpcomingShows from "../screens/upcomingShows";
-import Clips from "../screens/Clips/clips";
-import Store from "../screens/store";
-import WaitList from "../screens/waitList";
+import { HomePage, UpcomingShows, Clips, Store, WaitList, PlayVideoScreen, RentSeries, GladiatorsLanding, Episodes } from "../screens";
 import { NavBar } from "../components/";
-import PlayVideoScreen from "../screens/playVideoScreen";
 import HomeStack from "./homeStack";
-import RentSeries from "../screens/RentSeries/rentSeries";
-import GladiatorsLanding from "../screens/GladiatorsLanding/gladiatorsLanding";
-import Episodes from "../screens/Episodes/episodes";
 import AuthStack from "./AuthStack";
 
 const WIDTH = Dimensions.get("window").width;
@@ -176,4 +168,4 @@ const DrawerNav = () => {
 //   DrawerConfig
 // );
 
-export default DrawerNav;
+module.exports = DrawerNav;

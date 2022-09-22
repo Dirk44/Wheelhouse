@@ -12,7 +12,7 @@ import {
 
 import { useNavigation } from "@react-navigation/native";
 
-// import PlayVideoScreen from "../screens/playVideoScreen";
+// import { PlayVideoScreen } from "../screens";
 import VideoPlayer from "./VideoPlayer";
 import MenuText from "./MenuText";
 import movies from "../components/movies.json";

@@ -3,13 +3,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { TouchableWithoutFeedback, Keyboard } from "react-native";
 
-import SignIn from "../screens/signIn";
-import SignUp from "../screens/signUp";
-import ForgotPassword from "../screens/forgotPassword";
-import ConfirmAccount from "../screens/confirmAccount";
-import ResetPassword from "../screens/resetPassword";
-import SignOut from "../screens/signOut";
-// import HomePage from "../screens/HomePage/homePage";
+import { SignIn, SignUp, ForgotPassword, ConfirmAccount, ResetPassword, SignOut } from "../screens";
+// import { HomePage } from "../screens";
 
 const Stack = createStackNavigator();
 
@@ -32,4 +27,4 @@ const AuthStack = (props) => {
   );
 };
 
-export default AuthStack;
+module.exports = AuthStack;
