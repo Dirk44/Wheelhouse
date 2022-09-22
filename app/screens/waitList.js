@@ -12,9 +12,7 @@ import {
   TextInput,
 } from "react-native";
 
-import InputField from "../components/InputField";
-import NavBar from "../components/NavBar";
-import WhButton from "../components/WhButton";
+import { InputField, NavBar, WhButton } from "../components/";
 
 function WaitList() {
   return (

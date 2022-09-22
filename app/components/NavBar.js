@@ -1,42 +1,19 @@
 import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
-import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 import Hamburger from "./Hamburger";
+import { navBarStyles } from "../stylesheets/";
 
-export default function NavBar({ navigation }) {
+module.exports = function NavBar({ navigation }) {
   return (
-    <View style={styles.header}>
+    <View style={navBarStyles.header}>
       <TouchableOpacity>
-        <Hamburger style={styles.hamburger} />
+        <Hamburger style={navBarStyles.hamburger} />
       </TouchableOpacity>
-      <Text style={styles.navBar}>WheelHouse</Text>
+      <Text style={navBarStyles.navBar}>WheelHouse</Text>
     </View>
   );
 }
-const styles = StyleSheet.create({
-  hamburger: {
-    marginLeft: "6%",
-    opacity: 0.7,
-    justifyContent: "flex-start",
-  },
-  header: {
-    // flex: 1,
-    flexDirection: "row",
-    width: "100%",
-    height: 60,
-    backgroundColor: "rgba(37,37,37,255)",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  navBar: {
-    fontFamily: "Helvetica87Bold",
-    color: "white",
-    fontSize: 16,
-    fontWeight: "900",
-    marginRight: "3%",
-    opacity: 0.8,
-    top: 0,
-  },
-});
+

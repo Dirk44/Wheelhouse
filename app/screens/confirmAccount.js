@@ -12,8 +12,7 @@ import {
   Button,
   Alert,
 } from "react-native";
-import InputField from "../components/InputField";
-import WhButton from "../components/WhButton";
+import { InputField, WhButton } from "../components/";
 import { useNavigation } from "@react-navigation/native";
 import { useForm } from "react-hook-form";
 import { useRoute } from "@react-navigation/native";

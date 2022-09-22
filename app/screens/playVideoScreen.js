@@ -15,9 +15,8 @@ import { Video, AVPlaybackStatus } from "expo-av";
 import { ScaledSheet } from "react-native-size-matters";
 import { useNavigation } from "@react-navigation/native";
 
-import NavBar from "../components/NavBar";
-import VideoPlayer from "../components/VideoPlayer";
-import movies from "../components/movies.json";
+import { NavBar, VideoPlayer, movies } from "../components/";
+// import movies from "../components/movies.json";
 
 function PlayVideoScreen({ route, navigation }) {
   const video = React.useRef(null);

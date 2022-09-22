@@ -15,8 +15,7 @@ import { ScaledSheet } from "react-native-size-matters";
 
 import { Auth } from "aws-amplify";
 
-import InputField from "../components/InputField";
-import WhButton from "../components/WhButton";
+import { InputField, WhButton } from "../components/";
 
 import { useNavigation } from "@react-navigation/native";
 import { useForm, Controller } from "react-hook-form";

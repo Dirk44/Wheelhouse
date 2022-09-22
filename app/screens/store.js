@@ -10,7 +10,7 @@ import {
   Dimensions,
 } from "react-native";
 import { ScaledSheet } from "react-native-size-matters";
-import NavBar from "../components/NavBar";
+import { NavBar } from "../components/";
 
 function Store() {
   const { width, height } = Dimensions.get("window");

@@ -21,7 +21,7 @@ import Navigator from "./app/routes/drawer";
 import HomePage from "./app/screens/HomePage/homePage";
 import HomeStack from "./app/routes/homeStack";
 
-// console.log(useDeviceOrientation());
+console.log(useDeviceOrientation());
 Amplify.configure({
   ...config,
   Analytics: {
@@ -36,7 +36,7 @@ const DismissKeyboard = ({ children }) => (
 );
 
 const App = () => {
-  // Auth.signOut();
+  Auth.signOut();
 
   const [auth, setAuth] = useState(null);
 

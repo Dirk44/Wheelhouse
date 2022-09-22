@@ -13,10 +13,14 @@ import {
 import { useNavigation } from "@react-navigation/native";
 // import Carousel from "../../components/Carousel";
 import { ClipsStyles } from "./clipsStyles";
+<<<<<<< HEAD
 import MenuText from "../../components/MenuText";
 import ClipsCard from "../../components/ClipsCard";
 import NavBar from "../../components/NavBar";
 import movies from "../../components/movies.json";
+=======
+import { Card, MenuText, NavBar } from "../../components";
+>>>>>>> jorgen
 import { NavigationContainerRefContext } from "@react-navigation/native";
 
 function Clips({ route }) {

@@ -13,7 +13,7 @@ import { useNavigation } from "@react-navigation/native";
 
 import { HomePageStyles } from "./homePageStyles";
 import { AuthStack } from "../../routes/AuthStack";
-import NavBar from "../../components/NavBar";
+import { NavBar } from "../../components/";
 
 const HomePage = () => {
   const navigation = useNavigation();

@@ -1,16 +1,17 @@
 import { React, useState } from "react";
-import { View, StyleSheet, Button } from "react-native";
+import { View, Button } from "react-native";
 import { Video, AVPlaybackStatus } from "expo-av";
 import movies from "../components/movies.json";
+import { videoPlayerStyles } from "../stylesheets/";
 
 function VideoPlayer() {
   const video = React.useRef(null);
   const [status, setStatus] = React.useState({});
   return (
-    <View style={styles.playerWindow}>
+    <View style={videoPlayerStyles.playerWindow}>
       <Video
         ref={video}
-        style={styles.video}
+        style={videoPlayerStyles.video}
         source={{
           uri: movies.playVideo,
         }}
@@ -23,7 +24,7 @@ function VideoPlayer() {
         resizeMode="contain"
         onPlaybackStatusUpdate={(status) => setStatus(() => status)}
       />
-      <View style={styles.buttons}>
+      <View style={videoPlayerStyles.buttons}>
         <Button
           title={status.isPlaying ? "Pause" : "Play"}
           onPress={() =>
@@ -37,13 +38,5 @@ function VideoPlayer() {
   );
 }
 
-const styles = StyleSheet.create({
-  video: {
-    width: "100%",
-    aspectRatio: 16 / 9,
-  },
-  playerWindow: {
-    marginTop: "7%",
-  },
-});
-export default VideoPlayer;
+
+module.exports = VideoPlayer;

@@ -12,8 +12,7 @@ import {
   View,
   Button,
 } from "react-native";
-import InputField from "../components/InputField";
-import WhButton from "../components/WhButton";
+import { InputField, WhButton } from "../components/";
 
 function ResetPassword({ props }) {
   const [code, setCode] = useState("");

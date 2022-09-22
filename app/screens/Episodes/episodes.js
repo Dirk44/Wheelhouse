@@ -7,9 +7,7 @@ import {
   View,
 } from "react-native";
 import { EpisodeStyles } from "./episodesStyles";
-import NavBar from "../../components/NavBar";
-import Card from "../../components/Card";
-import movies from "../../components/movies.json";
+import { Card, movies, NavBar } from "../../components/";
 
 function Episodes() {
   return (

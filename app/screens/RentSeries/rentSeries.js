@@ -12,8 +12,7 @@ import {
 
 import { useNavigation } from "@react-navigation/native";
 import { RentSeriesStyles } from "./rentSeriesStyles";
-import NavBar from "../../components/NavBar";
-import WhButton from "../../components/WhButton";
+import { NavBar, WhButton } from "../../components/";
 
 const RentSeries = (props) => {
   const navigation = useNavigation();

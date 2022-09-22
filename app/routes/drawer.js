@@ -7,7 +7,7 @@ import UpcomingShows from "../screens/upcomingShows";
 import Clips from "../screens/Clips/clips";
 import Store from "../screens/store";
 import WaitList from "../screens/waitList";
-import NavBar from "../components/NavBar";
+import { NavBar } from "../components/";
 import PlayVideoScreen from "../screens/playVideoScreen";
 import HomeStack from "./homeStack";
 import RentSeries from "../screens/RentSeries/rentSeries";
@@ -43,6 +43,16 @@ const DrawerNav = () => {
       <Drawer.Screen
         name="Home"
         component={HomeStack}
+        onPress={() =>
+          navigation.dispatch(
+          CommonActions.reset({
+            index: 0,
+            routes: [
+              { name: 'HomePage' },
+            ],
+          })
+        )
+        }
         options={{
           navigationOptions: navigationOptions,
           title: "Home",

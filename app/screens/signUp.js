@@ -17,9 +17,7 @@ import { Auth } from "aws-amplify";
 import { useNavigation } from "@react-navigation/native";
 import { useForm } from "react-hook-form";
 
-import InputField from "../components/InputField";
-import WhButton from "../components/WhButton";
-import PhoneInputField from "../components/PhoneInputField";
+import { InputField, PhoneInputField, WhButton } from "../components/";
 
 function Signup() {
   // const [email, setEmail] = useState("");

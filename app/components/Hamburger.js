@@ -1,8 +1,9 @@
 import React from "react";
-import { StyleSheet } from "react-native";
+
 
 import { Entypo } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import { hamburgerStyles } from "../stylesheets/";
 
 function Hamburger() {
   const navigation = useNavigation();
@@ -12,17 +13,12 @@ function Hamburger() {
       name="menu"
       color="#b8b8b8"
       size={50}
-      style={styles.menuIcon}
+      style={hamburgerStyles.menuIcon}
       onPress={openMenu}
     />
   );
 }
 
-const styles = StyleSheet.create({
-  menuIcon: {
-    zIndex: 9,
-    left: 20,
-  },
-});
 
-export default Hamburger;
+
+module.exports = Hamburger;

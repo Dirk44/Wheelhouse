@@ -12,7 +12,7 @@ import {
 
 import { useNavigation } from "@react-navigation/native";
 import { GladiatorsLandingStyles } from "./gladiatorLandingStyles";
-import NavBar from "../../components/NavBar";
+import { NavBar } from "../../components/";
 
 function GladiatorsLanding(props) {
   const navigation = useNavigation();
