@@ -1,11 +1,16 @@
 module.exports = {
     cardStyles: require('./Card'),
     carouselStyles: require('./Carousel'),
+    clipsStyles: require('./Clips'),
+    episodeStyles: require('./Episodes'),
+    gladiatorsLandingStyles: require('./GladiatorsLanding'),
     hamburgerStyles: require('./Hamburger'),
+    homePageStyles: require('./HomePage'),
     inputFieldStyles: require('./InputField'),
     menuTextStyles: require('./MenuText'),
     navBarStyles: require('./NavBar'),
     phoneInputFieldStyles: require('./PhoneInputField'),
+    rentSeriesStyles: require('./RentSeries'),
     videoPlayerStyles: require('./VideoPlayer'),
     whButtonStyles: require('./WhButton'),
 };
