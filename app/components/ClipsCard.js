@@ -32,7 +32,6 @@ function Card(props) {
           <TouchableHighlight
             // underlayColor="#0aeeb5"
             onPress={() => {
-              // navigation.navigate("Video");
               console.warn("Play Button Pressed", props.playVideo);
               navigation.navigate("Video", {
                 videoPoster: props.poster,
@@ -42,7 +41,7 @@ function Card(props) {
             }}
           >
             <Image
-              style={{ height: 45, width: 45, opacity: 0.7 }}
+              style={{ height: 55, width: 55, opacity: 0.7 }}
               source={{ uri: props.playBtn }}
             />
           </TouchableHighlight>
@@ -60,44 +59,46 @@ const styles = ScaledSheet.create({
     width: "100%",
     height: 140,
     justifyContent: "center",
-    // alignItems: "center",
-    // marginTop: "1@s",
+    alignItems: "center",
+    marginTop: "25@s",
     // resizeMode: "cover",
     // backgroundColor: "white",
   },
   image: {
-    width: 165,
-    height: 90,
+    width: 208,
+    height: 115,
     justifyContent: "center",
     alignItems: "center",
     resizeMode: "cover",
     // marginTop: "20@s",
   },
   textContainer: {
+    justifyContent: "center",
     width: "100%",
-    marginTop: "6@s",
+    height: "25@s",
+    marginTop: "9@s",
     // backgroundColor: "red",
   },
   text: {
-    textAlign: "left",
+    textAlign: "center",
     color: "white",
-    opacity: 1,
-    fontSize: "11@s",
-    fontWeight: "600",
-    marginTop: "2@s",
-    fontFamily: "HelveticaRegular",
-    letterSpacing: 1,
+    opacity: 0.9,
+    fontSize: 17,
+    // fontWeight: "800",
+    // marginTop: "1@s",
+    fontFamily: "Helvetica87HeavyCondensed",
+    // letterSpacing: -1,
     // marginLeft: 5,
-    // paddingTop: 2,
+    // paddingTop: "2%",
     // backgroundColor: "red",
   },
   thumbContainer: {
-    width: "65%",
+    width: "80%",
     height: "auto",
     backgroundColor: "white",
-    borderWidth: 2,
+    borderWidth: 3,
     borderColor: "white",
-    borderRadius: 1,
+    borderRadius: 2,
   },
 });
 

@@ -14,8 +14,9 @@ import { useNavigation } from "@react-navigation/native";
 // import Carousel from "../../components/Carousel";
 import { ClipsStyles } from "./clipsStyles";
 import MenuText from "../../components/MenuText";
-import Card from "../../components/Card";
+import ClipsCard from "../../components/ClipsCard";
 import NavBar from "../../components/NavBar";
+import movies from "../../components/movies.json";
 import { NavigationContainerRefContext } from "@react-navigation/native";
 
 function Clips({ route }) {
@@ -31,19 +32,32 @@ function Clips({ route }) {
           style={ClipsStyles.background}
           source={require("../../assets/whLandingBg.jpg")}
         >
-          <View
-            style={{
-              width: "100%",
-              height: 250,
-              alignItems: "center",
-            }}
-          >
+          <View style={ClipsStyles.gladLogoContainer}>
             <Image
               style={ClipsStyles.gladiatorsLogo}
               source={require("../../assets/gladiatorsLogoSimple.png")}
             />
           </View>
-          <View
+          {/* <View style={ClipsStyles.clipsContainer}> */}
+          <View style={ClipsStyles.list}>
+            {movies.clips.map((movie) => {
+              return (
+                <View key={movie.id}>
+                  <ClipsCard
+                    key={movie.id}
+                    title={movie.title}
+                    thumb={movie.thumb}
+                    poster={movie.poster}
+                    playBtn={movie.playBtn}
+                    playVideo={movie.playVideo}
+                  />
+                </View>
+              );
+            })}
+          </View>
+          {/* </View> */}
+
+          {/* <View
             style={{
               flex: 0.7,
               width: "100%",
@@ -84,7 +98,7 @@ function Clips({ route }) {
               />
             </TouchableHighlight>
           </View>
-          <Text style={ClipsStyles.thumbText}>WATCH SERIES</Text>
+          <Text style={ClipsStyles.thumbText}>WATCH SERIES</Text> */}
 
           <Image
             style={ClipsStyles.whLogo}

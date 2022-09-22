@@ -1,50 +1,79 @@
-[
-  {
-    "id": 1,
-    "title": "A SPORT LIKE NO OTHER",
-    "thumb": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode1Thumb.png",
-    "poster": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode1Poster.png",
-    "playBtn": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/playBtn.png",
-    "playVideo": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/gladiators_of_steel_teaser+(Original).mp4"
-  },
-  {
-    "id": 2,
-    "title": "LETTING HER RIP",
-    "thumb": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode2Thumb.png",
-    "poster": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode2Poster.png",
-    "playBtn": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/playBtn.png",
-    "playVideo": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/clip_1_-_injuries+(1080p).mp4"
-  },
-  {
-    "id": 3,
-    "title": "RUNNING FOR THE MONEY",
-    "thumb": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode3Thumb.png",
-    "poster": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode3Poster.png",
-    "playBtn": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/playBtn.png",
-    "playVideo": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/clip_1_-_injuries+(1080p).mp4"
-  },
-  {
-    "id": 4,
-    "title": "A FAMILY SPORT",
-    "thumb": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode4Thumb.png",
-    "poster": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode4Poster.png",
-    "playBtn": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/playBtn.png",
-    "playVideo": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/clip_1_-_injuries+(1080p).mp4"
-  },
-  {
-    "id": 5,
-    "title": "INDIO, CA",
-    "thumb": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode5Thumb.png",
-    "poster": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode5Poster.png",
-    "playBtn": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/playBtn.png",
-    "playVideo": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/clip_1_-_injuries+(1080p).mp4"
-  },
-  {
-    "id": 6,
-    "title": "EIGHT MINUTES",
-    "thumb": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode6Thumb.png",
-    "poster": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode6Poster.png",
-    "playBtn": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/playBtn.png",
-    "playVideo": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/clip_1_-_injuries+(1080p).mp4"
-  }
-]
+{
+  "clips": [
+    {
+      "id": 1,
+      "title": "PLAY TRAILER",
+      "thumb": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/playTrailerThumb.jpg",
+      "poster": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode1Poster.png",
+      "playBtn": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/playBtn.png",
+      "playVideo": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/gladiators_of_steel_teaser+(Original).mp4"
+    },
+    {
+      "id": 2,
+      "title": "PLAY CLIP 1",
+      "thumb": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/playClipThumb.jpg",
+      "poster": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode1Poster.png",
+      "playBtn": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/playBtn.png",
+      "playVideo": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/clip_1_-_injuries+(1080p).mp4"
+    },
+    {
+      "id": 3,
+      "title": "WATCH SERIES",
+      "thumb": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/watchSeriesThumb.jpg",
+      "poster": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode1Poster.png",
+      "playBtn": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/playBtn.png",
+      "playVideo": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/gladiators_of_steel_teaser+(Original).mp4"
+    }
+  ],
+
+  "episodes": [
+    {
+      "id": 1,
+      "title": "A SPORT LIKE NO OTHER",
+      "thumb": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode1Thumb.png",
+      "poster": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode1Poster.png",
+      "playBtn": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/playBtn.png",
+      "playVideo": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/gladiators_of_steel_teaser+(Original).mp4"
+    },
+    {
+      "id": 2,
+      "title": "LETTING HER RIP",
+      "thumb": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode2Thumb.png",
+      "poster": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode2Poster.png",
+      "playBtn": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/playBtn.png",
+      "playVideo": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/clip_1_-_injuries+(1080p).mp4"
+    },
+    {
+      "id": 3,
+      "title": "RUNNING FOR THE MONEY",
+      "thumb": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode3Thumb.png",
+      "poster": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode3Poster.png",
+      "playBtn": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/playBtn.png",
+      "playVideo": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/clip_1_-_injuries+(1080p).mp4"
+    },
+    {
+      "id": 4,
+      "title": "A FAMILY SPORT",
+      "thumb": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode4Thumb.png",
+      "poster": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode4Poster.png",
+      "playBtn": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/playBtn.png",
+      "playVideo": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/clip_1_-_injuries+(1080p).mp4"
+    },
+    {
+      "id": 5,
+      "title": "INDIO, CA",
+      "thumb": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode5Thumb.png",
+      "poster": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode5Poster.png",
+      "playBtn": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/playBtn.png",
+      "playVideo": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/clip_1_-_injuries+(1080p).mp4"
+    },
+    {
+      "id": 6,
+      "title": "EIGHT MINUTES",
+      "thumb": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode6Thumb.png",
+      "poster": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/episode6Poster.png",
+      "playBtn": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/videoThumbnails/playBtn.png",
+      "playVideo": "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/clip_1_-_injuries+(1080p).mp4"
+    }
+  ]
+}

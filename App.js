@@ -43,6 +43,8 @@ const App = () => {
   let [fontsLoaded] = useFonts({
     HelveticaRegular: require("./app/assets/fonts/Yantramanav-Black.ttf"),
     Helvetica87Bold: require("./app/assets/fonts/Montserrat-Black.ttf"),
+    Helvetica87Bold: require("./app/assets/fonts/Montserrat-Black.ttf"),
+    Helvetica87HeavyCondensed: require("./app/assets/fonts/Helvetica-87-Heavy-Condensed.ttf"),
   });
 
   if (!fontsLoaded) {

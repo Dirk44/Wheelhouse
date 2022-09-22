@@ -28,7 +28,7 @@ function PlayVideoScreen({ route, navigation }) {
   //   return () => {
   //     console.log("component unmounted");
   //     // put actions when screen unmounts
-  // setStatus((status) => ({ ...status, isPlaying: false }));
+  //     setStatus((status) => ({ ...status, isPlaying: false }));
   //   };
   // }, []);
 

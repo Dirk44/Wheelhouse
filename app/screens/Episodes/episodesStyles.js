@@ -29,7 +29,7 @@ export const EpisodeStyles = ScaledSheet.create({
   },
   list: {
     alignItems: "center",
-    width: "75%",
+    width: "55%",
     // marginTop: "-10@s",
     flex: 7,
     // backgroundColor: "white",

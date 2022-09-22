@@ -67,7 +67,7 @@ const HomePage = () => {
           <View>
             <TouchableOpacity
               style={HomePageStyles.buttonStyle}
-              onPress={() => navigation.navigate("")}
+              onPress={({ route }) => navigation.navigate("")}
             >
               <Text style={HomePageStyles.buttonText}>SIGN UP</Text>
             </TouchableOpacity>

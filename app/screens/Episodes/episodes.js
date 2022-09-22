@@ -42,7 +42,7 @@ function Episodes() {
             />
           </View>
           <View style={EpisodeStyles.list}>
-            {movies.map((movie) => {
+            {movies.episodes.map((movie) => {
               return (
                 <View key={movie.id}>
                   <Card
