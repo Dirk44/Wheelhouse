@@ -212,4 +212,4 @@ const styles = ScaledSheet.create({
   },
 });
 
-export default PlayVideoScreen;
+module.exports = PlayVideoScreen;

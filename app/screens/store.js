@@ -67,4 +67,4 @@ const styles = ScaledSheet.create({
   },
 });
 
-export default Store;
+module.exports = Store;

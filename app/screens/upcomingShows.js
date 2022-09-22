@@ -104,4 +104,4 @@ const styles = ScaledSheet.create({
   },
 });
 
-export default UpcomingShows;
+module.exports = UpcomingShows;
