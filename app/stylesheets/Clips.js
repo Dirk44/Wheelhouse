@@ -57,5 +57,4 @@ const clipsStyles = ScaledSheet.create({
   },
 });
 
-
 module.exports = clipsStyles;

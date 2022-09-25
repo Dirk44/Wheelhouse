@@ -1,6 +1,8 @@
 module.exports = {
     Card: require('./Card'),
     Carousel: require('./Carousel'),
+    CheckboxComponent: require('./Checkbox'),
+    ClipsCard: require('./ClipsCard'),
     Hamburger: require('./Hamburger'),
     InputField: require('./InputField'),
     MenuText: require('./MenuText'),

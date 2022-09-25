@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  StyleSheet,
   Platform,
   Text,
   SafeAreaView,
@@ -19,6 +18,8 @@ import { InputField, WhButton } from "../components/";
 
 import { useNavigation } from "@react-navigation/native";
 import { useForm, Controller } from "react-hook-form";
+
+import { signInStyles } from '../stylesheets';
 
 const EMAIL_REGEX =
   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9]+)*$/;
@@ -60,17 +61,17 @@ function SignIn() {
     navigation.navigate("SignUp");
   };
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={signInStyles.container}>
       <ImageBackground
-        style={styles.background}
+        style={signInStyles.background}
         source={require("../assets/landing-page-background.jpg")}
       >
         <Image
           source={require("../assets/wh-logo.png")}
-          style={styles.whLogo}
+          style={signInStyles.whLogo}
         />
-        <Text style={styles.loginText}>Login</Text>
-        <View style={styles.inputs}>
+        <Text style={signInStyles.loginText}>Login</Text>
+        <View style={signInStyles.inputs}>
           <InputField
             name="username"
             placeholder="USERNAME "
@@ -92,7 +93,7 @@ function SignIn() {
             }}
             secureTextEntry
           />
-          {/* <Text style={styles.or}>Or</Text> */}
+          {/* <Text style={signInStyles.or}>Or</Text> */}
           {/* <InputField
             name="email"
             placeholder="Email"
@@ -123,12 +124,12 @@ function SignIn() {
             onPress={handleSubmit(onLoginPressed)}
           />
 
-          <Text style={styles.signupText}>Forgot Password?</Text>
+          <Text style={signInStyles.signupText}>Forgot Password?</Text>
           <Button title="Click Here" onPress={onForgotPasswordPressed} />
           <View>
-            <Text style={styles.signupText}>Haven't signed up?</Text>
+            <Text style={signInStyles.signupText}>Haven't signed up?</Text>
             <Button
-              style={styles.signupText}
+              style={signInStyles.signupText}
               title="Sign up here"
               onPress={onSignUpPressed}
             />
@@ -138,47 +139,5 @@ function SignIn() {
     </SafeAreaView>
   );
 }
-
-const styles = ScaledSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#000",
-    // paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  },
-  background: {
-    flex: 1,
-    width: "100%",
-    height: "auto",
-    alignItems: "center",
-  },
-  inputs: {
-    width: "100%",
-    height: "50%",
-    alignItems: "center",
-    marginTop: "20@s",
-  },
-  loginText: {
-    color: "white",
-    fontSize: "30@s",
-    fontFamily: "HelveticaRegular",
-    opacity: 0.9,
-    paddingTop: "20@s",
-    marginTop: "60@s",
-  },
-  signupText: {
-    color: "white",
-    fontSize: "18@s",
-    fontFamily: "HelveticaRegular",
-    marginTop: "35@s",
-    opacity: 0.9,
-  },
-  whLogo: {
-    flex: 1,
-    overflow: "visible",
-    width: "80%",
-    height: "auto",
-    marginRight: "6%",
-  },
-});
 
 module.exports = SignIn;

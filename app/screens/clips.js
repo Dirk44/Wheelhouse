@@ -8,7 +8,7 @@ import {
 } from "react-native";
 
 import { clipsStyles } from "../stylesheets";
-import { ClipsCard, movies, NavBar } from "../components";
+import { ClipsCard, MenuText, NavBar, movies } from "../components";
 
 import { NavigationContainerRefContext } from "@react-navigation/native";
 
