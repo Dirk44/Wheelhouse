@@ -16,6 +16,7 @@ import {
 import { Auth } from "aws-amplify";
 import { useNavigation } from "@react-navigation/native";
 import { useForm } from "react-hook-form";
+import { signUpStyles } from '../stylesheets';
 
 import { InputField, PhoneInputField, WhButton } from "../components/";
 
@@ -54,17 +55,17 @@ function Signup() {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={signUpStyles.container}>
       <ImageBackground
-        style={styles.background}
+        style={signUpStyles.background}
         source={require("../assets/landing-page-background.jpg")}
       >
         <Image
           source={require("../assets/wh-logo.png")}
-          style={styles.whLogo}
+          style={signUpStyles.whLogo}
         />
-        <Text style={styles.signupText}>Signup</Text>
-        <View style={styles.inputs}>
+        <Text style={signUpStyles.signupText}>Signup</Text>
+        <View style={signUpStyles.inputs}>
           <InputField
             name="username"
             placeholder="USERNAME "
@@ -124,75 +125,14 @@ function Signup() {
           <WhButton title="Signup" onPress={handleSubmit(onSignUpPressed)} />
           {/* copy props from Whbutton to other buttons */}
 
-          {/* <View style={styles.signUpContainer}> */}
+          {/* <View style={signUpStyles.signUpContainer}> */}
 
-          <Text style={styles.loginText}>Back to Login</Text>
+          <Text style={signUpStyles.loginText}>Back to Login</Text>
           <Button title="Click Here" onPress={onBackToLoginPressed} />
         </View>
       </ImageBackground>
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#000",
-    // paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  },
-  background: {
-    flex: 1,
-    width: "100%",
-    height: "auto",
-    alignItems: "center",
-  },
-  inputs: {
-    width: "100%",
-    height: "50%",
-    alignItems: "center",
-  },
-  input: {
-    justifyContent: "center",
-    width: "75%",
-    height: "10%",
-    backgroundColor: "#f2f3f5",
-    borderRadius: 10,
-    borderColor: "rgba(37,37,37,255)",
-    fontSize: 20,
-    marginTop: 12,
-    paddingLeft: 8,
-    shadowColor: "black",
-    shadowOffset: { width: 5, height: 5 },
-    shadowOpacity: 0.9,
-    shadowRadius: 10,
-  },
-  signupText: {
-    color: "white",
-    fontSize: 30,
-    fontFamily: "HelveticaRegular",
-    opacity: 0.9,
-    paddingTop: "5%",
-    marginTop: "18%",
-    // shadowColor: "black",
-    // shadowOffset: { width: 5, height: 5 },
-    // shadowOpacity: 1,
-    // shadowRadius: 10,
-  },
-  loginText: {
-    color: "white",
-    fontSize: 18,
-    fontFamily: "HelveticaRegular",
-    marginTop: "10%",
-    opacity: 0.9,
-  },
-  whLogo: {
-    width: "80%",
-    height: 130,
-    // resizeMode: "contain",
-    overflow: "visible",
-    marginTop: "12%",
-    marginRight: "7%",
-  },
-});
 
 module.exports = Signup;

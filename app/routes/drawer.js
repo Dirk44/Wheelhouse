@@ -2,7 +2,7 @@ import React from "react";
 import { Dimensions } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 
-import { HomePage, UpcomingShows, Clips, Store, WaitList, PlayVideoScreen, RentSeries, GladiatorsLanding, Episodes } from "../screens";
+import { HomePage, UpcomingShows, Clips, Store, WaitList, PlayVideoScreen, RentSeries, GladiatorsLanding, Episodes, CreditCard } from "../screens";
 import { NavBar } from "../components/";
 import HomeStack from "./homeStack";
 import AuthStack from "./AuthStack";
@@ -34,7 +34,7 @@ const DrawerNav = () => {
 
       <Drawer.Screen
         name="Home"
-        component={HomeStack}
+        component={CreditCard}
         onPress={() =>
           navigation.dispatch(
           CommonActions.reset({
