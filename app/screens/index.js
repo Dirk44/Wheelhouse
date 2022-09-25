@@ -1,6 +1,7 @@
 module.exports = {
     Clips: require('./clips'),
     ConfirmAccount: require('./confirmAccount'),
+    CreditCard: require('./creditCard'),
     Episodes: require('./episodes'),
     ForgotPassword: require('./forgotPassword'),
     GladiatorsLanding: require('./gladiatorsLanding'),

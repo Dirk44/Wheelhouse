@@ -12,7 +12,7 @@ import {
 import { ScaledSheet } from "react-native-size-matters";
 import { useNavigation } from "@react-navigation/native";
 
-import { PlayVideoScreen } from "../screens";
+// import { PlayVideoScreen } from "../screens";
 import VideoPlayer from "./VideoPlayer";
 import MenuText from "./MenuText";
 import movies from "../components/movies.json";
@@ -102,4 +102,4 @@ const styles = ScaledSheet.create({
   },
 });
 
-export default Card;
+module.exports = Card;

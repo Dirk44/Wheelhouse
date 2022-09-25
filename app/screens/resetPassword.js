@@ -1,7 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import {
-  StyleSheet,
   Platform,
   Text,
   SafeAreaView,
@@ -13,6 +12,8 @@ import {
   Button,
 } from "react-native";
 import { InputField, WhButton } from "../components/";
+
+import { resetPasswordStyles } from '../stylesheets';
 
 function ResetPassword({ props }) {
   const [code, setCode] = useState("");
@@ -30,17 +31,17 @@ function ResetPassword({ props }) {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={resetPasswordStyles.container}>
       <ImageBackground
-        style={styles.background}
+        style={resetPasswordStyles.background}
         source={require("../assets/landing-page-background.jpg")}
       >
         <Image
           source={require("../assets/wh-logo.png")}
-          style={styles.whLogo}
+          style={resetPasswordStyles.whLogo}
         />
-        <Text style={styles.loginText}>Reset Password</Text>
-        <View style={styles.inputs}>
+        <Text style={resetPasswordStyles.loginText}>Reset Password</Text>
+        <View style={resetPasswordStyles.inputs}>
           <InputField
             placeholder="Input Verification code"
             value={code}
@@ -55,61 +56,12 @@ function ResetPassword({ props }) {
 
           <WhButton title="Submit" onPress={onSubmitNewPassword} />
 
-          <Text style={styles.signupText}>Back to Sign In</Text>
+          <Text style={resetPasswordStyles.signupText}>Back to Sign In</Text>
           <Button title="Sign in here" onPress={onBackToSigninPressed} />
         </View>
       </ImageBackground>
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#000",
-    // paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  },
-  background: {
-    flex: 1,
-    width: "100%",
-    height: "auto",
-    alignItems: "center",
-  },
-  inputs: {
-    width: "100%",
-    height: "50%",
-    alignItems: "center",
-  },
-  loginText: {
-    color: "white",
-    fontSize: 30,
-    fontFamily: "HelveticaRegular",
-    opacity: 0.9,
-    paddingTop: "5%",
-    marginTop: "18%",
-    shadowColor: "black",
-    shadowOffset: { width: 5, height: 5 },
-    shadowOpacity: 1,
-    shadowRadius: 10,
-  },
-  signUpContainer: {},
-  signupText: {
-    color: "white",
-    fontSize: 18,
-    fontFamily: "HelveticaRegular",
-    marginTop: "15%",
-    opacity: 0.9,
-
-    // justifyContent: "center",
-    // alignItems: "center",
-  },
-  whLogo: {
-    width: "80%",
-    height: 130,
-    resizeMode: "contain",
-    // position: "absolute",
-    marginTop: "12%",
-  },
-});
 
 module.exports = ResetPassword;

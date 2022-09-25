@@ -17,6 +17,7 @@ import { useNavigation } from "@react-navigation/native";
 import { useForm } from "react-hook-form";
 import { useRoute } from "@react-navigation/native";
 import { Auth } from "aws-amplify";
+import { confirmAccountStyles } from '../stylesheets';
 
 function ConfirmAccount({ props }) {
   const route = useRoute();
@@ -57,17 +58,17 @@ function ConfirmAccount({ props }) {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={confirmAccountStyles.container}>
       <ImageBackground
-        style={styles.background}
+        style={confirmAccountStyles.background}
         source={require("../assets/landing-page-background.jpg")}
       >
         <Image
           source={require("../assets/wh-logo.png")}
-          style={styles.whLogo}
+          style={confirmAccountStyles.whLogo}
         />
-        <Text style={styles.loginText}>Verify Account</Text>
-        <View style={styles.inputs}>
+        <Text style={confirmAccountStyles.loginText}>Verify Account</Text>
+        <View style={confirmAccountStyles.inputs}>
           <InputField
             name="username"
             placeholder="Input Verification code"
@@ -85,68 +86,15 @@ function ConfirmAccount({ props }) {
 
           <WhButton title="Verify" onPress={handleSubmit(onVerifyPressed)} />
 
-          <Text style={styles.signupText}>Resend Code</Text>
+          <Text style={confirmAccountStyles.signupText}>Resend Code</Text>
           <Button title="Click Here" onPress={onResendCodePressed} />
 
-          <Text style={styles.signupText}>Back to Sign In</Text>
+          <Text style={confirmAccountStyles.signupText}>Back to Sign In</Text>
           <Button title="Sign in here" onPress={onBackToSigninPressed} />
         </View>
       </ImageBackground>
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#000",
-    // paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  },
-  background: {
-    flex: 1,
-    width: "100%",
-    height: "auto",
-    alignItems: "center",
-  },
-  inputs: {
-    width: "100%",
-    height: "50%",
-    alignItems: "center",
-  },
-  loginText: {
-    color: "white",
-    fontSize: 30,
-    fontFamily: "HelveticaRegular",
-    opacity: 0.9,
-    paddingTop: "5%",
-    marginTop: "18%",
-    shadowColor: "black",
-    shadowOffset: { width: 5, height: 5 },
-    shadowOpacity: 1,
-    shadowRadius: 10,
-  },
-  signUpContainer: {},
-  signupText: {
-    color: "white",
-    fontSize: 18,
-    fontFamily: "HelveticaRegular",
-    marginTop: "15%",
-    opacity: 0.9,
-
-    // justifyContent: "center",
-    // alignItems: "center",
-  },
-  whLogo: {
-    width: "80%",
-    height: 130,
-    resizeMode: "contain",
-    overflow: "visible",
-    marginTop: "12%",
-    shadowColor: "black",
-    shadowOffset: { width: 10, height: 10 },
-    shadowOpacity: 0.8,
-    shadowRadius: 15,
-  },
-});
 
 module.exports = ConfirmAccount;

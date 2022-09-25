@@ -15,6 +15,7 @@ import { InputField, WhButton } from "../components/";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { useNavigation } from "@react-navigation/native";
+import { signOutStyles } from '../stylesheets';
 
 function SignOut({ props }) {
   const navigation = useNavigation();
@@ -28,74 +29,26 @@ function SignOut({ props }) {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={signOutStyles.container}>
       <ImageBackground
-        style={styles.background}
+        style={signOutStyles.background}
         source={require("../assets/landing-page-background.jpg")}
       >
         <Image
           source={require("../assets/wh-logo.png")}
-          style={styles.whLogo}
+          style={signOutStyles.whLogo}
         />
-        <Text style={styles.loginText}>Logout</Text>
-        <View style={styles.inputs}>
+        <Text style={signOutStyles.loginText}>Logout</Text>
+        <View style={signOutStyles.inputs}>
           <WhButton title="Logout" onPress={onLogoutPressed} />
-          {/* <View style={styles.signUpContainer}> */}
+          {/* <View style={signOutStyles.signUpContainer}> */}
 
-          <Text style={styles.signupText}>Sign In</Text>
+          <Text style={signOutStyles.signupText}>Sign In</Text>
           <Button title="Click Here" onPress={onSignInPressed} />
         </View>
       </ImageBackground>
     </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#000",
-    // paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-  },
-  background: {
-    flex: 1,
-    width: "100%",
-    height: "auto",
-    alignItems: "center",
-  },
-  inputs: {
-    width: "100%",
-    height: "50%",
-    alignItems: "center",
-  },
-  loginText: {
-    color: "white",
-    fontSize: 30,
-    fontFamily: "HelveticaRegular",
-    opacity: 0.9,
-    paddingTop: "5%",
-    marginTop: "18%",
-    shadowColor: "black",
-    shadowOffset: { width: 5, height: 5 },
-    shadowOpacity: 1,
-    shadowRadius: 10,
-  },
-  signupText: {
-    color: "white",
-    fontSize: 18,
-    fontFamily: "HelveticaRegular",
-    marginTop: "15%",
-    opacity: 0.9,
-
-    // justifyContent: "center",
-    // alignItems: "center",
-  },
-  whLogo: {
-    width: "80%",
-    height: 130,
-    resizeMode: "contain",
-    // position: "absolute",
-    marginTop: "12%",
-  },
-});
 
 module.exports = SignOut;
