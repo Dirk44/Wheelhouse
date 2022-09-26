@@ -8,6 +8,7 @@ import {
   ImageBackground,
   Pressable,
   TouchableHighlight,
+  TouchableWithoutFeedback,
 } from "react-native";
 
 import { useNavigation } from "@react-navigation/native";
@@ -24,38 +25,60 @@ function Card(props) {
   const video = React.useRef(null);
   const [status, setStatus] = React.useState({});
   const navigation = useNavigation();
-
+  const [index, setIndex] = useState(0);
+  const borderColorChange = () => {
+    setTimeout(() => {
+      setIndex(0);
+    }, 100);
+  };
+  index === 0;
   return (
     // <View>
     <View style={cardStyles.container}>
-      <View style={cardStyles.thumbContainer}>
-        <ImageBackground style={cardStyles.image} source={{ uri: props.thumb }}>
-          <TouchableHighlight
-            // underlayColor="#0aeeb5"
-            onPress={() => {
-              // navigation.navigate("Video");
-              console.warn("Play Button Pressed", props.playVideo);
-              navigation.navigate("Video", {
-                videoPoster: props.poster,
-                videoTitle: props.title,
-                videoUrl: props.playVideo,
-              });
-            }}
+      <Pressable
+        underlayColor="none"
+        onPressIn={() => {
+          borderColorChange(setIndex(1));
+          navigation.navigate("", {
+            videoPoster: props.poster,
+            videoTitle: props.title,
+            videoUrl: props.playVideo,
+          });
+        }}
+      >
+        <View
+          style={[
+            cardStyles.thumbContainer,
+            { borderColor: index === 1 ? "#0aeeb5" : "white" },
+          ]}
+        >
+          <ImageBackground
+            style={cardStyles.image}
+            source={{ uri: props.thumb }}
           >
             <Image
-              style={{ height: 45, width: 45, opacity: 0.7 }}
+              style={{
+                height: 45,
+                width: 45,
+                tintColor: index === 1 ? "#0aeeb5" : "white",
+              }}
               source={{ uri: props.playBtn }}
             />
-          </TouchableHighlight>
-        </ImageBackground>
-      </View>
+          </ImageBackground>
+        </View>
+      </Pressable>
       <View style={cardStyles.textContainer}>
-        <Text style={cardStyles.text}>{props.title}</Text>
+        <Text
+          style={[
+            cardStyles.text,
+            { color: index === 1 ? "#0aeeb5" : "white" },
+          ]}
+        >
+          {props.title}
+        </Text>
       </View>
     </View>
   );
 }
-
-
 
 module.exports = Card;

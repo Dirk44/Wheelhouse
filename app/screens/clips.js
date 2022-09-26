@@ -1,27 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import {
-  StyleSheet,
-  Text,
   ImageBackground,
-  TouchableHighlight,
   SafeAreaView,
   Image,
   ScrollView,
   View,
 } from "react-native";
 
-import { useNavigation } from "@react-navigation/native";
-// import Carousel from "../../components/Carousel";
 import { clipsStyles } from "../stylesheets";
 import { ClipsCard, MenuText, NavBar, movies } from "../components";
 
 import { NavigationContainerRefContext } from "@react-navigation/native";
 
-function Clips({ route }) {
-  const [clickState, setClickState] = useState({
-    style: (borderColor = "#07fbb9"),
-  });
-  const navigation = useNavigation();
+function Clips() {
+  // const [clickState, setClickState] = useState({
+  //   style: (borderColor = "#07fbb9"),
+  // });
   return (
     <SafeAreaView style={clipsStyles.container}>
       <NavBar />

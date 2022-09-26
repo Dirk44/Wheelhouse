@@ -2,7 +2,18 @@ import React from "react";
 import { Dimensions } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 
-import { HomePage, UpcomingShows, Clips, Store, WaitList, PlayVideoScreen, RentSeries, GladiatorsLanding, Episodes, CreditCard } from "../screens";
+import {
+  HomePage,
+  UpcomingShows,
+  Clips,
+  Store,
+  WaitList,
+  PlayVideoScreen,
+  RentSeries,
+  GladiatorsLanding,
+  Episodes,
+  CreditCard,
+} from "../screens";
 import { NavBar } from "../components/";
 import HomeStack from "./homeStack";
 import AuthStack from "./AuthStack";
@@ -34,16 +45,14 @@ const DrawerNav = () => {
 
       <Drawer.Screen
         name="Home"
-        component={CreditCard}
+        component={HomeStack}
         onPress={() =>
           navigation.dispatch(
-          CommonActions.reset({
-            index: 0,
-            routes: [
-              { name: 'HomePage' },
-            ],
-          })
-        )
+            CommonActions.reset({
+              index: 0,
+              routes: [{ name: "HomePage" }],
+            })
+          )
         }
         options={{
           navigationOptions: navigationOptions,

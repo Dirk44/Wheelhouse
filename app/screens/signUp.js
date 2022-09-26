@@ -16,11 +16,11 @@ import {
 import { Auth } from "aws-amplify";
 import { useNavigation } from "@react-navigation/native";
 import { useForm } from "react-hook-form";
-import { signUpStyles } from '../stylesheets';
+import { signUpStyles } from "../stylesheets";
 
 import { InputField, PhoneInputField, WhButton } from "../components/";
 
-function Signup() {
+function SignUp() {
   // const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   // const [password, setPassword] = useState("");
@@ -135,4 +135,4 @@ function Signup() {
   );
 }
 
-module.exports = Signup;
+module.exports = SignUp;

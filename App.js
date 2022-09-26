@@ -11,22 +11,22 @@ import {
 } from "react-native";
 import { NavigationContainer, StackActions } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-// import Amplify from "aws-amplify";
-// import config from "./src/aws-exports";
+import Amplify from "aws-amplify";
+import config from "./src/aws-exports";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
 
 // import { AuthStack } from "./app/routes";
-import { Navigator, HomeStack } from "./app/routes";
+import { Navigator, HomeStack, AuthStack } from "./app/routes";
 import { HomePage } from "./app/screens";
 
 // console.log(useDeviceOrientation());
-// Amplify.configure({
-//   ...config,
-//   Analytics: {
-//     disabled: true,
-//   },
-// });
+Amplify.configure({
+  ...config,
+  Analytics: {
+    disabled: true,
+  },
+});
 
 const DismissKeyboard = ({ children }) => (
   <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
@@ -37,7 +37,7 @@ const DismissKeyboard = ({ children }) => (
 const App = () => {
   // Auth.signOut();
 
-  // const [auth, setAuth] = useState(null);
+  const [auth, setAuth] = useState(null);
 
   let [fontsLoaded] = useFonts({
     HelveticaRegular: require("./app/assets/fonts/Yantramanav-Black.ttf"),
@@ -59,8 +59,8 @@ const App = () => {
       />
       <DismissKeyboard>
         <NavigationContainer>
-          {/* {!auth ? <Navigator /> : <AuthStack />} */}
-          <Navigator />
+          {!auth ? <Navigator /> : <AuthStack />}
+          {/* <Navigator /> */}
         </NavigationContainer>
       </DismissKeyboard>
     </>
