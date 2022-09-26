@@ -1,14 +1,10 @@
 import { ScaledSheet } from "react-native-size-matters";
 
-const cardStyles = ScaledSheet.create({
+const EpisodesCardStyles = ScaledSheet.create({
   container: {
     width: "100%",
     height: 140,
     justifyContent: "center",
-    // alignItems: "center",
-    // marginTop: "1@s",
-    // resizeMode: "cover",
-    // backgroundColor: "white",
   },
   image: {
     width: 165,
@@ -16,12 +12,10 @@ const cardStyles = ScaledSheet.create({
     justifyContent: "center",
     alignItems: "center",
     resizeMode: "cover",
-    // marginTop: "20@s",
   },
   textContainer: {
     width: "100%",
     marginTop: "6@s",
-    // backgroundColor: "red",
   },
   text: {
     textAlign: "left",
@@ -32,18 +26,14 @@ const cardStyles = ScaledSheet.create({
     marginTop: "2@s",
     fontFamily: "HelveticaRegular",
     letterSpacing: 1,
-    // marginLeft: 5,
-    // paddingTop: 2,
-    // backgroundColor: "red",
   },
   thumbContainer: {
     width: "100%",
     height: "auto",
     backgroundColor: "white",
     borderWidth: 2,
-    // borderColor: "white",
     borderRadius: 1,
   },
 });
 
-module.exports = cardStyles;
+module.exports = EpisodesCardStyles;

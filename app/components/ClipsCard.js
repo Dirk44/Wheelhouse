@@ -17,8 +17,9 @@ import VideoPlayer from "./VideoPlayer";
 import MenuText from "./MenuText";
 import movies from "../components/movies.json";
 import { Video } from "expo-av";
+import { clipsCardStyles } from "../stylesheets";
 
-function Card(props) {
+function ClipsCard(props) {
   // const [videos, setVideos] = useState([movies]);
   const video = React.useRef(null);
   const [status, setStatus] = React.useState({});
@@ -32,25 +33,30 @@ function Card(props) {
 
   return (
     // <View>
-    <View style={styles.container}>
+    <View style={clipsCardStyles.container}>
       <Pressable
         underlayColor="none"
         onPressIn={() => {
           borderColorChange(setIndex(1));
-          navigation.navigate("", {
-            videoPoster: props.poster,
-            videoTitle: props.title,
-            videoUrl: props.playVideo,
-          });
+          setTimeout(() => {
+            navigation.navigate("Video", {
+              videoPoster: props.poster,
+              videoTitle: props.title,
+              videoUrl: props.playVideo,
+            });
+          }, 200);
         }}
       >
         <View
           style={[
-            styles.thumbContainer,
+            clipsCardStyles.thumbContainer,
             { borderColor: index === 1 ? "#0aeeb5" : "white" },
           ]}
         >
-          <ImageBackground style={styles.image} source={{ uri: props.thumb }}>
+          <ImageBackground
+            style={clipsCardStyles.image}
+            source={{ uri: props.thumb }}
+          >
             <Image
               style={{
                 height: 55,
@@ -63,9 +69,12 @@ function Card(props) {
           </ImageBackground>
         </View>
       </Pressable>
-      <View style={styles.textContainer}>
+      <View style={clipsCardStyles.textContainer}>
         <Text
-          style={[styles.text, { color: index === 1 ? "#0aeeb5" : "white" }]}
+          style={[
+            clipsCardStyles.text,
+            { color: index === 1 ? "#0aeeb5" : "white" },
+          ]}
         >
           {props.title}
         </Text>
@@ -74,52 +83,4 @@ function Card(props) {
   );
 }
 
-const styles = ScaledSheet.create({
-  container: {
-    width: "100%",
-    height: "125@s",
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: "25@s",
-    // resizeMode: "cover",
-    // backgroundColor: "white",
-  },
-  image: {
-    width: "185@s",
-    height: "101@s",
-    justifyContent: "center",
-    alignItems: "center",
-    resizeMode: "cover",
-    // marginTop: "20@s",
-  },
-  textContainer: {
-    justifyContent: "center",
-    width: "100%",
-    height: "25@s",
-    marginTop: "9@s",
-    // backgroundColor: "red",
-  },
-  text: {
-    textAlign: "center",
-    color: "white",
-    opacity: 0.9,
-    fontSize: 17,
-    // fontWeight: "800",
-    // marginTop: "1@s",
-    fontFamily: "Helvetica87HeavyCondensed",
-    // letterSpacing: -1,
-    // marginLeft: 5,
-    // paddingTop: "2%",
-    // backgroundColor: "red",
-  },
-  thumbContainer: {
-    width: "80%",
-    height: "auto",
-    backgroundColor: "white",
-    borderWidth: 3,
-    // borderColor: "white",
-    borderRadius: 2,
-  },
-});
-
-module.exports = Card;
+module.exports = ClipsCard;

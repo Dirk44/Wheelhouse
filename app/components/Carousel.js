@@ -2,10 +2,9 @@ import React from "react";
 import { View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
-
 import { useNavigation } from "@react-navigation/native";
 
-import Card from "./Card";
+import Card from "./EpisodesCard";
 import movies from "../components/movies.json";
 import { TouchableHighlight } from "react-native-gesture-handler";
 import { carouselStyles } from "../stylesheets/";
@@ -31,7 +30,5 @@ function Carousel() {
     </View>
   );
 }
-
-
 
 module.exports = Carousel;

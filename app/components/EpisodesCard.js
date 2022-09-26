@@ -13,15 +13,13 @@ import {
 
 import { useNavigation } from "@react-navigation/native";
 
-// import { PlayVideoScreen } from "../screens";
 import VideoPlayer from "./VideoPlayer";
 import MenuText from "./MenuText";
-import movies from "../components/movies.json";
+import movies from "./movies.json";
 import { Video } from "expo-av";
 import { cardStyles } from "../stylesheets";
 
-function Card(props) {
-  // const [videos, setVideos] = useState([movies]);
+function EpisodesCard(props) {
   const video = React.useRef(null);
   const [status, setStatus] = React.useState({});
   const navigation = useNavigation();
@@ -29,7 +27,7 @@ function Card(props) {
   const borderColorChange = () => {
     setTimeout(() => {
       setIndex(0);
-    }, 100);
+    }, 150);
   };
   index === 0;
   return (
@@ -39,11 +37,13 @@ function Card(props) {
         underlayColor="none"
         onPressIn={() => {
           borderColorChange(setIndex(1));
-          navigation.navigate("", {
-            videoPoster: props.poster,
-            videoTitle: props.title,
-            videoUrl: props.playVideo,
-          });
+          setTimeout(() => {
+            navigation.navigate("Video", {
+              videoPoster: props.poster,
+              videoTitle: props.title,
+              videoUrl: props.playVideo,
+            });
+          }, 200);
         }}
       >
         <View
@@ -81,4 +81,4 @@ function Card(props) {
   );
 }
 
-module.exports = Card;
+module.exports = EpisodesCard;
