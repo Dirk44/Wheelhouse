@@ -7,7 +7,7 @@ import {
   View,
 } from "react-native";
 import { episodeStyles } from "../stylesheets";
-import { Card, movies, NavBar } from "../components";
+import { EpisodesCard, movies, NavBar } from "../components";
 
 function Episodes() {
   return (
@@ -43,7 +43,7 @@ function Episodes() {
             {movies.episodes.map((movie) => {
               return (
                 <View key={movie.id}>
-                  <Card
+                  <EpisodesCard
                     key={movie.id}
                     title={movie.title}
                     thumb={movie.thumb}

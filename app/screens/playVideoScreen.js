@@ -69,7 +69,7 @@ function PlayVideoScreen({ route, navigation }) {
               useNativeControls={true}
               usePoster
               resizeMode="contain"
-              onPlaybackStatusUpdate={(status) => setStatus(() => status)}
+              // onPlaybackStatusUpdate={(status) => setStatus(() => status)}
             />
             {/* <View style={playVideoScreenStyles.buttons}>
               <Button
