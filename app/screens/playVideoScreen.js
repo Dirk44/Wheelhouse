@@ -15,7 +15,7 @@ import { useNavigation } from "@react-navigation/native";
 
 import { NavBar, VideoPlayer, movies } from "../components/";
 // import movies from "../components/movies.json";
-import { playVideoScreenStyles } from '../stylesheets';
+import { playVideoScreenStyles } from "../stylesheets";
 
 function PlayVideoScreen({ route, navigation }) {
   const video = React.useRef(null);
@@ -44,7 +44,9 @@ function PlayVideoScreen({ route, navigation }) {
           />
 
           <View style={{ alignItems: "center", marginTop: -13 }}>
-            <Text style={playVideoScreenStyles.rentText}>YOUR RENTAL HAS BEEN ACTIVATED!</Text>
+            <Text style={playVideoScreenStyles.rentText}>
+              YOUR RENTAL HAS BEEN ACTIVATED!
+            </Text>
             <Text style={playVideoScreenStyles.hoursLeft}>
               You now have <Text style={{ color: "#0aeeb5" }}>48 hours</Text>
               {"\n"} to finish this episode.
@@ -92,7 +94,9 @@ function PlayVideoScreen({ route, navigation }) {
                 })
               }
             >
-              <Text style={playVideoScreenStyles.buttonText}>PLAY UNCUT VERSION</Text>
+              <Text style={playVideoScreenStyles.buttonText}>
+                PLAY UNCUT VERSION
+              </Text>
             </TouchableOpacity>
           </View>
           <View>

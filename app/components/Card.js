@@ -26,21 +26,24 @@ function Card(props) {
   const [status, setStatus] = React.useState({});
   const navigation = useNavigation();
   const [index, setIndex] = useState(0);
+  const borderColorChange = () => {
+    setTimeout(() => {
+      setIndex(0);
+    }, 100);
+  };
   index === 0;
   return (
     // <View>
     <View style={cardStyles.container}>
-      <TouchableHighlight
-        underlayColor={"none"}
-        onPress={() => {
-          setIndex(1);
-          console.warn("Play Button Pressed", props.playVideo);
-          navigation.navigate("Video", {
+      <Pressable
+        underlayColor="none"
+        onPressIn={() => {
+          borderColorChange(setIndex(1));
+          navigation.navigate("", {
             videoPoster: props.poster,
             videoTitle: props.title,
             videoUrl: props.playVideo,
           });
-          // setIndex(0);
         }}
       >
         <View
@@ -63,9 +66,16 @@ function Card(props) {
             />
           </ImageBackground>
         </View>
-      </TouchableHighlight>
+      </Pressable>
       <View style={cardStyles.textContainer}>
-        <Text style={cardStyles.text}>{props.title}</Text>
+        <Text
+          style={[
+            cardStyles.text,
+            { color: index === 1 ? "#0aeeb5" : "white" },
+          ]}
+        >
+          {props.title}
+        </Text>
       </View>
     </View>
   );
