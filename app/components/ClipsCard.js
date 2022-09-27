@@ -39,11 +39,13 @@ function ClipsCard(props) {
         onPressIn={() => {
           borderColorChange(setIndex(1));
           setTimeout(() => {
-            navigation.navigate("Video", {
-              videoPoster: props.poster,
-              videoTitle: props.title,
-              videoUrl: props.playVideo,
-            });
+            props.title === "WATCH SERIES"
+              ? navigation.navigate("Rental")
+              : navigation.navigate("Video", {
+                  videoPoster: props.poster,
+                  videoTitle: props.title,
+                  videoUrl: props.playVideo,
+                });
           }, 200);
         }}
       >

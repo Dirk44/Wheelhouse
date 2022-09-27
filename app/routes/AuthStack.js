@@ -3,7 +3,15 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { TouchableWithoutFeedback, Keyboard } from "react-native";
 
-import { SignIn, SignUp, ForgotPassword, ConfirmAccount, ResetPassword, SignOut } from "../screens";
+import {
+  SignIn,
+  SignUp,
+  ForgotPassword,
+  ConfirmAccount,
+  ResetPassword,
+  SignOut,
+  RentSeries,
+} from "../screens";
 // import { HomePage } from "../screens";
 
 const Stack = createStackNavigator();
@@ -22,6 +30,7 @@ const AuthStack = (props) => {
       <Stack.Screen name="ConfirmAccount" component={ConfirmAccount} />
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
       <Stack.Screen name="ResetPassword" component={ResetPassword} />
+      <Stack.Screen name="Rental" component={RentSeries} />
       {/* <Stack.Screen name="Home" component={HomePage} /> */}
     </Stack.Navigator>
   );

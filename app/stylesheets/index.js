@@ -1,6 +1,6 @@
 module.exports = {
   borderPlayButtonStyles: require("./BorderPlayButton"),
-  cardStyles: require("./Card"),
+  cardStyles: require("./EpisodesCard"),
   carouselStyles: require("./Carousel"),
   checkboxStyles: require("./Checkbox"),
   clipsStyles: require("./Clips"),

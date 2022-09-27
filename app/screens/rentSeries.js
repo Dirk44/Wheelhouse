@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   ScrollView,
   Text,
@@ -13,9 +13,20 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { rentSeriesStyles } from "../stylesheets";
 import { NavBar, WhButton } from "../components";
+import Amplify from "aws-amplify";
+import config from "../../src/aws-exports";
+import AuthStack from "../routes/AuthStack";
+
+Amplify.configure({
+  ...config,
+  Analytics: {
+    disabled: true,
+  },
+});
 
 const RentSeries = (props) => {
   const navigation = useNavigation();
+  const [auth, setAuth] = useState(null);
   return (
     <SafeAreaView style={rentSeriesStyles.container}>
       <NavBar />
@@ -51,7 +62,14 @@ const RentSeries = (props) => {
             />
           </View>
           <View>
-            <TouchableOpacity style={rentSeriesStyles.buttonStyle} onPress={""}>
+            <TouchableOpacity
+              style={rentSeriesStyles.buttonStyle}
+              onPress={() => {
+                !auth
+                  ? navigation.navigate("CreditCard")
+                  : navigation.navigate("SignIn");
+              }}
+            >
               <Text style={rentSeriesStyles.buttonText}>RENT NOW $11.99</Text>
             </TouchableOpacity>
           </View>
