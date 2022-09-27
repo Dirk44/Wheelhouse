@@ -44,6 +44,8 @@ function EpisodesCard(props) {
               videoUrl: props.playVideo,
             });
           }, 200);
+          // props.title === "WATCH SERIES", navigation.navigate("RentSeries");
+          // console.log(props.title);
         }}
       >
         <View
