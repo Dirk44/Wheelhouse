@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import { Entypo } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { hamburgerStyles } from "../stylesheets/";
@@ -18,7 +17,5 @@ function Hamburger() {
     />
   );
 }
-
-
 
 module.exports = Hamburger;

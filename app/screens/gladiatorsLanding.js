@@ -27,9 +27,9 @@ function GladiatorsLanding(props) {
           <View
             style={{
               width: "100%",
-              height: 125,
+              height: "20%",
               alignItems: "center",
-              marginTop: 230,
+              marginTop: "65%",
               //   backgroundColor: "red",
             }}
           >
@@ -38,7 +38,7 @@ function GladiatorsLanding(props) {
               source={require("../assets/gladLogoGreen.png")}
             />
           </View>
-          <View>
+          <View style={{ width: "100%", height: "7%", alignItems: "center" }}>
             <TouchableOpacity
               style={gladiatorsLandingStyles.buttonStyle}
               onPress={() => navigation.navigate("Clips")}
@@ -48,7 +48,7 @@ function GladiatorsLanding(props) {
           </View>
           <View
             style={{
-              height: 30,
+              height: "5%",
               width: "72%",
               alignItems: "center",
               //   backgroundColor: "red",
@@ -60,7 +60,7 @@ function GladiatorsLanding(props) {
               source={require("../assets/4kDolbyDigital.png")}
             />
           </View>
-          <View style={{ width: "80%", marginTop: 30 }}>
+          <View style={{ width: "80%", height: "25%", marginTop: 10 }}>
             <Text style={gladiatorsLandingStyles.descriptionText}>
               GLADIATORS OF STEEL is an in-depth look at one of America's most
               dangerous sports: Demolition Derby. {"\n"} {"\n"} GLADIATORS OF

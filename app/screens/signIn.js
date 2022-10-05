@@ -19,7 +19,8 @@ import { InputField, WhButton } from "../components/";
 import { useNavigation } from "@react-navigation/native";
 import { useForm, Controller } from "react-hook-form";
 
-import { signInStyles } from '../stylesheets';
+import { signInStyles } from "../stylesheets";
+import { HomeStack } from "../routes";
 
 const EMAIL_REGEX =
   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9]+)*$/;

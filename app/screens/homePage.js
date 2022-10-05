@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   ScrollView,
   Text,
@@ -9,14 +9,31 @@ import {
   View,
 } from "react-native";
 
-import { useNavigation } from "@react-navigation/native";
+import {
+  NavigationContainer,
+  StackActions,
+  useNavigation,
+} from "@react-navigation/native";
 
 import { homePageStyles } from "../stylesheets";
 // import { AuthStack } from "../routes";
 import { NavBar } from "../components";
+import Amplify from "aws-amplify";
+import config from "../../src/aws-exports";
+import { AuthStack, Navigator } from "../routes";
+import { SignUp } from "./signUp";
+// import { HomePage } from "./gladiatorsLanding";
+
+// Amplify.configure({
+//   ...config,
+//   Analytics: {
+//     disabled: true,
+//   },
+// });
 
 const HomePage = () => {
   const navigation = useNavigation();
+  const [auth, setAuth] = useState(false);
   return (
     <SafeAreaView style={homePageStyles.container}>
       <NavBar />
@@ -58,7 +75,7 @@ const HomePage = () => {
                 <Image
                   style={homePageStyles.gladiatorsLogo}
                   source={require("../assets/gladLogoWhite.png")}
-                  onPress={() => navigation.navigate("Gladiators of Steel")}
+                  // onPress={() => navigation.navigate("GladiatorsLanding")}
                 />
               </View>
             </TouchableOpacity>
@@ -67,13 +84,17 @@ const HomePage = () => {
           <View>
             <TouchableOpacity
               style={homePageStyles.buttonStyle}
-              onPress={({ route }) => navigation.navigate("")}
+              onPress={() => {
+                navigation.navigate("SignUp");
+              }}
             >
               <Text style={homePageStyles.buttonText}>SIGN UP</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={homePageStyles.buttonStyle}
-              onPress={() => navigation.navigate("")}
+              onPress={() => {
+                navigation.navigate("SignIn");
+              }}
             >
               <Text style={homePageStyles.buttonText}>LOGIN</Text>
             </TouchableOpacity>

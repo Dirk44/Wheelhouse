@@ -12,7 +12,8 @@ import {
   SignOut,
   RentSeries,
 } from "../screens";
-// import { HomePage } from "../screens";
+import { HomePage } from "../screens";
+import { HomeStack, Navigator } from ".";
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,7 @@ const AuthStack = (props) => {
     </TouchableWithoutFeedback>
   );
   return (
+    // <DismissKeyboard>
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="SignIn" component={SignIn} />
       <Stack.Screen name="SignUp" component={SignUp} />
@@ -30,9 +32,10 @@ const AuthStack = (props) => {
       <Stack.Screen name="ConfirmAccount" component={ConfirmAccount} />
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
       <Stack.Screen name="ResetPassword" component={ResetPassword} />
-      <Stack.Screen name="Rental" component={RentSeries} />
-      {/* <Stack.Screen name="Home" component={HomePage} /> */}
+      {/* <Stack.Screen name="Rental" component={RentSeries} /> */}
+      <Stack.Screen name="Home" component={HomeStack} />
     </Stack.Navigator>
+    // </DismissKeyboard>
   );
 };
 

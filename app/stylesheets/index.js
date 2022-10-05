@@ -17,6 +17,7 @@ module.exports = {
   navBarStyles: require("./NavBar"),
   phoneInputFieldStyles: require("./PhoneInputField"),
   playVideoScreenStyles: require("./PlayVideoScreen"),
+  playClipsScreenStyles: require("./PlayClipsScreen"),
   rentSeriesStyles: require("./RentSeries"),
   resetPasswordStyles: require("./ResetPassword"),
   signInStyles: require("./SignIn"),
