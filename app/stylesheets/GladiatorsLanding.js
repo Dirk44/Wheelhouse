@@ -23,26 +23,26 @@ const gladiatorsLandingStyles = ScaledSheet.create({
     backgroundColor: "#0aeeb5",
     height: "30@s",
     width: "300@s",
-    borderRadius: 4,
-    marginTop: "50@s",
+    borderRadius: "4@s",
+    // marginTop: "50@s",
   },
   buttonText: {
     color: "black",
-    fontSize: 16,
+    fontSize: "16@s",
     fontWeight: "400",
     letterSpacing: 2,
   },
   descriptionText: {
-    fontSize: 13,
+    fontSize: "11@s",
     color: "white",
     fontWeight: "500",
     textAlign: "center",
     lineHeight: "14@s",
   },
   dolby: {
-    width: "50%",
+    width: "53%",
     height: "7@s",
-    marginTop: "15@s",
+    // marginTop: "15@s",
   },
   gladiatorsLogo: {
     width: "50%",
@@ -52,7 +52,7 @@ const gladiatorsLandingStyles = ScaledSheet.create({
   whLogo: {
     width: "75%",
     height: "70@s",
-    marginTop: "40@s",
+    // marginTop: "40@s",
   },
 });
 

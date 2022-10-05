@@ -41,7 +41,7 @@ function ClipsCard(props) {
           setTimeout(() => {
             props.title === "WATCH SERIES"
               ? navigation.navigate("Rental")
-              : navigation.navigate("Video", {
+              : navigation.navigate("Play Clips", {
                   videoPoster: props.poster,
                   videoTitle: props.title,
                   videoUrl: props.playVideo,

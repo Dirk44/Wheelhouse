@@ -59,8 +59,8 @@ const App = () => {
       />
       <DismissKeyboard>
         <NavigationContainer>
-          {!auth ? <Navigator /> : <AuthStack />}
-          {/* <Navigator /> */}
+          {/* {!auth ? <Navigator /> : <AuthStack />} */}
+          <Navigator />
         </NavigationContainer>
       </DismissKeyboard>
     </>

@@ -31,7 +31,7 @@ const Drawer = createDrawerNavigator();
 const DrawerNav = () => {
   return (
     <Drawer.Navigator
-      initialRouteName="Home"
+      // initialRouteName="Home"
       screenOptions={{
         headerShown: false,
         swipeEdgeWidth: 0,
@@ -44,7 +44,7 @@ const DrawerNav = () => {
       {/* {!auth && <HomeStack />} */}
 
       <Drawer.Screen
-        name="Home"
+        name="HomePage"
         component={HomeStack}
         onPress={() =>
           navigation.dispatch(
@@ -56,79 +56,72 @@ const DrawerNav = () => {
         }
         options={{
           navigationOptions: navigationOptions,
-          title: "Home",
+          title: "HOME",
         }}
       />
-      {/* <Drawer.Screen name="SignUp" component={AuthStack} /> */}
+      {/* <Drawer.Screen name="SignIn" component={AuthStack} /> */}
 
+      <Drawer.Screen
+        name="SignUp"
+        component={AuthStack}
+        options={{
+          navigationOptions: navigationOptions,
+          title: "SIGN UP",
+        }}
+      />
       <Drawer.Screen
         name="GladiatorsLanding"
         component={GladiatorsLanding}
         options={{
           navigationOptions: navigationOptions,
-          title: "Gladiators",
+          title: "GLADIATORS OF STEEL",
         }}
       />
 
-      <Drawer.Screen
-        name="Clips"
-        component={Clips}
-        options={{
-          navigationOptions: navigationOptions,
-          title: "Clips",
-        }}
-      />
-      <Drawer.Screen
+      {/* <Drawer.Screen
         name="Episodes"
         component={Episodes}
         options={{
           navigationOptions: navigationOptions,
           title: "Episodes",
         }}
-      />
-      <Drawer.Screen
+      /> */}
+
+      {/* <Drawer.Screen
         name="UpcomingShows"
         component={UpcomingShows}
         options={{
           navigationOptions: navigationOptions,
           title: "Upcoming Shows",
         }}
-      />
+      /> */}
 
       <Drawer.Screen
         name="Store"
         component={Store}
         options={{
           navigationOptions: navigationOptions,
-          title: "Store",
+          title: "STORE",
         }}
       />
 
-      <Drawer.Screen
+      {/* <Drawer.Screen
         name="WaitList"
         component={WaitList}
         options={{
           navigationOptions: navigationOptions,
           title: "Waitlist",
         }}
-      />
-      <Drawer.Screen
+      /> */}
+
+      {/* <Drawer.Screen
         name="Rental"
         component={RentSeries}
         options={{
           navigationOptions: navigationOptions,
           title: "Rental",
         }}
-      />
-
-      {/* <Drawer.Screen
-        name="Video"
-        component={PlayVideoScreen}
-        options={{
-          navigationOptions: navigationOptions,
-          title: "Video",
-        }}
-      /> */}
+      />  */}
     </Drawer.Navigator>
   );
 };

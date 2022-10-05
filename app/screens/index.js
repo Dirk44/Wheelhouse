@@ -7,6 +7,7 @@ module.exports = {
   GladiatorsLanding: require("./gladiatorsLanding"),
   HomePage: require("./homePage"),
   PlayVideoScreen: require("./playVideoScreen"),
+  PlayClipsScreen: require("./playClipsScreen"),
   RentSeries: require("./rentSeries"),
   ResetPassword: require("./resetPassword"),
   SignIn: require("./signIn"),
