@@ -18,16 +18,7 @@ function Episodes() {
           style={episodeStyles.background}
           source={require("../assets/episodes/episodesBg.jpg")}
         >
-          <View
-            style={{
-              flex: 1,
-              width: "100%",
-              height: 125,
-              alignItems: "center",
-              marginTop: 70,
-              //   backgroundColor: "red",
-            }}
-          >
+          <View style={episodeStyles.gladiatorsLogoContainer}>
             <Image
               style={episodeStyles.gladiatorsLogo}
               source={require("../assets/episodes/gladiatorsLogoSimple.png")}
@@ -54,6 +45,12 @@ function Episodes() {
                 </View>
               );
             })}
+          </View>
+          <View style={episodeStyles.whLogoContainer}>
+            <Image
+              style={episodeStyles.whLogo}
+              source={require("../assets/wh-logo.png")}
+            />
           </View>
         </ImageBackground>
       </ScrollView>

@@ -35,27 +35,13 @@ const RentSeries = (props) => {
           style={rentSeriesStyles.background}
           source={require("../assets/rentNowBg.jpg")}
         >
-          <View
-            style={{
-              height: 300,
-              width: "100%",
-              // backgroundColor: "red",
-              marginTop: 52,
-            }}
-          >
+          <View style={rentSeriesStyles.carsImageContainer}>
             <Image
               source={require("../assets/rentalCarImage.png")}
               style={rentSeriesStyles.carsImage}
             />
           </View>
-          <View
-            style={{
-              height: 200,
-              width: "100%",
-              alignItems: "center",
-              // backgroundColor: "red",
-            }}
-          >
+          <View style={rentSeriesStyles.gladiatorsLogoContainer}>
             <Image
               style={rentSeriesStyles.gladiatorsLogo}
               source={require("../assets/gladLogoGreen.png")}
@@ -73,15 +59,7 @@ const RentSeries = (props) => {
               <Text style={rentSeriesStyles.buttonText}>RENT NOW $11.99</Text>
             </TouchableOpacity>
           </View>
-          <View
-            style={{
-              height: 30,
-              width: "60%",
-              alignItems: "center",
-              // backgroundColor: "red",
-              marginTop: 25,
-            }}
-          >
+          <View style={rentSeriesStyles.dolbyContainer}>
             <Image
               style={rentSeriesStyles.dolby}
               source={require("../assets/4kDolbyDigital.png")}

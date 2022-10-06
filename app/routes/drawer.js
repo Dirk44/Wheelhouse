@@ -42,7 +42,6 @@ const DrawerNav = () => {
       // useLegacyImplementation={true}
     >
       {/* {!auth && <HomeStack />} */}
-
       <Drawer.Screen
         name="HomePage"
         component={HomeStack}
@@ -60,7 +59,6 @@ const DrawerNav = () => {
         }}
       />
       {/* <Drawer.Screen name="SignIn" component={AuthStack} /> */}
-
       <Drawer.Screen
         name="SignUp"
         component={AuthStack}
@@ -77,25 +75,22 @@ const DrawerNav = () => {
           title: "GLADIATORS OF STEEL",
         }}
       />
-
-      {/* <Drawer.Screen
+      <Drawer.Screen
         name="Episodes"
         component={Episodes}
         options={{
           navigationOptions: navigationOptions,
           title: "Episodes",
         }}
-      /> */}
-
-      {/* <Drawer.Screen
+      />
+      <Drawer.Screen
         name="UpcomingShows"
         component={UpcomingShows}
         options={{
           navigationOptions: navigationOptions,
           title: "Upcoming Shows",
         }}
-      /> */}
-
+      />
       <Drawer.Screen
         name="Store"
         component={Store}
@@ -104,24 +99,22 @@ const DrawerNav = () => {
           title: "STORE",
         }}
       />
-
-      {/* <Drawer.Screen
+      <Drawer.Screen
         name="WaitList"
         component={WaitList}
         options={{
           navigationOptions: navigationOptions,
           title: "Waitlist",
         }}
-      /> */}
-
-      {/* <Drawer.Screen
+      />
+      <Drawer.Screen
         name="Rental"
         component={RentSeries}
         options={{
           navigationOptions: navigationOptions,
           title: "Rental",
         }}
-      />  */}
+      />
     </Drawer.Navigator>
   );
 };

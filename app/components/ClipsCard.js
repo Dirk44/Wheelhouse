@@ -60,12 +60,10 @@ function ClipsCard(props) {
             source={{ uri: props.thumb }}
           >
             <Image
-              style={{
-                height: 55,
-                width: 55,
-                opacity: 0.7,
-                tintColor: index === 1 ? "#0aeeb5" : "white",
-              }}
+              style={[
+                clipsCardStyles.playBtn,
+                { tintColor: index === 1 ? "#0aeeb5" : "white" },
+              ]}
               source={{ uri: props.playBtn }}
             />
           </ImageBackground>
