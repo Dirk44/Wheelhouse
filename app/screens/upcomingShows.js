@@ -10,7 +10,7 @@ import {
   Dimensions,
 } from "react-native";
 import { NavBar } from "../components/";
-import { upcomingShowsStyles } from '../stylesheets';
+import { upcomingShowsStyles } from "../stylesheets";
 
 function UpcomingShows() {
   const { width, height } = Dimensions.get("window");
@@ -22,25 +22,16 @@ function UpcomingShows() {
           style={upcomingShowsStyles.background}
           source={require("../assets/upcominShowsElements/upcomingBg.jpg")}
         >
-          <View
-            style={{
-              // flex: 1,
-              width: "100%",
-              marginTop: -80,
-              marginRight: 15,
-              // backgroundColor: "red",
-              overflow: "hidden",
-            }}
-          >
+          <View style={upcomingShowsStyles.whLogoContainer}>
             <Image
               source={require("../assets/upcominShowsElements/whLogo.png")}
               style={upcomingShowsStyles.whLogo}
             />
           </View>
-          <View style={{ flex: 1, marginTop: -80 }}>
+          <View style={upcomingShowsStyles.textContainer}>
             <Text style={upcomingShowsStyles.text}>COMING SOON</Text>
           </View>
-          <View style={{ flex: 6, width: "85%" }}>
+          <View style={upcomingShowsStyles.descriptTextContainer}>
             <Text style={upcomingShowsStyles.descriptText}>
               WheelHouse Motorsports has many shows in the pipeline. More
               exclusive content coming soon.
@@ -57,6 +48,5 @@ function UpcomingShows() {
     </SafeAreaView>
   );
 }
-
 
 module.exports = UpcomingShows;
