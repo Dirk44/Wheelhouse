@@ -3,15 +3,20 @@ import { ScaledSheet } from "react-native-size-matters";
 const EpisodesCardStyles = ScaledSheet.create({
   container: {
     width: "100%",
-    height: 140,
+    height: "140@s",
     justifyContent: "center",
+    marginTop: "-8@s",
   },
   image: {
-    width: 165,
-    height: 90,
+    width: "160@s",
+    height: "90@s",
     justifyContent: "center",
     alignItems: "center",
     resizeMode: "cover",
+  },
+  playBtn: {
+    height: "45@s",
+    width: "45@s",
   },
   textContainer: {
     width: "100%",
@@ -20,19 +25,20 @@ const EpisodesCardStyles = ScaledSheet.create({
   text: {
     textAlign: "left",
     color: "white",
-    opacity: 1,
+    opacity: 0.9,
     fontSize: "11@s",
     fontWeight: "600",
-    marginTop: "2@s",
+    // marginTop: "2@s",
     fontFamily: "HelveticaRegular",
-    letterSpacing: 1,
+    letterSpacing: "1@s",
   },
   thumbContainer: {
     width: "100%",
     height: "auto",
     backgroundColor: "white",
-    borderWidth: 2,
-    borderRadius: 1,
+    borderWidth: "2@s",
+    borderRadius: "1@s",
+    // marginTop: "-10@s",
   },
 });
 

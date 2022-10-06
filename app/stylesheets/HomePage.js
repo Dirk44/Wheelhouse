@@ -20,12 +20,12 @@ const homePageStyles = ScaledSheet.create({
     backgroundColor: "#0aeeb5",
     height: "30@s",
     width: "220@s",
-    borderRadius: 4,
+    borderRadius: "4@s",
     marginTop: "20@s",
   },
   buttonText: {
     color: "black",
-    fontSize: 15,
+    fontSize: "15@s",
     fontWeight: "600",
     letterSpacing: 2,
   },
@@ -53,7 +53,7 @@ const homePageStyles = ScaledSheet.create({
   },
   gladiatorsLogo: {
     // flex: 1,
-    width: "75%",
+    width: "205@s",
     height: "176@s",
     // resizeMode: "contain",
     marginTop: "25@s",
@@ -76,11 +76,12 @@ const homePageStyles = ScaledSheet.create({
     marginTop: "175@s",
   },
   whLogo: {
-    width: "90%",
+    width: "300@s",
     // overflow: "visible",
     resizeMode: "contain",
     // position: "absolute",
-    paddingRight: "25@s",
+    // paddingRight: "30@s",
+    marginLeft: "10@s",
   },
   whLogoContainer: {
     // flex: 1,
@@ -93,6 +94,5 @@ const homePageStyles = ScaledSheet.create({
     // marginBottom: "25@s",
   },
 });
-
 
 module.exports = homePageStyles;

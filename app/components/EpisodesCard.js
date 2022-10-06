@@ -59,11 +59,10 @@ function EpisodesCard(props) {
             source={{ uri: props.thumb }}
           >
             <Image
-              style={{
-                height: 45,
-                width: 45,
-                tintColor: index === 1 ? "#0aeeb5" : "white",
-              }}
+              style={[
+                cardStyles.playBtn,
+                { tintColor: index === 1 ? "#0aeeb5" : "white" },
+              ]}
               source={{ uri: props.playBtn }}
             />
           </ImageBackground>

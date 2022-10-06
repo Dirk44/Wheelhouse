@@ -30,18 +30,18 @@ const clipsStyles = ScaledSheet.create({
   gladiatorsLogo: {
     width: "50%",
     resizeMode: "contain",
-    height: 160,
+    height: "160@s",
     // backgroundColor: "yellow",
-    // marginTop: "5@s",
+    marginTop: "5@s",
   },
   list: {
     // justifyContent: "center",
     alignItems: "center",
     marginTop: "-27@s",
     shadowColor: "black",
-    shadowOffset: { width: 10, height: 10 },
-    shadowOpacity: 0.5,
-    shadowRadius: 4,
+    shadowOffset: { width: "10@s", height: "10@s" },
+    shadowOpacity: "0.5@s",
+    shadowRadius: "6@s",
     // width: "65%",
     // height: 140,
     // borderWidth: 2,
@@ -51,8 +51,8 @@ const clipsStyles = ScaledSheet.create({
 
   whLogo: {
     width: "45%",
-    height: 100,
-    marginTop: 25,
+    height: "100@s",
+    marginTop: "10@s",
     // paddingBottom: "10%",
   },
 });

@@ -18,6 +18,11 @@ const clipsCardStyles = ScaledSheet.create({
     resizeMode: "cover",
     // marginTop: "20@s",
   },
+  playBtn: {
+    height: "55@s",
+    width: "55@s",
+    opacity: "0.7@s",
+  },
   textContainer: {
     justifyContent: "center",
     width: "100%",
@@ -29,7 +34,7 @@ const clipsCardStyles = ScaledSheet.create({
     textAlign: "center",
     color: "white",
     opacity: 0.9,
-    fontSize: 17,
+    fontSize: "17@s",
     // fontWeight: "800",
     // marginTop: "1@s",
     fontFamily: "Helvetica87HeavyCondensed",
