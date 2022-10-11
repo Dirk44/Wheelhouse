@@ -64,12 +64,13 @@ function PlayVideoScreen({ route, navigation }) {
               posterSource={{
                 uri: videoPoster,
               }}
+              onLoadStart={() => setVideoLoaded(false)}
               shouldPlay
               staysActiveInBackground={false}
               useNativeControls={true}
               usePoster
               resizeMode="contain"
-              // onPlaybackStatusUpdate={(status) => setStatus(() => status)}
+              onPlaybackStatusUpdate={(status) => setStatus(() => status)}
             />
             {/* <View style={playVideoScreenStyles.buttons}>
               <Button

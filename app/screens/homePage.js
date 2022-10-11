@@ -44,7 +44,7 @@ const HomePage = () => {
         >
           <View style={homePageStyles.whLogoContainer}>
             <Image
-              source={require("../assets/wh-logo-text.png")}
+              source={require("../assets/wh-logo.png")}
               style={homePageStyles.whLogo}
             />
           </View>
