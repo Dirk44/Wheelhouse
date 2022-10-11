@@ -76,6 +76,15 @@ const DrawerNav = () => {
         }}
       />
       <Drawer.Screen
+        name="Clips"
+        component={Clips}
+        options={{
+          navigationOptions: navigationOptions,
+          title: "CLIPS",
+        }}
+      />
+
+      <Drawer.Screen
         name="Episodes"
         component={Episodes}
         options={{

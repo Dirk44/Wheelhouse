@@ -5,6 +5,8 @@ import {
   SafeAreaView,
   ScrollView,
   View,
+  TouchableOpacity,
+  Text,
 } from "react-native";
 import { episodeStyles } from "../stylesheets";
 import { EpisodesCard, movies, NavBar } from "../components";
@@ -45,6 +47,16 @@ function Episodes() {
                 </View>
               );
             })}
+          </View>
+          <View style={episodeStyles.buttonContainer}>
+            <TouchableOpacity
+              style={episodeStyles.buttonStyle}
+              onPress={() => {
+                navigation.navigate("SignUp");
+              }}
+            >
+              <Text style={episodeStyles.buttonText}>VIEW BONUS CONTENT</Text>
+            </TouchableOpacity>
           </View>
           <View style={episodeStyles.whLogoContainer}>
             <Image
