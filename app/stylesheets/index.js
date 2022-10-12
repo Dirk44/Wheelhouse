@@ -28,4 +28,5 @@ module.exports = {
   videoPlayerStyles: require("./VideoPlayer"),
   waitListStyles: require("./WaitList"),
   whButtonStyles: require("./WhButton"),
+  thankYouStyles: require("./ThankYou"),
 };

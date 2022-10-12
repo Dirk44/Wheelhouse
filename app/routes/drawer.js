@@ -13,6 +13,7 @@ import {
   GladiatorsLanding,
   Episodes,
   CreditCard,
+  ThankYou,
 } from "../screens";
 import { NavBar } from "../components/";
 import HomeStack from "./homeStack";
@@ -122,6 +123,14 @@ const DrawerNav = () => {
         options={{
           navigationOptions: navigationOptions,
           title: "Rental",
+        }}
+      />
+      <Drawer.Screen
+        name="ThankYou"
+        component={ThankYou}
+        options={{
+          navigationOptions: navigationOptions,
+          title: "Thank You",
         }}
       />
     </Drawer.Navigator>
