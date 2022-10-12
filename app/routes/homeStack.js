@@ -14,6 +14,7 @@ import {
   CreditCard,
   SignUp,
   SignIn,
+  ThankYou,
 } from "../screens";
 import { AuthStack } from ".";
 
@@ -45,6 +46,7 @@ function HomeStack() {
       <Stack.Screen name="Video" component={PlayVideoScreen} />
       <Stack.Screen name="Play Clips" component={PlayClipsScreen} />
       <Stack.Screen name="CreditCard" component={CreditCard} />
+      <Stack.Screen name="ThankYou" component={ThankYou} />
       <Stack.Screen name="SignUp" component={SignUp} />
       <Stack.Screen name="SignIn" component={SignIn} />
     </Stack.Navigator>

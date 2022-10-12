@@ -16,4 +16,5 @@ module.exports = {
   Store: require("./store"),
   UpcomingShows: require("./upcomingShows"),
   WaitList: require("./waitList"),
+  ThankYou: require("./thankYou"),
 };
