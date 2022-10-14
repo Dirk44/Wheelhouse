@@ -18,4 +18,6 @@ function Hamburger() {
   );
 }
 
-module.exports = Hamburger;
+module.exports = {
+  Hamburger,
+};

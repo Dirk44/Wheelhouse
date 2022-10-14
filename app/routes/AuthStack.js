@@ -33,7 +33,7 @@ const AuthStack = (props) => {
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
       <Stack.Screen name="ResetPassword" component={ResetPassword} />
       {/* <Stack.Screen name="Rental" component={RentSeries} /> */}
-      <Stack.Screen name="Home" component={HomeStack} />
+      {/* <Stack.Screen name="Home" component={HomeStack} /> */}
     </Stack.Navigator>
     // </DismissKeyboard>
   );

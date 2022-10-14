@@ -3,7 +3,7 @@ import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-import Hamburger from "./Hamburger";
+import { Hamburger } from "./Hamburger";
 import { navBarStyles } from "../stylesheets/";
 
 module.exports = function NavBar({ navigation }) {
@@ -15,5 +15,4 @@ module.exports = function NavBar({ navigation }) {
       <Text style={navBarStyles.navBar}>WheelHouse</Text>
     </View>
   );
-}
-
+};

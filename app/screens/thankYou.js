@@ -45,7 +45,7 @@ const ThankYou = () => {
               >
                 <TouchableOpacity
                   style={thankYouStyles.buttonStyle}
-                  onPress={() => navigation.navigate("Clips")}
+                  onPress={() => navigation.navigate("Episodes")}
                 >
                   <Text style={thankYouStyles.buttonText}>VIEW EPISODES</Text>
                 </TouchableOpacity>
