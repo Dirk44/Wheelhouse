@@ -60,14 +60,14 @@ const DrawerNav = () => {
         }}
       />
       {/* <Drawer.Screen name="SignIn" component={AuthStack} /> */}
-      <Drawer.Screen
+      {/* <Drawer.Screen
         name="SignUp"
         component={AuthStack}
         options={{
           navigationOptions: navigationOptions,
           title: "SIGN UP",
         }}
-      />
+      /> */}
       <Drawer.Screen
         name="GladiatorsLanding"
         component={GladiatorsLanding}
