@@ -48,7 +48,7 @@ function SignIn() {
       const response = await Auth.signIn(data.username, data.password);
       Alert.alert("Success!");
       console.log(response);
-      navigation.navigate("Home");
+      navigation.navigate("HomePage");
     } catch (e) {
       Alert.alert("Oopsie, ", e.message);
     }

@@ -17,4 +17,5 @@ module.exports = {
   UpcomingShows: require("./upcomingShows"),
   WaitList: require("./waitList"),
   ThankYou: require("./thankYou"),
+  LoadingScreen: require("./loadingScreen"),
 };
