@@ -18,11 +18,11 @@ import { HomeStack, Navigator } from ".";
 const Stack = createStackNavigator();
 
 const AuthStack = (props) => {
-  const DismissKeyboard = ({ children }) => (
-    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-      {children}
-    </TouchableWithoutFeedback>
-  );
+  // const DismissKeyboard = ({ children }) => (
+  //   <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+  //     {children}
+  //   </TouchableWithoutFeedback>
+  // );
   return (
     // <DismissKeyboard>
     <Stack.Navigator screenOptions={{ headerShown: false }}>
@@ -33,7 +33,7 @@ const AuthStack = (props) => {
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
       <Stack.Screen name="ResetPassword" component={ResetPassword} />
       {/* <Stack.Screen name="Rental" component={RentSeries} /> */}
-      {/* <Stack.Screen name="Home" component={HomeStack} /> */}
+      <Stack.Screen name="Home" component={HomePage} />
     </Stack.Navigator>
     // </DismissKeyboard>
   );

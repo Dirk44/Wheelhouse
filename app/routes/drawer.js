@@ -14,6 +14,7 @@ import {
   Episodes,
   CreditCard,
   ThankYou,
+  LoadingScreen,
 } from "../screens";
 import { NavBar } from "../components/";
 import HomeStack from "./homeStack";
@@ -32,7 +33,7 @@ const Drawer = createDrawerNavigator();
 const DrawerNav = () => {
   return (
     <Drawer.Navigator
-      // initialRouteName="Home"
+      initialRouteName="Home"
       screenOptions={{
         headerShown: false,
         swipeEdgeWidth: 0,
@@ -131,6 +132,14 @@ const DrawerNav = () => {
         options={{
           navigationOptions: navigationOptions,
           title: "Thank You",
+        }}
+      />
+      <Drawer.Screen
+        name="LoadingScreen"
+        component={LoadingScreen}
+        options={{
+          navigationOptions: navigationOptions,
+          title: "Loading Screen",
         }}
       />
     </Drawer.Navigator>

@@ -29,4 +29,5 @@ module.exports = {
   waitListStyles: require("./WaitList"),
   whButtonStyles: require("./WhButton"),
   thankYouStyles: require("./ThankYou"),
+  loadingScreenStyles: require("./LoadingScreen"),
 };
