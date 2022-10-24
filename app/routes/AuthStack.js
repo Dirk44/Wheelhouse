@@ -1,6 +1,6 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { TouchableWithoutFeedback, Keyboard } from "react-native";
 
 import {
@@ -15,7 +15,7 @@ import {
 import { HomePage } from "../screens";
 import { HomeStack, Navigator } from ".";
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 const AuthStack = (props) => {
   // const DismissKeyboard = ({ children }) => (
@@ -33,7 +33,7 @@ const AuthStack = (props) => {
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
       <Stack.Screen name="ResetPassword" component={ResetPassword} />
       {/* <Stack.Screen name="Rental" component={RentSeries} /> */}
-      <Stack.Screen name="Home" component={HomePage} />
+      <Stack.Screen name="HomePage" component={HomePage} />
     </Stack.Navigator>
     // </DismissKeyboard>
   );

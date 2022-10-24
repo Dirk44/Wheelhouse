@@ -15,6 +15,8 @@ import {
   CreditCard,
   ThankYou,
   LoadingScreen,
+  SignUp,
+  SignIn,
 } from "../screens";
 import { NavBar } from "../components/";
 import HomeStack from "./homeStack";
@@ -45,7 +47,7 @@ const DrawerNav = () => {
     >
       {/* {!auth && <HomeStack />} */}
       <Drawer.Screen
-        name="HomePage"
+        name="Home"
         component={HomeStack}
         onPress={() =>
           navigation.dispatch(
@@ -70,6 +72,22 @@ const DrawerNav = () => {
         }}
       /> */}
       <Drawer.Screen
+        name="SignUp"
+        component={SignUp}
+        options={{
+          navigationOptions: navigationOptions,
+          title: "SIGN UP",
+        }}
+      />
+      {/* <Drawer.Screen
+        name="SignIn"
+        component={SignIn}
+        options={{
+          navigationOptions: navigationOptions,
+          title: "SIGN UP",
+        }}
+      /> */}
+      <Drawer.Screen
         name="GladiatorsLanding"
         component={GladiatorsLanding}
         options={{
@@ -85,7 +103,6 @@ const DrawerNav = () => {
           title: "CLIPS",
         }}
       />
-
       <Drawer.Screen
         name="Episodes"
         component={Episodes}

@@ -29,7 +29,7 @@ function GladiatorsLanding(props) {
               width: "100%",
               height: "20%",
               alignItems: "center",
-              marginTop: "65%",
+              marginTop: "58%",
               //   backgroundColor: "red",
             }}
           >

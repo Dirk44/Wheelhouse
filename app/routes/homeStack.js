@@ -1,5 +1,5 @@
 import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import {
   HomePage,
   UpcomingShows,
@@ -19,7 +19,7 @@ import {
 } from "../screens";
 import { AuthStack } from ".";
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 function HomeStack() {
   return (
@@ -48,7 +48,7 @@ function HomeStack() {
       <Stack.Screen name="Play Clips" component={PlayClipsScreen} />
       <Stack.Screen name="CreditCard" component={CreditCard} />
       <Stack.Screen name="ThankYou" component={ThankYou} />
-      <Stack.Screen name="LoadingScreen" component={LoadingScreen} />
+      {/* <Stack.Screen name="LoadingScreen" component={LoadingScreen} /> */}
       <Stack.Screen name="SignUp" component={SignUp} />
       <Stack.Screen name="SignIn" component={SignIn} />
     </Stack.Navigator>

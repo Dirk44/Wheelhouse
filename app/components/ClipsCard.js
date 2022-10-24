@@ -39,7 +39,7 @@ function ClipsCard(props) {
         onPressIn={() => {
           borderColorChange(setIndex(1));
           setTimeout(() => {
-            props.title === "WATCH SERIES"
+            props.title === "PRE-ORDER SERIES AND SAVE $10"
               ? navigation.navigate("Rental")
               : navigation.navigate("Play Clips", {
                   videoPoster: props.poster,

@@ -32,12 +32,12 @@ const clipsStyles = ScaledSheet.create({
     resizeMode: "contain",
     height: "160@s",
     // backgroundColor: "yellow",
-    marginTop: "5@s",
+    // marginTop: "5@s",
   },
   list: {
     // justifyContent: "center",
     alignItems: "center",
-    marginTop: "-27@s",
+    marginTop: "-30@s",
     shadowColor: "black",
     shadowOffset: { width: "10@s", height: "10@s" },
     shadowOpacity: "0.5@s",
@@ -50,9 +50,9 @@ const clipsStyles = ScaledSheet.create({
   },
 
   whLogo: {
-    width: "45%",
+    width: "40%",
     height: "100@s",
-    marginTop: "10@s",
+    marginTop: "5@s",
     // paddingBottom: "10%",
   },
 });

@@ -15,18 +15,24 @@ const rentSeriesStyles = ScaledSheet.create({
     alignItems: "center",
     marginTop: "-55@s",
   },
-  buttonStyle: {
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#0aeeb5",
+  buttonImage: {
     height: "30@s",
     width: "300@s",
     borderRadius: "4@s",
-    marginTop: "-45@s",
+    marginTop: "-60@s",
   },
+  // buttonStyle: {
+  //   justifyContent: "center",
+  //   alignItems: "center",
+  //   backgroundColor: "#0aeeb5",
+  //   height: "30@s",
+  //   width: "300@s",
+  //   borderRadius: "4@s",
+  //   marginTop: "-60@s",
+  // },
   buttonText: {
     color: "black",
-    fontSize: "20@s",
+    fontSize: "14@s",
     fontWeight: "400",
     letterSpacing: "2@s",
   },
@@ -53,7 +59,7 @@ const rentSeriesStyles = ScaledSheet.create({
   dolby: {
     width: "65%",
     height: "7@s",
-    marginTop: "-20@s",
+    marginTop: "-35@s",
   },
   dolbyContainer: {
     height: "30@s",
@@ -67,7 +73,7 @@ const rentSeriesStyles = ScaledSheet.create({
     height: "170@s",
     // padding: "5@s",
     resizeMode: "contain",
-    marginTop: "-25@s",
+    marginTop: "-35@s",
   },
   gladiatorsLogoContainer: {
     height: "200@s",
@@ -77,8 +83,13 @@ const rentSeriesStyles = ScaledSheet.create({
   whLogo: {
     width: "90%",
     height: "80@s",
-    marginTop: "40@s",
+    marginTop: "25@s",
     // overflow: "",
+  },
+  worldPremiereText: {
+    width: "100%",
+    height: "111@s",
+    marginTop: "15@s",
   },
 });
 

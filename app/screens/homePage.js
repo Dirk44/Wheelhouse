@@ -9,20 +9,10 @@ import {
   View,
 } from "react-native";
 
-import {
-  NavigationContainer,
-  StackActions,
-  useNavigation,
-} from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 
 import { homePageStyles } from "../stylesheets";
-// import { AuthStack } from "../routes";
 import { NavBar } from "../components";
-import Amplify from "aws-amplify";
-import config from "../../src/aws-exports";
-import { AuthStack, Navigator } from "../routes";
-import { SignUp } from "./signUp";
-// import { HomePage } from "./gladiatorsLanding";
 
 // Amplify.configure({
 //   ...config,

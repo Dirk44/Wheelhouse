@@ -9,7 +9,6 @@ import {
 } from "react-native";
 
 import { Controller } from "react-hook-form";
-import PhoneInput from "react-native-phone-number-input";
 import { inputFieldStyles } from "../stylesheets/";
 
 const InputField = ({
@@ -60,7 +59,5 @@ const InputField = ({
     />
   );
 };
-
-
 
 module.exports = InputField;

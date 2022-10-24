@@ -7,6 +7,11 @@ const playVideoScreenStyles = ScaledSheet.create({
     resizeMode: "contain",
     // paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
+  activatedText: {
+    alignItems: "center",
+    // justifyContent: "center",
+    marginTop: "-13@s",
+  },
   background: {
     flex: 1,
     width: "100%",
@@ -63,10 +68,11 @@ const playVideoScreenStyles = ScaledSheet.create({
   },
   hoursLeft: {
     color: "white",
-    fontFamily: "HelveticaRegular",
-    letterSpacing: 1,
-    fontSize: 16,
+    // fontFamily: "HelveticaRegular",
+    // letterSpacing: 1,
+    fontSize: 15,
     marginTop: 25,
+    lineHeight: 25,
   },
   playerWindow: {
     marginTop: "7%",
@@ -75,6 +81,10 @@ const playVideoScreenStyles = ScaledSheet.create({
     borderWidth: 2,
     borderColor: "white",
     borderRadius: 2,
+    shadowColor: "black",
+    shadowOffset: { width: "10@s", height: "10@s" },
+    shadowOpacity: "0.3@s",
+    shadowRadius: "6@s",
   },
   rentText: {
     color: "#0aeeb5",

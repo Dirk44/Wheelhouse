@@ -49,14 +49,17 @@ const RentSeries = (props) => {
           </View>
           <View>
             <TouchableOpacity
-              style={rentSeriesStyles.buttonStyle}
+              // style={rentSeriesStyles.buttonStyle}
               onPress={() => {
                 auth
                   ? navigation.navigate("CreditCard")
                   : navigation.navigate("SignIn");
               }}
             >
-              <Text style={rentSeriesStyles.buttonText}>RENT NOW $11.99</Text>
+              <Image
+                style={rentSeriesStyles.buttonImage}
+                source={require("../assets/preOrderBtn.jpg")}
+              />
             </TouchableOpacity>
           </View>
           <View style={rentSeriesStyles.dolbyContainer}>
@@ -65,12 +68,11 @@ const RentSeries = (props) => {
               source={require("../assets/4kDolbyDigital.png")}
             />
           </View>
-          <View style={{ width: "80%", marginTop: 5 }}>
-            <Text style={rentSeriesStyles.descriptionText}>
-              Watch all six-episodes of GLADIATORS OF STEEL with this world
-              premiere exclusive and receive FREE BONUS CONTENT only on
-              WHEELHOUSE MOTORSPORTS.
-            </Text>
+          <View style={{ width: "80%", marginTop: -50 }}>
+            <Image
+              style={rentSeriesStyles.worldPremiereText}
+              source={require("../assets/worldPremiereEventText.png")}
+            />
           </View>
           <View style={{ width: "50%", alignItems: "center" }}>
             <Image

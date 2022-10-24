@@ -20,6 +20,7 @@ import { playVideoScreenStyles } from "../stylesheets";
 function PlayVideoScreen({ route, navigation }) {
   const video = React.useRef(null);
   const [status, setStatus] = React.useState({});
+  const [episode, setEpisode] = React.useState({});
   const { videoUrl, videoPoster, videoTitle } = route.params;
   console.log(videoTitle);
   // useEffect(() => {
@@ -43,13 +44,22 @@ function PlayVideoScreen({ route, navigation }) {
             source={require("../assets/gladiatorsLogoSimple.png")}
           />
 
-          <View style={{ alignItems: "center", marginTop: -13 }}>
+          <View style={playVideoScreenStyles.activatedText}>
             <Text style={playVideoScreenStyles.rentText}>
               YOUR RENTAL HAS BEEN ACTIVATED!
             </Text>
+
             <Text style={playVideoScreenStyles.hoursLeft}>
-              You now have <Text style={{ color: "#0aeeb5" }}>48 hours</Text>
-              {"\n"} to finish this episode.
+              Once you start an episode, you have{"\n"}
+              <Text
+                style={{
+                  color: "#0aeeb5",
+                  fontWeight: "700",
+                }}
+              >
+                48 hours{" "}
+              </Text>
+              to finish it.
             </Text>
           </View>
 
@@ -59,18 +69,18 @@ function PlayVideoScreen({ route, navigation }) {
               ref={video}
               style={playVideoScreenStyles.video}
               source={{
-                uri: videoUrl,
+                uri: {},
               }}
               posterSource={{
                 uri: videoPoster,
               }}
-              onLoadStart={() => setVideoLoaded(false)}
+              // onLoadStart
               shouldPlay
               staysActiveInBackground={false}
               useNativeControls={true}
               usePoster
               resizeMode="contain"
-              onPlaybackStatusUpdate={(status) => setStatus(() => status)}
+              // onPlaybackStatusUpdate={(status) => setStatus(() => status)}
             />
             {/* <View style={playVideoScreenStyles.buttons}>
               <Button
@@ -91,7 +101,8 @@ function PlayVideoScreen({ route, navigation }) {
               style={playVideoScreenStyles.buttonStyle}
               onPress={() =>
                 navigation.navigate("Video", {
-                  videoUrl: props.playVideo,
+                  videoTitle: videoTitle,
+                  videoUrl: videoUrl,
                 })
               }
             >

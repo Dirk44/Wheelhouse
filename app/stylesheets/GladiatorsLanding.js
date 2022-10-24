@@ -24,7 +24,7 @@ const gladiatorsLandingStyles = ScaledSheet.create({
     height: "30@s",
     width: "300@s",
     borderRadius: "4@s",
-    // marginTop: "50@s",
+    marginTop: "10@s",
   },
   buttonText: {
     color: "black",
@@ -38,11 +38,12 @@ const gladiatorsLandingStyles = ScaledSheet.create({
     fontWeight: "500",
     textAlign: "center",
     lineHeight: "14@s",
+    marginTop: "-10@s",
   },
   dolby: {
     width: "53%",
     height: "7@s",
-    // marginTop: "15@s",
+    marginTop: "10@s",
   },
   gladiatorsLogo: {
     width: "50%",
@@ -52,7 +53,7 @@ const gladiatorsLandingStyles = ScaledSheet.create({
   whLogo: {
     width: "75%",
     height: "70@s",
-    // marginTop: "40@s",
+    marginTop: "-30@s",
   },
 });
 

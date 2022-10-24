@@ -34,7 +34,7 @@ const clipsCardStyles = ScaledSheet.create({
     textAlign: "center",
     color: "white",
     opacity: 0.9,
-    fontSize: "17@s",
+    fontSize: "15@s",
     // fontWeight: "800",
     // marginTop: "1@s",
     fontFamily: "Helvetica87HeavyCondensed",

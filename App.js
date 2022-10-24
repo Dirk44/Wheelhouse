@@ -14,11 +14,11 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Amplify from "aws-amplify";
 import config from "./src/aws-exports";
 import { useFonts } from "expo-font";
-import AppLoading from "expo-app-loading";
+// import AppLoading from "expo-app-loading";
 
 // import { AuthStack } from "./app/routes";
 import { Navigator, HomeStack, AuthStack } from "./app/routes";
-import { HomePage } from "./app/screens";
+import { HomePage, LoadingScreen } from "./app/screens";
 
 // console.log(useDeviceOrientation());
 Amplify.configure({
@@ -47,7 +47,10 @@ const App = () => {
   });
 
   if (!fontsLoaded) {
-    return <AppLoading />;
+    // setTimeout(() => {
+    //   console.log("Delayed for 1 second.");
+    // }, 3000);
+    return <LoadingScreen />;
   }
 
   return (
