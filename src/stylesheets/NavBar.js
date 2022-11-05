@@ -6,6 +6,8 @@ const navBarStyles = ScaledSheet.create({
     marginLeft: "6%",
     opacity: 0.7,
     justifyContent: "flex-start",
+    zIndex: "9@s",
+    left: "10@s",
   },
   header: {
     // flex: 1,

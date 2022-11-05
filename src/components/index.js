@@ -1,7 +1,7 @@
 export { default as EpisodesCard } from "./EpisodesCard";
 export { default as CheckboxComponent } from "./Checkbox";
 export { default as ClipsCard } from "./ClipsCard";
-export { default as Hamburger } from "./Hamburger";
+// export { default as Hamburger } from "./Hamburger";
 export { default as InputField } from "./InputField";
 export { default as MenuText } from "./MenuText";
 export { default as NavBar } from "./NavBar";

@@ -11,7 +11,7 @@ export { default as googleSignInStyles } from "./GoogleSignIn";
 export { default as inputFieldStyles } from "./InputField";
 export { default as whButtonStyles } from "./WhButton";
 export { default as checkboxStyles } from "./Checkbox";
-export { default as hamburgerStyles } from "./Hamburger";
+// export { default as hamburgerStyles } from "./Hamburger";
 export { default as menuTextStyles } from "./MenuText";
 export { default as navBarStyles } from "./NavBar";
 export { default as videoPlayerStyles } from "./VideoPlayer";

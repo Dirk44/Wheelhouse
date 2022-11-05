@@ -18,7 +18,7 @@ import {
   GoogleSignIn,
 } from "../screens";
 import { ROUTES } from "../constants";
-import { AuthStack } from "../navigation";
+import AuthStack from "../navigation/AuthStack";
 
 const Stack = createStackNavigator();
 

@@ -13,7 +13,7 @@ import { useNavigation } from "@react-navigation/native";
 import { ROUTES } from "../../constants";
 import { homePageStyles } from "../../stylesheets";
 import { NavBar } from "../../components";
-import { SignIn, SignUp } from "../../screens";
+// import { SignIn, SignUp } from "../../screens";
 
 const HomePage = () => {
   const navigation = useNavigation();
