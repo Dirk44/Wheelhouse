@@ -13,7 +13,7 @@ import {
   RentSeries,
   GoogleSignIn,
 } from "../screens";
-import { HomeStack } from "../navigation";
+import HomeStack from "../navigation/homeStack";
 import { ROUTES } from "../constants";
 
 const Stack = createStackNavigator();

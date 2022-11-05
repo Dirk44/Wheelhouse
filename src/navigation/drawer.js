@@ -20,7 +20,7 @@ import {
 } from "../screens";
 import { NavBar } from "../components/";
 import { ROUTES } from "../constants";
-import { HomeStack, AuthStack } from "../navigation";
+import HomeStack from "../navigation/homeStack";
 
 const WIDTH = Dimensions.get("window").width;
 
