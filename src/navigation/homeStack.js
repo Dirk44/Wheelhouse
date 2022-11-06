@@ -19,6 +19,7 @@ import {
   JSI,
   EmailConfirmation,
   JSI,
+  EmailConfirmation,
 } from "../screens";
 import { ROUTES } from "../constants";
 import AuthStack from "../navigation/AuthStack";
