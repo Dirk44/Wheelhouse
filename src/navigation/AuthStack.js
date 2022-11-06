@@ -15,6 +15,7 @@ import {
 } from "../screens";
 import HomeStack from "../navigation/homeStack";
 import { ROUTES } from "../constants";
+import DrawerNav from "./drawer";
 
 const Stack = createStackNavigator();
 
@@ -30,11 +31,7 @@ const AuthStack = () => {
       <Stack.Screen name={ROUTES.SIGNIN} component={GoogleSignIn} />
       <Stack.Screen name={ROUTES.SIGNUP} component={GoogleSignIn} />
       <Stack.Screen name={ROUTES.SIGNOUT} component={SignOut} />
-      {/* <Stack.Screen name={ROUTES.CONFIRM_ACCOUNT} component={ConfirmAccount} />
-      <Stack.Screen name={ROUTES.FORGOT_PASSWORD} component={ForgotPassword} />
-      <Stack.Screen name={ROUTES.RESET_PASSWORD} component={ResetPassword} /> */}
-      {/* <Stack.Screen name={ROUTES.RENTAL_AUTH} component={HomeStack} /> */}
-      <Stack.Screen name={ROUTES.HOME_AUTH} component={HomeStack} />
+      <Stack.Screen name={ROUTES.HOME_AUTH} component={DrawerNav} />
     </Stack.Navigator>
     // </DismissKeyboard>
   );

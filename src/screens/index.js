@@ -9,9 +9,10 @@ export { default as PlayClipsScreen } from "./home/playClipsScreen";
 export { default as RentSeries } from "./home/rentSeries";
 export { default as GladiatorsLanding } from "./home/gladiatorsLanding";
 export { default as Episodes } from "./home/episodes";
-export { default as CreditCard } from "./home/creditCard";
+export { default as Cart } from "./home/cart";
 export { default as ThankYou } from "./home/thankYou";
 export { default as LoadingScreen } from "./home/loadingScreen";
+export { default as EmailConfirmation } from "./home/emailConfirmation";
 
 //Auth
 export { default as SignIn } from "./auth/signIn";

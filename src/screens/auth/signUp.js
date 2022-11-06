@@ -12,12 +12,13 @@ import {
   Button,
   useWindowDimensions,
   Alert,
+  ScrollView,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useForm } from "react-hook-form";
 import { signUpStyles } from "../../stylesheets";
 
-import { InputField, WhButton } from "../../components";
+import { InputField, NavBar, WhButton } from "../../components";
 
 function SignUp() {
   // const [email, setEmail] = useState("");
@@ -27,9 +28,7 @@ function SignUp() {
   // const [phoneNumber, setPhoneNumber] = useState("");
   const navigation = useNavigation();
 
-  const { control, handleSubmit, watch } = useForm();
-
-  const pWord = watch("password");
+  const { control, handleSubmit } = useForm();
 
   const onSignUpPressed = async (data) => {
     const { username, email, password } = data;
@@ -46,7 +45,7 @@ function SignUp() {
       console.log(e);
     }
 
-    navigation.navigate("ConfirmAccount", { username });
+    //   navigation.navigate("ConfirmAccount", { username });
   };
 
   const onBackToLoginPressed = () => {
@@ -55,58 +54,56 @@ function SignUp() {
 
   return (
     <SafeAreaView style={signUpStyles.container}>
-      <ImageBackground
-        style={signUpStyles.background}
-        source={require("../../assets/landing-page-background.jpg")}
-      >
-        <Image
-          source={require("../../assets/wh-logo.png")}
-          style={signUpStyles.whLogo}
-        />
-        <Text style={signUpStyles.signupText}>Signup</Text>
-        <View style={signUpStyles.inputs}>
-          <InputField
-            name="username"
-            placeholder="USERNAME "
-            control={control}
-            rules={{ required: "Username is required" }}
+      <NavBar />
+      <ScrollView>
+        <ImageBackground
+          style={signUpStyles.background}
+          source={require("../../assets/googleSignIn/googleSignInBg.jpg")}
+        >
+          <Image
+            source={require("../../assets/googleSignIn/wh-logo-signIn.png")}
+            style={signUpStyles.whLogo}
           />
-          <InputField
-            name="email"
-            placeholder="EMAIL "
-            control={control}
-            rules={{ required: "Email is required" }}
-            autoCapitalize="none"
-            keyboardType="email-address"
-          />
-          <InputField
-            name="password"
-            placeholder="PASSWORD "
-            control={control}
-            rules={{
-              required: "Password is required",
-              minLength: {
-                value: 8,
-                message: "Password minimum length is 8 characters",
-              },
-            }}
-            secureTextEntry={true}
-          />
-          <InputField
-            name="confirm password"
-            placeholder="CONFIRM PASSWORD "
-            control={control}
-            rules={{
-              validate: (value) => value === pWord || "Passwords do not match",
-              required: "Please confirm password",
-              minLength: {
-                value: 8,
-                message: "Password minimum length is 8 characters",
-              },
-            }}
-            secureTextEntry={true}
-          />
-          {/* <PhoneInputField
+          <View style={signUpStyles.signupTextContainer}>
+            <Text style={signUpStyles.signupText}>
+              Sign up for updates on WheelHouse Motorsports' upcoming shows, new
+              content and special offers. Your information will not be shared or
+              sold.
+            </Text>
+          </View>
+          <View style={signUpStyles.inputs}>
+            <InputField
+              name="name"
+              placeholder="NAME "
+              control={control}
+              rules={{ required: "Username is required" }}
+            />
+            <InputField
+              name="email"
+              placeholder="EMAIL "
+              control={control}
+              rules={{ required: "Email is required" }}
+              autoCapitalize="none"
+              keyboardType="email-address"
+            />
+            <InputField
+              name="age"
+              placeholder="AGE "
+              control={control}
+              rules={{
+                required: "Age is required",
+                keyboardType: "numeric",
+              }}
+            />
+            <InputField
+              name="favorite motorsport"
+              placeholder="FAVORITE MOTORSPORT "
+              control={control}
+              rules={{
+                required: "Favorite motorsport is required",
+              }}
+            />
+            {/* <PhoneInputField
             name="phone_number"
             placeholder="Phone Number"
             control={control}
@@ -120,16 +117,24 @@ function SignUp() {
               },
             }}
           /> */}
-
-          <WhButton title="Signup" onPress={handleSubmit(onSignUpPressed)} />
+          </View>
+          <View style={signUpStyles.buttonContainer}>
+            <TouchableOpacity
+              style={signUpStyles.buttonStyle}
+              onPress={() => {
+                navigation.navigate("SignUp");
+              }}
+            >
+              <Text style={signUpStyles.buttonText}>SIGN UP</Text>
+            </TouchableOpacity>
+          </View>
           {/* copy props from Whbutton to other buttons */}
-
-          {/* <View style={signUpStyles.signUpContainer}> */}
-
-          <Text style={signUpStyles.loginText}>Back to Login</Text>
-          <Button title="Click Here" onPress={onBackToLoginPressed} />
-        </View>
-      </ImageBackground>
+          <Image
+            style={signUpStyles.whLogoBottom}
+            source={require("../../assets/wh-logo.png")}
+          />
+        </ImageBackground>
+      </ScrollView>
     </SafeAreaView>
   );
 }

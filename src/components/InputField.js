@@ -45,7 +45,7 @@ const InputField = ({
               autoCapitalize={autoCapitalize}
               keyboardType={keyboardType}
               placeholderTextColor="#00aeef"
-              fontSize={18}
+              fontSize={13}
               fontWeight="bold"
               color="white"
             />
