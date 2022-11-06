@@ -51,10 +51,7 @@ const linking = {
 
 function HomeStack() {
   return (
-    <Stack.Navigator
-      initialRouteName={ROUTES.HOME}
-      screenOptions={{ headerShown: false }}
-    >
+    <Stack.Navigator initialRouteName={ROUTES.HOME} screenOptions={{ headerShown: false }}>
       <Stack.Screen
         name={ROUTES.HOME}
         component={HomePage}
@@ -75,22 +72,8 @@ function HomeStack() {
       <Stack.Screen name={ROUTES.CLIPS_VIDEO} component={PlayClipsScreen} />
       <Stack.Screen name={ROUTES.CART} component={Cart} />
       <Stack.Screen name={ROUTES.THANKYOU} component={ThankYou} />
-<<<<<<< HEAD
-<<<<<<< HEAD
       <Stack.Screen name={ROUTES.SIGNUP_HOME} component={JSI} />
-=======
-      <Stack.Screen
-        name={ROUTES.EMAIL_CONFIRMATION}
-        component={EmailConfirmation}
-      />
-      {/* <Stack.Screen
-        name={ROUTES.EMAIL_CONFIRMATION_HOME}
-        component={HomePage}
-      /> */}
-=======
->>>>>>> 5213e65 (`added jsi, not rendering)
-      <Stack.Screen name={ROUTES.SIGNUP_HOME} component={GoogleSignIn} />
->>>>>>> 9348b4d (Added welcome and thank you pages)
+      <Stack.Screen name={ROUTES.EMAIL_CONFIRMATION} component={EmailConfirmation} />
       <Stack.Screen name={ROUTES.SIGNIN_HOME} component={AuthStack} />
     </Stack.Navigator>
   );
