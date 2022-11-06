@@ -1,21 +1,47 @@
 import { StyleSheet } from "react-native";
+import { ScaledSheet } from "react-native-size-matters";
 
-const signUpStyles = StyleSheet.create({
+const signUpStyles = ScaledSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#000",
     // paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   background: {
-    flex: 1,
+    // flex: 1,
     width: "100%",
-    height: "auto",
+    height: "700@s",
     alignItems: "center",
+    marginTop: "-18@s",
+  },
+  buttonContainer: {
+    flex: 0.4,
+    marginTop: "30@s",
+    overflow: "visible",
+  },
+  buttonStyle: {
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "black",
+    borderColor: "white",
+    borderWidth: "1@s",
+    height: "30@s",
+    width: "220@s",
+    borderRadius: "4@s",
+    // marginTop: "-120@s",
+  },
+  buttonText: {
+    color: "white",
+    fontSize: "15@s",
+    fontWeight: "700",
+    letterSpacing: 2,
   },
   inputs: {
     width: "100%",
-    height: "50%",
+    height: "125@s",
     alignItems: "center",
+    marginTop: "25@s",
+    // backgroundColor: "red",
   },
   input: {
     justifyContent: "center",
@@ -32,17 +58,19 @@ const signUpStyles = StyleSheet.create({
     shadowOpacity: 0.9,
     shadowRadius: 10,
   },
+  signupTextContainer: {
+    width: "80%",
+  },
   signupText: {
     color: "white",
-    fontSize: 30,
-    fontFamily: "HelveticaRegular",
+    fontSize: "12@s",
+    textAlign: "center",
+    lineHeight: 23,
+
+    // fontFamily: "HelveticaRegular",
+    fontWeight: "600",
     opacity: 0.9,
     paddingTop: "5%",
-    marginTop: "18%",
-    // shadowColor: "black",
-    // shadowOffset: { width: 5, height: 5 },
-    // shadowOpacity: 1,
-    // shadowRadius: 10,
   },
   loginText: {
     color: "white",
@@ -58,6 +86,12 @@ const signUpStyles = StyleSheet.create({
     overflow: "visible",
     marginTop: "12%",
     marginRight: "7%",
+  },
+  whLogoBottom: {
+    width: "40%",
+    height: "60@s",
+    marginTop: "200@s",
+    marginRight: "20@s",
   },
 });
 

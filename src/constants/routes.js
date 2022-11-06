@@ -11,6 +11,8 @@ export default {
 
   //Home
   HOME: "Home",
+  EMAIL_CONFIRMATION_HOME: "Email Confirmation Home",
+  EMAIL_CONFIRMATION: "Email Confirmation",
   UPCOMINGSHOWS: "Upcoming Shows",
   CLIPS: "Clips",
   STORE: "Store",
@@ -18,7 +20,7 @@ export default {
   GLADIATORS: "Gladiators Landing",
   RENTAL: "Rent Series",
   EPISODES: "Episodes",
-  CREDITCARD: "Credit Card",
+  CART: "Cart",
   THANKYOU: "Thank You",
   LOADINGSCREEN: "Loading Screen",
   VIDEO: "Play Video Screen",

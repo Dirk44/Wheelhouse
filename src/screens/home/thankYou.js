@@ -12,6 +12,7 @@ import {
 } from "react-native";
 import { thankYouStyles } from "../../stylesheets";
 import { NavBar } from "../../components";
+import { ROUTES } from "../../constants";
 
 const ThankYou = () => {
   const navigation = useNavigation();
@@ -45,7 +46,7 @@ const ThankYou = () => {
               >
                 <TouchableOpacity
                   style={thankYouStyles.buttonStyle}
-                  onPress={() => navigation.navigate("Episodes")}
+                  onPress={() => navigation.navigate(ROUTES.EPISODES)}
                 >
                   <Text style={thankYouStyles.buttonText}>VIEW EPISODES</Text>
                 </TouchableOpacity>
@@ -53,6 +54,11 @@ const ThankYou = () => {
             </View>
           </View>
           {/* <View styles={thankYouStyles.whLogoContainerSmall}> */}
+          <View style={thankYouStyles.emailSignupContainer}>
+            <Text style={thankYouStyles.signupText}>
+              SIGN UP FOR EMAILS ABOUT EXLUSIVE OFFERS AND UPCOMING CONTENT
+            </Text>
+          </View>
           <Image
             style={thankYouStyles.whLogoSmall}
             source={require("../../assets/upcominShowsElements/whBottom.png")}

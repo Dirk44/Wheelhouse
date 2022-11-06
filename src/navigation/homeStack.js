@@ -11,11 +11,12 @@ import {
   RentSeries,
   GladiatorsLanding,
   Episodes,
-  CreditCard,
+  Cart,
   ThankYou,
   SignUp,
   SignIn,
   GoogleSignIn,
+  EmailConfirmation,
 } from "../screens";
 import { ROUTES } from "../constants";
 import AuthStack from "../navigation/AuthStack";
@@ -27,7 +28,6 @@ function HomeStack() {
     <Stack.Navigator
       initialRouteName={ROUTES.HOME}
       screenOptions={{ headerShown: false }}
-      // useLegacyImplementation={true}
     >
       <Stack.Screen
         name={ROUTES.HOME}
@@ -47,8 +47,16 @@ function HomeStack() {
       <Stack.Screen name={ROUTES.WAITLIST} component={WaitList} />
       <Stack.Screen name={ROUTES.VIDEO} component={PlayVideoScreen} />
       <Stack.Screen name={ROUTES.CLIPS_VIDEO} component={PlayClipsScreen} />
-      <Stack.Screen name={ROUTES.CREDITCARD} component={CreditCard} />
+      <Stack.Screen name={ROUTES.CART} component={Cart} />
       <Stack.Screen name={ROUTES.THANKYOU} component={ThankYou} />
+      <Stack.Screen
+        name={ROUTES.EMAIL_CONFIRMATION}
+        component={EmailConfirmation}
+      />
+      {/* <Stack.Screen
+        name={ROUTES.EMAIL_CONFIRMATION_HOME}
+        component={HomePage}
+      /> */}
       <Stack.Screen name={ROUTES.SIGNUP_HOME} component={GoogleSignIn} />
       <Stack.Screen name={ROUTES.SIGNIN_HOME} component={AuthStack} />
     </Stack.Navigator>

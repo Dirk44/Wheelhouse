@@ -23,6 +23,7 @@ const App = () => {
     Helvetica87Bold: require("./src/assets/fonts/Montserrat-Black.ttf"),
     Helvetica87: require("./src/assets/fonts/Montserrat-VariableFont_wght.ttf"),
     Helvetica87HeavyCondensed: require("./src/assets/fonts/Helvetica-87-Heavy-Condensed.ttf"),
+    Helvetica75Bold: require("./src/assets/fonts/Helvetica75-Bold.ttf"),
   });
 
   useEffect(() => {

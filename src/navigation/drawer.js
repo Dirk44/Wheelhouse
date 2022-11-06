@@ -17,10 +17,12 @@ import {
   LoadingScreen,
   SignUp,
   SignIn,
+  EmailConfirmation,
 } from "../screens";
 import { NavBar } from "../components/";
 import { ROUTES } from "../constants";
 import HomeStack from "../navigation/homeStack";
+import { CommonActions, useNavigation } from "@react-navigation/native";
 
 const WIDTH = Dimensions.get("window").width;
 
@@ -33,30 +35,33 @@ const navigationOptions = () => {
 const Drawer = createDrawerNavigator();
 
 const DrawerNav = () => {
+  const navigation = useNavigation();
+
   return (
     <Drawer.Navigator
       initialRouteName={ROUTES.HOME}
       screenOptions={{
+        // unmountOnBlur: true,
         headerShown: false,
         swipeEdgeWidth: 0,
         drawerStyle: {
           width: WIDTH * 0.6,
+          backgroundColor: "#c6cbef",
         },
       }}
-      // useLegacyImplementation={true}
     >
       {/* {!auth && <HomeStack />} */}
       <Drawer.Screen
         name={ROUTES.HOME_DRAWER}
         component={HomeStack}
-        onPress={() =>
-          navigation.dispatch(
-            CommonActions.reset({
-              index: 0,
-              routes: [{ name: ROUTES.HOME }],
-            })
-          )
-        }
+        // onPress={() =>
+        //   navigation.dispatch(
+        //     CommonActions.reset({
+        //       index: 0,
+        //       routes: [{ name: ROUTES.HOME }],
+        //     })
+        //   )
+        // }
         options={{
           navigationOptions: navigationOptions,
           title: "HOME",
@@ -146,9 +151,9 @@ const DrawerNav = () => {
           navigationOptions: navigationOptions,
           title: "Rental",
         }}
-      />
+      /> */}
       <Drawer.Screen
-        name="ThankYou"
+        name={ROUTES.THANKYOU}
         component={ThankYou}
         options={{
           navigationOptions: navigationOptions,
@@ -156,13 +161,21 @@ const DrawerNav = () => {
         }}
       />
       <Drawer.Screen
+        name={ROUTES.EMAIL_CONFIRMATION}
+        component={EmailConfirmation}
+        options={{
+          navigationOptions: navigationOptions,
+          title: "Email Confirmation",
+        }}
+      />
+      {/* <Drawer.Screen
         name="LoadingScreen"
         component={LoadingScreen}
         options={{
           navigationOptions: navigationOptions,
           title: "Loading Screen",
         }}
-      /> */}
+      />  */}
     </Drawer.Navigator>
   );
 };
