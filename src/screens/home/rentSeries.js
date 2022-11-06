@@ -52,8 +52,8 @@ const RentSeries = (props) => {
             <TouchableOpacity
               // style={rentSeriesStyles.buttonStyle}
               onPress={() => {
-                auth
-                  ? navigation.navigate(ROUTES.CREDITCARD)
+                !auth
+                  ? navigation.navigate(ROUTES.CART)
                   : navigation.navigate(ROUTES.SIGNIN_HOME);
               }}
             >

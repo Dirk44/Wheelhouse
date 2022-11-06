@@ -1,6 +1,6 @@
 import { ScaledSheet } from "react-native-size-matters";
 
-const thankYouStyles = ScaledSheet.create({
+const emailConfirmationStyles = ScaledSheet.create({
   container: {
     backgroundColor: "#000",
     flex: 1,
@@ -16,7 +16,7 @@ const thankYouStyles = ScaledSheet.create({
   },
   box: {
     width: "275@s",
-    height: "230@s",
+    height: "240@s",
     backgroundColor: "#1a1a1a",
     borderColor: "white",
     borderWidth: 0.5,
@@ -28,20 +28,28 @@ const thankYouStyles = ScaledSheet.create({
     height: "auto",
     alignItems: "center",
   },
+  buttonContainer: {
+    flex: 0.4,
+    marginTop: "50@s",
+    overflow: "visible",
+  },
   buttonStyle: {
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#0aeeb5",
+    // backgroundColor: "black",
+    borderColor: "white",
+    borderWidth: "1@s",
     height: "30@s",
-    width: "225@s",
+    width: "220@s",
     borderRadius: "4@s",
-    marginTop: "20@s",
+    // marginTop: "-120@s",
   },
   buttonText: {
-    color: "black",
-    fontSize: "14@s",
-    fontWeight: "400",
+    color: "white",
+    fontSize: "15@s",
+    // fontWeight: "600",
     letterSpacing: 2,
+    fontFamily: "Helvetica-Bold",
   },
   congratsText: {
     width: "220@s",
@@ -65,14 +73,30 @@ const thankYouStyles = ScaledSheet.create({
     textAlign: "center",
     letterSpacing: 1,
   },
-  thankYouText: {
+  teamText: {
     color: "white",
-    marginTop: "40@s",
-    fontSize: "35@s",
-    fontWeight: "800",
-    fontFamily: "Helvetica87HeavyCondensed",
-    letterSpacing: 2,
-    lineHeight: "40@s",
+    fontSize: "22@s",
+    fontFamily: "Helvetica-Bold",
+    marginTop: "10@s",
+  },
+  toTheText: {
+    color: "white",
+    fontSize: "17@s",
+    marginTop: "10@s",
+    fontFamily: "Helvetica",
+  },
+  welcomeTextContainer: {
+    width: "100%",
+    height: "auto",
+    // backgroundColor: "red",
+    marginTop: "20@s",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  welcomeText: {
+    color: "white",
+    fontSize: "45@s",
+    fontFamily: "Helvetica-Bold",
   },
   whLogo: {
     width: "85%",
@@ -91,16 +115,8 @@ const thankYouStyles = ScaledSheet.create({
   whLogoSmall: {
     width: "40%",
     height: "47@s",
-    marginTop: "150@s",
+    marginTop: "250@s",
   },
-  //   whLogoContainerSmall: {
-  //     width: "60%",
-  //     height: "40@s",
-  //     // marginTop: "-80@s",
-  //     // marginRight: "15@s",
-  //     backgroundColor: "red",
-  //     // overflow: "hidden",
-  //   },
 });
 
-export default thankYouStyles;
+export default emailConfirmationStyles;

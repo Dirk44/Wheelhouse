@@ -7,6 +7,8 @@ export { default as MenuText } from "./MenuText";
 export { default as NavBar } from "./NavBar";
 export { default as VideoPlayer } from "./VideoPlayer";
 export { default as WhButton } from "./WhButton";
+export { default as CartCard } from "./CartCard";
+
 // export { default as movies } from ".movies.json"
 
 // module.exports = {
