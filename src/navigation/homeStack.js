@@ -18,6 +18,7 @@ import {
   GoogleSignIn,
   JSI,
   EmailConfirmation,
+  JSI,
 } from "../screens";
 import { ROUTES } from "../constants";
 import AuthStack from "../navigation/AuthStack";
