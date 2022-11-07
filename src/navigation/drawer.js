@@ -160,14 +160,14 @@ const DrawerNav = () => {
           title: "Thank You",
         }}
       /> */}
-      <Drawer.Screen
+      {/* <Drawer.Screen
         name={ROUTES.EMAIL_CONFIRMATION}
         component={EmailConfirmation}
         options={{
           navigationOptions: navigationOptions,
           title: "Email Confirmation",
         }}
-      />
+      /> */}
       {/* <Drawer.Screen
         name="LoadingScreen"
         component={LoadingScreen}
