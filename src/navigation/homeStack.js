@@ -52,7 +52,6 @@ const linking = {
 function HomeStack() {
   return (
     <Stack.Navigator
-      linking={linking}
       initialRouteName={ROUTES.HOME}
       screenOptions={{ headerShown: false }}
     >
