@@ -76,6 +76,7 @@ function HomeStack() {
       <Stack.Screen name={ROUTES.CART} component={Cart} />
       <Stack.Screen name={ROUTES.THANKYOU} component={ThankYou} />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Stack.Screen name={ROUTES.SIGNUP_HOME} component={JSI} />
 =======
       <Stack.Screen
@@ -86,6 +87,8 @@ function HomeStack() {
         name={ROUTES.EMAIL_CONFIRMATION_HOME}
         component={HomePage}
       /> */}
+=======
+>>>>>>> 5213e65 (`added jsi, not rendering)
       <Stack.Screen name={ROUTES.SIGNUP_HOME} component={GoogleSignIn} />
 >>>>>>> 9348b4d (Added welcome and thank you pages)
       <Stack.Screen name={ROUTES.SIGNIN_HOME} component={AuthStack} />
