@@ -152,14 +152,14 @@ const DrawerNav = () => {
           title: "Rental",
         }}
       /> */}
-      <Drawer.Screen
+      {/* <Drawer.Screen
         name={ROUTES.THANKYOU}
         component={ThankYou}
         options={{
           navigationOptions: navigationOptions,
           title: "Thank You",
         }}
-      />
+      /> */}
       <Drawer.Screen
         name={ROUTES.EMAIL_CONFIRMATION}
         component={EmailConfirmation}
