@@ -16,6 +16,7 @@ import {
   SignUp,
   SignIn,
   GoogleSignIn,
+  JSI,
 } from "../screens";
 import { ROUTES } from "../constants";
 import AuthStack from "../navigation/AuthStack";
@@ -49,7 +50,7 @@ function HomeStack() {
       <Stack.Screen name={ROUTES.CLIPS_VIDEO} component={PlayClipsScreen} />
       <Stack.Screen name={ROUTES.CREDITCARD} component={CreditCard} />
       <Stack.Screen name={ROUTES.THANKYOU} component={ThankYou} />
-      <Stack.Screen name={ROUTES.SIGNUP_HOME} component={GoogleSignIn} />
+      <Stack.Screen name={ROUTES.SIGNUP_HOME} component={JSI} />
       <Stack.Screen name={ROUTES.SIGNIN_HOME} component={AuthStack} />
     </Stack.Navigator>
   );
