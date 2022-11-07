@@ -23,9 +23,35 @@ import AuthStack from "../navigation/AuthStack";
 
 const Stack = createStackNavigator();
 
+const linking = {
+  prefixes: ["https://wheelhouse.com", "wheelhouse://"],
+  config: {
+    Home: " ",
+    SignIn: "signin",
+    SignUp: "signup",
+    ForgotPassword: "forgotpassword",
+    ConfirmAccount: "confirmaccount",
+    ResetPassword: "resetpassword",
+    SignOut: "signout",
+    UpcomingShows: "upcomingshows",
+    Clips: "clips",
+    Store: "store",
+    WaitList: "waitlist",
+    PlayVideoScreen: "playvideoscreen",
+    PlayClipsScreen: "playclipsscreen",
+    RentSeries: "rentseries",
+    GladiatorsLanding: "gladiatorslanding",
+    Episodes: "episodes",
+    Cart: "cart",
+    ThankYou: "thankyou",
+    EmailConfirmation: "emailconfirmation",
+  },
+};
+
 function HomeStack() {
   return (
     <Stack.Navigator
+      linking={linking}
       initialRouteName={ROUTES.HOME}
       screenOptions={{ headerShown: false }}
     >
