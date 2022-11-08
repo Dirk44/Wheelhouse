@@ -1,14 +1,6 @@
 import Checkbox from "expo-checkbox";
 import React, { useState, useEffect } from "react";
-import {
-  ImageBackground,
-  SafeAreaView,
-  ScrollView,
-  View,
-  Text,
-  Image,
-  TouchableOpacity,
-} from "react-native";
+import { ImageBackground, SafeAreaView, ScrollView, View, Text, Image, TouchableOpacity } from "react-native";
 import { useCookies } from "react-cookie";
 import { WebView } from "react-native-webview";
 import { NavBar } from "../../components";
@@ -45,20 +37,20 @@ const JSI = () => {
   return (
     <SafeAreaView style={googleSignInStyles.container}>
       <NavBar />
-      <ScrollView>
-        <ImageBackground
-          style={googleSignInStyles.background}
-          source={require("../../assets/googleSignIn/googleSignInBg.jpg")}
+      {/* <ScrollView> */}
+      <ImageBackground
+        style={googleSignInStyles.background}
+        source={require("../../assets/googleSignIn/googleSignInBg.jpg")}
+      >
+        <View
+          style={{
+            marginTop: 100,
+          }}
         >
-          <View
-            style={{
-              marginTop: 100,
-            }}
-          >
-            <div id="jsi_menu_slot">Does this work</div>
-          </View>
-        </ImageBackground>
-      </ScrollView>
+          <div id="jsi_menu_slot">Does this work</div>
+        </View>
+      </ImageBackground>
+      {/* </ScrollView> */}
     </SafeAreaView>
   );
 };
