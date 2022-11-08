@@ -75,7 +75,10 @@ function HomeStack() {
       <Stack.Screen name={ROUTES.CLIPS_VIDEO} component={PlayClipsScreen} />
       <Stack.Screen name={ROUTES.CART} component={Cart} />
       <Stack.Screen name={ROUTES.THANKYOU} component={ThankYou} />
-      <Stack.Screen name={ROUTES.EMAIL_CONFIRMATION} component={EmailConfirmation} />
+      <Stack.Screen
+        name={ROUTES.EMAIL_CONFIRMATION}
+        component={EmailConfirmation}
+      />
       {/* <Stack.Screen
         name={ROUTES.EMAIL_CONFIRMATION_HOME}
         component={HomePage}
