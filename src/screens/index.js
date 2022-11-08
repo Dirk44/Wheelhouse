@@ -22,3 +22,4 @@ export { default as ResetPassword } from "./auth/resetPassword";
 export { default as SignOut } from "./auth/signOut";
 export { default as ConfirmAccount } from "./auth/confirmAccount";
 export { default as GoogleSignIn } from "./auth/googleSignIn";
+export { default as JSI } from "./auth/jsi";
