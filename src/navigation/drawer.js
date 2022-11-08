@@ -175,7 +175,7 @@ const DrawerNav = () => {
           navigationOptions: navigationOptions,
           title: "Loading Screen",
         }}
-      />   */}
+      />  */}
     </Drawer.Navigator>
   );
 };
