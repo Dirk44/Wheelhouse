@@ -15,6 +15,33 @@ const DismissKeyboard = ({ children }) => (
   <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>{children}</TouchableWithoutFeedback>
 );
 
+const linking = {
+  prefixes: ["https://wheelhouse.com", "wheelhouse://"],
+  config: {
+    screens: {
+      Home: "Home",
+      SignIn: "signin",
+      SignUp: "signup",
+      ForgotPassword: "forgotpassword",
+      ConfirmAccount: "confirmaccount",
+      ResetPassword: "resetpassword",
+      SignOut: "signout",
+      UpcomingShows: "upcomingshows",
+      Clips: "clips",
+      Store: "store",
+      WaitList: "waitlist",
+      PlayVideoScreen: "playvideoscreen",
+      PlayClipsScreen: "playclipsscreen",
+      RentSeries: "rentseries",
+      GladiatorsLanding: "gladiatorslanding",
+      Episodes: "episodes",
+      Cart: "cart",
+      ThankYou: "thankyou",
+      EmailConfirmation: "emailconfirmation",
+    },
+  },
+};
+
 const App = () => {
   const [fontsLoaded] = useFonts({
     HelveticaRegular: require("./src/assets/fonts/Yantramanav-Black.ttf"),
@@ -42,7 +69,7 @@ const App = () => {
     <>
       <StatusBar barStyle="light-content" translucent={true} backgroundColor="black" />
       <DismissKeyboard>
-        <NavigationContainer>
+        <NavigationContainer linking={linking}>
           <DrawerNav />
         </NavigationContainer>
       </DismissKeyboard>

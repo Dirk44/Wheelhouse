@@ -23,35 +23,35 @@ import AuthStack from "../navigation/AuthStack";
 
 const Stack = createStackNavigator();
 
-const linking = {
-  prefixes: ["https://wheelhouse.com", "wheelhouse://"],
-  config: {
-    Home: " ",
-    SignIn: ":id/signin",
-    SignUp: ":id/signup",
-    ForgotPassword: ":id/forgotpassword",
-    ConfirmAccount: ":id/confirmaccount",
-    ResetPassword: ":id/resetpassword",
-    SignOut: ":id/signout",
-    UpcomingShows: ":id/upcomingshows",
-    Clips: ":id/clips",
-    Store: ":id/store",
-    WaitList: ":id/waitlist",
-    PlayVideoScreen: ":id/playvideoscreen",
-    PlayClipsScreen: ":id/playclipsscreen",
-    RentSeries: ":id/rentseries",
-    GladiatorsLanding: ":id/gladiatorslanding",
-    Episodes: ":id/episodes",
-    Cart: ":id/cart",
-    ThankYou: ":id/thankyou",
-    EmailConfirmation: ":id/emailconfirmation",
-  },
-};
+// const linking = {
+//   prefixes: ["https://wheelhouse.com", "wheelhouse://"],
+//   config: {
+//     Home: " ",
+//     SignIn: ":id/signin",
+//     SignUp: ":id/signup",
+//     ForgotPassword: ":id/forgotpassword",
+//     ConfirmAccount: ":id/confirmaccount",
+//     ResetPassword: ":id/resetpassword",
+//     SignOut: ":id/signout",
+//     UpcomingShows: ":id/upcomingshows",
+//     Clips: ":id/clips",
+//     Store: ":id/store",
+//     WaitList: ":id/waitlist",
+//     PlayVideoScreen: ":id/playvideoscreen",
+//     PlayClipsScreen: ":id/playclipsscreen",
+//     RentSeries: ":id/rentseries",
+//     GladiatorsLanding: ":id/gladiatorslanding",
+//     Episodes: ":id/episodes",
+//     Cart: ":id/cart",
+//     ThankYou: ":id/thankyou",
+//     EmailConfirmation: ":id/emailconfirmation",
+//   },
+// };
 
 function HomeStack() {
   return (
     <Stack.Navigator
-      linking={linking}
+      // linking={linking}
       initialRouteName={ROUTES.HOME}
       screenOptions={{ headerShown: false }}
     >
