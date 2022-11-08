@@ -5,7 +5,6 @@ import { useCookies } from "react-cookie";
 import { WebView } from "react-native-webview";
 import { NavBar } from "../../components";
 import { googleSignInStyles } from "../../stylesheets";
-import { AuthContext } from "../../utils/auth";
 
 const JSI = () => {
   const [isChecked, setChecked] = useState(false);

@@ -56,7 +56,7 @@ const DrawerNav = () => {
       }}
     >
       <Drawer.Screen
-        name={ROUTES.HOME_DRAWER}
+        name={ROUTES.HOME}
         component={HomeStack}
         // onPress={() =>
         //   navigation.dispatch(
@@ -110,7 +110,7 @@ const DrawerNav = () => {
       }}
     >
       <Drawer.Screen
-        name={ROUTES.HOME_DRAWER}
+        name={ROUTES.HOME}
         component={HomeStack}
         // onPress={() =>
         //   navigation.dispatch(
