@@ -34,10 +34,7 @@ function PlayClipsScreen({ route, navigation }) {
     <SafeAreaView style={playClipsScreenStyles.container}>
       <NavBar />
       <ScrollView>
-        <ImageBackground
-          style={playClipsScreenStyles.background}
-          source={require("../../assets/videoPlayerBg.jpg")}
-        >
+        <ImageBackground style={playClipsScreenStyles.background} source={require("../../assets/videoPlayerBg.jpg")}>
           <Image
             style={playClipsScreenStyles.gladiatorLogo}
             source={require("../../assets/gladiatorsLogoSimple.png")}
@@ -109,10 +106,7 @@ function PlayClipsScreen({ route, navigation }) {
             </TouchableOpacity>
           </View> */}
           <View style={{ width: "50%", alignItems: "center" }}>
-            <Image
-              style={playClipsScreenStyles.whLogo}
-              source={require("../../assets/wh-logo.png")}
-            ></Image>
+            <Image style={playClipsScreenStyles.whLogo} source={require("../../assets/wh-logo.png")}></Image>
           </View>
         </ImageBackground>
       </ScrollView>
