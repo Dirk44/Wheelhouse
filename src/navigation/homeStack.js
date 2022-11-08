@@ -15,7 +15,7 @@ import {
   ThankYou,
   SignUp,
   SignIn,
-  GoogleSignIn,
+  JSI,
   EmailConfirmation,
 } from "../screens";
 import { ROUTES } from "../constants";
@@ -50,11 +50,7 @@ const linking = {
 
 function HomeStack() {
   return (
-    <Stack.Navigator
-      linking={linking}
-      initialRouteName={ROUTES.HOME}
-      screenOptions={{ headerShown: false }}
-    >
+    <Stack.Navigator linking={linking} initialRouteName={ROUTES.HOME} screenOptions={{ headerShown: false }}>
       <Stack.Screen
         name={ROUTES.HOME}
         component={HomePage}
@@ -75,15 +71,8 @@ function HomeStack() {
       <Stack.Screen name={ROUTES.CLIPS_VIDEO} component={PlayClipsScreen} />
       <Stack.Screen name={ROUTES.CART} component={Cart} />
       <Stack.Screen name={ROUTES.THANKYOU} component={ThankYou} />
-      <Stack.Screen
-        name={ROUTES.EMAIL_CONFIRMATION}
-        component={EmailConfirmation}
-      />
-      {/* <Stack.Screen
-        name={ROUTES.EMAIL_CONFIRMATION_HOME}
-        component={HomePage}
-      /> */}
-      <Stack.Screen name={ROUTES.SIGNUP_HOME} component={GoogleSignIn} />
+      <Stack.Screen name={ROUTES.EMAIL_CONFIRMATION} component={EmailConfirmation} />
+      <Stack.Screen name={ROUTES.SIGNUP_HOME} component={JSI} />
       <Stack.Screen name={ROUTES.SIGNIN_HOME} component={AuthStack} />
     </Stack.Navigator>
   );
