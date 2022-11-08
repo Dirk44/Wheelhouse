@@ -15,7 +15,7 @@ import {
   ThankYou,
   SignUp,
   SignIn,
-  JSI,
+  GoogleSignIn,
   EmailConfirmation,
 } from "../screens";
 import { ROUTES } from "../constants";
@@ -76,7 +76,11 @@ function HomeStack() {
       <Stack.Screen name={ROUTES.CART} component={Cart} />
       <Stack.Screen name={ROUTES.THANKYOU} component={ThankYou} />
       <Stack.Screen name={ROUTES.EMAIL_CONFIRMATION} component={EmailConfirmation} />
-      <Stack.Screen name={ROUTES.SIGNUP_HOME} component={JSI} />
+      {/* <Stack.Screen
+        name={ROUTES.EMAIL_CONFIRMATION_HOME}
+        component={HomePage}
+      /> */}
+      <Stack.Screen name={ROUTES.SIGNUP_HOME} component={GoogleSignIn} />
       <Stack.Screen name={ROUTES.SIGNIN_HOME} component={AuthStack} />
     </Stack.Navigator>
   );
