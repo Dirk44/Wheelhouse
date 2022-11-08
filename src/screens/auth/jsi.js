@@ -5,6 +5,7 @@ import { useCookies } from "react-cookie";
 import { WebView } from "react-native-webview";
 import { NavBar } from "../../components";
 import { googleSignInStyles } from "../../stylesheets";
+import { AuthContext } from "../../utils/auth";
 
 const JSI = () => {
   const [isChecked, setChecked] = useState(false);
@@ -15,6 +16,7 @@ const JSI = () => {
   useEffect(() => {
     if (cookies && cookies.jsis) {
       setSessionValid(true);
+      // AuthContext.setAuth(cookies.jsis);
     } else {
       window.signedUp = () => {
         setNewUser(true);
@@ -25,15 +27,17 @@ const JSI = () => {
       window.alreadySignedIn = () => {
         setSessionValid(true);
       };
-
-      try {
-        window.jsi.init();
-      } catch (e) {
-        console.error(e);
-      }
+    }
+    try {
+      window.jsi.init();
+    } catch (e) {
+      console.error(e);
     }
   }, [cookies, setSessionValid]);
 
+  // if (sessionValid) {
+  //   window.location.reload(false);
+  // } else {
   return (
     <SafeAreaView style={googleSignInStyles.container}>
       <NavBar />
@@ -53,6 +57,7 @@ const JSI = () => {
       {/* </ScrollView> */}
     </SafeAreaView>
   );
+  // }
 };
 
 export default JSI;
