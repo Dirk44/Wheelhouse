@@ -12,9 +12,7 @@ import { LoadingScreen } from "./src/screens";
 SplashScreen.preventAutoHideAsync();
 
 const DismissKeyboard = ({ children }) => (
-  <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-    {children}
-  </TouchableWithoutFeedback>
+  <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>{children}</TouchableWithoutFeedback>
 );
 
 const App = () => {
@@ -30,6 +28,7 @@ const App = () => {
     async function prepare() {
       await SplashScreen.preventAutoHideAsync();
     }
+
     prepare();
   }, []);
 
@@ -41,11 +40,7 @@ const App = () => {
 
   return (
     <>
-      <StatusBar
-        barStyle="light-content"
-        translucent={true}
-        backgroundColor="black"
-      />
+      <StatusBar barStyle="light-content" translucent={true} backgroundColor="black" />
       <DismissKeyboard>
         <NavigationContainer>
           <DrawerNav />
