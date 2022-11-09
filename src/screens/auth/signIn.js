@@ -21,8 +21,7 @@ import { useForm, Controller } from "react-hook-form";
 import { signInStyles } from "../../stylesheets";
 import { ROUTES } from "../../constants";
 
-const EMAIL_REGEX =
-  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9]+)*$/;
+const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9]+)*$/;
 
 function SignIn() {
   // const [email, setEmail] = useState("");
@@ -36,7 +35,7 @@ function SignIn() {
     formState: { errors },
   } = useForm();
 
-  console.log(errors);
+  // console.log(errors);
 
   const onLoginPressed = async (data) => {
     if (loading) {
@@ -46,7 +45,7 @@ function SignIn() {
     try {
       const response = await Auth.signIn(data.username, data.password);
       Alert.alert("Success!");
-      console.log(response);
+      // console.log(response);
       navigation.navigate(ROUTES.HOME_AUTH);
     } catch (e) {
       Alert.alert("Oopsie, ", e.message);
@@ -63,14 +62,8 @@ function SignIn() {
   return (
     <SafeAreaView style={signInStyles.container}>
       {/* <ScrollView> */}
-      <ImageBackground
-        style={signInStyles.background}
-        source={require("../../assets/landing-page-background.jpg")}
-      >
-        <Image
-          source={require("../../assets/wh-logo.png")}
-          style={signInStyles.whLogo}
-        />
+      <ImageBackground style={signInStyles.background} source={require("../../assets/landing-page-background.jpg")}>
+        <Image source={require("../../assets/wh-logo.png")} style={signInStyles.whLogo} />
         <Text style={signInStyles.loginText}>Login</Text>
         <View style={signInStyles.inputs}>
           <InputField
@@ -120,20 +113,13 @@ function SignIn() {
             }}
             secureTextEntry
           /> */}
-          <WhButton
-            title={loading ? "loading..." : "Login"}
-            onPress={handleSubmit(onLoginPressed)}
-          />
+          <WhButton title={loading ? "loading..." : "Login"} onPress={handleSubmit(onLoginPressed)} />
 
           <Text style={signInStyles.signupText}>Forgot Password?</Text>
           <Button title="Click Here" onPress={onForgotPasswordPressed} />
           <View>
             <Text style={signInStyles.signupText}>Haven't signed up?</Text>
-            <Button
-              style={signInStyles.signupText}
-              title="Sign up here"
-              onPress={onSignUpPressed}
-            />
+            <Button style={signInStyles.signupText} title="Sign up here" onPress={onSignUpPressed} />
           </View>
         </View>
       </ImageBackground>

@@ -32,17 +32,17 @@ function SignUp() {
 
   const onSignUpPressed = async (data) => {
     const { username, email, password } = data;
-    console.log(data);
+    // console.log(data);
     try {
       const response = await Auth.signUp({
         username,
         password,
         attributes: { email },
       });
-      console.log(response);
+      // console.log(response);
     } catch (e) {
       Alert.alert("Oopsie", e.message);
-      console.log(e);
+      // console.log(e);
     }
 
     //   navigation.navigate("ConfirmAccount", { username });
@@ -60,15 +60,11 @@ function SignUp() {
           style={signUpStyles.background}
           source={require("../../assets/googleSignIn/googleSignInBg.jpg")}
         >
-          <Image
-            source={require("../../assets/googleSignIn/wh-logo-signIn.png")}
-            style={signUpStyles.whLogo}
-          />
+          <Image source={require("../../assets/googleSignIn/wh-logo-signIn.png")} style={signUpStyles.whLogo} />
           <View style={signUpStyles.signupTextContainer}>
             <Text style={signUpStyles.signupText}>
-              Sign up for updates on WheelHouse Motorsports' upcoming shows, new
-              content and special offers. Your information will not be shared or
-              sold.
+              Sign up for updates on WheelHouse Motorsports' upcoming shows, new content and special offers. Your
+              information will not be shared or sold.
             </Text>
           </View>
           <View style={signUpStyles.inputs}>
@@ -129,10 +125,7 @@ function SignUp() {
             </TouchableOpacity>
           </View>
           {/* copy props from Whbutton to other buttons */}
-          <Image
-            style={signUpStyles.whLogoBottom}
-            source={require("../../assets/wh-logo.png")}
-          />
+          <Image style={signUpStyles.whLogoBottom} source={require("../../assets/wh-logo.png")} />
         </ImageBackground>
       </ScrollView>
     </SafeAreaView>

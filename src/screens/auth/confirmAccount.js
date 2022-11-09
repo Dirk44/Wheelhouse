@@ -40,12 +40,9 @@ function ConfirmAccount({ props }) {
 
   const onVerifyPressed = async (data) => {
     try {
-      const response = await Auth.confirmSignUp(
-        data.username,
-        data.verificationCode
-      );
+      const response = await Auth.confirmSignUp(data.username, data.verificationCode);
       Alert.alert("Your account has been verified");
-      console.log(response);
+      // console.log(response);
     } catch (e) {
       Alert.alert("Oopsie", e.message);
     }
@@ -62,10 +59,7 @@ function ConfirmAccount({ props }) {
         style={confirmAccountStyles.background}
         source={require("../../assets/landing-page-background.jpg")}
       >
-        <Image
-          source={require("../../assets/wh-logo.png")}
-          style={confirmAccountStyles.whLogo}
-        />
+        <Image source={require("../../assets/wh-logo.png")} style={confirmAccountStyles.whLogo} />
         <Text style={confirmAccountStyles.loginText}>Verify Account</Text>
         <View style={confirmAccountStyles.inputs}>
           <InputField
