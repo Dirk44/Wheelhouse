@@ -16,6 +16,7 @@ import {
 import HomeStack from "../navigation/homeStack";
 import { ROUTES } from "../constants";
 import DrawerNav from "./drawer";
+import { createAppContainer } from "react-navigation";
 
 const Stack = createStackNavigator();
 
