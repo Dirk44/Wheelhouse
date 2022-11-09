@@ -21,7 +21,11 @@ function Cart(props) {
 
   const user = useUser();
   const checkout = (user) => {
-    // console.log("user", user);
+    console.log("user", user);
+    if (!user) {
+      navigation.navigate(ROUTES.SIGNUP_HOME);
+      return;
+    }
     createOrder.mutate(
       {
         userId: user,
