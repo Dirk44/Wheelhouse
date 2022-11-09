@@ -23,6 +23,7 @@ import AuthStack from "../navigation/AuthStack";
 
 const Stack = createStackNavigator();
 
+
 // const linking = {
 //   prefixes: ["https://wheelhouse.com", "wheelhouse://"],
 //   config: {
@@ -56,6 +57,7 @@ function HomeStack() {
       screenOptions={{ headerShown: false }}
     >
       {/* <Stack.Navigator linking={linking} initialRouteName={ROUTES.HOME} screenOptions={{ headerShown: false }}> */}
+
       <Stack.Screen
         name={ROUTES.HOME}
         component={HomePage}
@@ -76,7 +78,10 @@ function HomeStack() {
       <Stack.Screen name={ROUTES.CLIPS_VIDEO} component={PlayClipsScreen} />
       <Stack.Screen name={ROUTES.CART} component={Cart} />
       <Stack.Screen name={ROUTES.THANKYOU} component={ThankYou} />
-      <Stack.Screen name={ROUTES.EMAIL_CONFIRMATION} component={EmailConfirmation} />
+      <Stack.Screen
+        name={ROUTES.EMAIL_CONFIRMATION}
+        component={EmailConfirmation}
+      />
       <Stack.Screen name={ROUTES.SIGNUP_HOME} component={JSI} />
       <Stack.Screen name={ROUTES.SIGNIN_HOME} component={AuthStack} />
     </Stack.Navigator>

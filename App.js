@@ -6,7 +6,7 @@ import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
 
 // import { AuthStack } from "./app/routes";
-import { DrawerNav, HomeStack } from "./src/navigation";
+import { DrawerNav } from "./src/navigation";
 import { LoadingScreen } from "./src/screens";
 
 SplashScreen.preventAutoHideAsync();
@@ -19,6 +19,7 @@ const linking = {
   prefixes: ["https://wheelhouse.com", "wheelhouse://"],
   config: {
     screens: {
+
       Home: "Home",
       SignIn: "signin",
       SignUp: "signup",
@@ -38,11 +39,14 @@ const linking = {
       Cart: "cart",
       ThankYou: "thankyou",
       EmailConfirmation: "emailconfirmation",
+
     },
   },
 };
 
+
 const App = () => {
+
   const [fontsLoaded] = useFonts({
     HelveticaRegular: require("./src/assets/fonts/Yantramanav-Black.ttf"),
     Helvetica87Bold: require("./src/assets/fonts/Montserrat-Black.ttf"),

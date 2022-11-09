@@ -59,7 +59,7 @@ const RentSeries = (props) => {
             >
               <Image
                 style={rentSeriesStyles.buttonImage}
-                source={require("../../assets/preOrderBtn.jpg")}
+                source={require("../../assets/preOrderBtn.png")}
               />
             </TouchableOpacity>
           </View>

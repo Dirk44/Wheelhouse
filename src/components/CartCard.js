@@ -29,14 +29,14 @@ Pay-Per-View Event`}
       <View style={cartCardStyles.pricesContainer}>
         <View style={cartCardStyles.total}>
           <Text style={cartCardStyles.subTotalText}>SUB-TOTAL</Text>
-          <Text style={cartCardStyles.subTotalTextPrice}>$24.95</Text>
+          <Text style={cartCardStyles.subTotalTextPrice}>$29.99</Text>
         </View>
         <View style={cartCardStyles.total}>
           <Text style={cartCardStyles.preOrderText}>PRE-ORDER</Text>
           <Text style={cartCardStyles.subTotalTextPrice}>-$5.00</Text>
         </View>
         <View style={cartCardStyles.finalTotal}>
-          <Text style={cartCardStyles.totalPriceText}>$19.95</Text>
+          <Text style={cartCardStyles.totalPriceText}>$24.99</Text>
         </View>
       </View>
     </View>

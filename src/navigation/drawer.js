@@ -25,7 +25,11 @@ import {
 import { NavBar } from "../components/";
 import { ROUTES } from "../constants";
 import HomeStack from "../navigation/homeStack";
-import { CommonActions, useNavigation } from "@react-navigation/native";
+import {
+  CommonActions,
+  NavigationContainer,
+  useNavigation,
+} from "@react-navigation/native";
 
 const WIDTH = Dimensions.get("window").width;
 
@@ -46,12 +50,16 @@ const DrawerNav = () => {
     <Drawer.Navigator
       initialRouteName={ROUTES.HOME}
       screenOptions={{
-        // unmountOnBlur: true,
+        drawerInactiveBackgroundColor: "transparent",
+        // drawerActiveBackgroundColor: "#transparent",
+        drawerActiveTintColor: "white",
+        drawerInactiveTintColor: "grey",
+
         headerShown: false,
         swipeEdgeWidth: 0,
         drawerStyle: {
           width: WIDTH * 0.6,
-          backgroundColor: "#c6cbef",
+          backgroundColor: "#191919",
         },
       }}
     >
