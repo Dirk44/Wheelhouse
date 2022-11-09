@@ -5,7 +5,8 @@ const EpisodesCardStyles = ScaledSheet.create({
     width: "100%",
     height: "140@s",
     justifyContent: "center",
-    marginTop: "-11@s",
+    // marginTop: "-11@s",
+    // backgroundColor: "blue",
   },
   image: {
     width: "160@s",
