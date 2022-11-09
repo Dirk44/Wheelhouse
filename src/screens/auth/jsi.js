@@ -7,6 +7,7 @@ import { NavBar } from "../../components";
 import { googleSignInStyles } from "../../stylesheets";
 import { useUser } from "../../utils/contexts/UserProvider";
 import { useAuth } from "../../utils/contexts/AuthProvider";
+import graphqlClient from "../../utils/graphqlClient";
 
 const JSI = () => {
   const [isChecked, setChecked] = useState(false);
@@ -19,8 +20,10 @@ const JSI = () => {
   useEffect(() => {
     if (cookies && cookies.jsis) {
       setSessionValid(true);
+      // graphqlClient.setHeader("Web-Token", cookies.jsis);
       // setAuth(cookies.jsis);
       // setUser(cookies.jsis);
+      // window.location.reload(false);
 
       // AuthContext.setAuth(cookies.jsis);
     } else {
@@ -42,8 +45,9 @@ const JSI = () => {
   }, [cookies, setSessionValid]);
 
   // if (sessionValid) {
-  //   window.location.reload(false);
-  // } else {
+  //   window.location.reload(true);
+  // }
+  // else {
   return (
     <SafeAreaView style={googleSignInStyles.container}>
       <NavBar />

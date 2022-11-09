@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
+// import graphqlClient from "../graphqlClient";
 
 const UserContext = createContext("");
 const SetUserContext = createContext("");
@@ -13,6 +14,7 @@ export const UserProvider = ({ children }) => {
     if (!loaded) {
       if (cookies && cookies.jsis) {
         const user = window.jsi.getSession();
+        // graphqlClient.setHeader("web-Token", cookies.jsis);
         if (user) {
           setUser(user.session.user.id);
         } else {
