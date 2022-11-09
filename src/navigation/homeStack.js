@@ -17,6 +17,7 @@ import {
   SignIn,
   JSI,
   EmailConfirmation,
+  Checkout,
 } from "../screens";
 import { ROUTES } from "../constants";
 import AuthStack from "../navigation/AuthStack";
@@ -79,6 +80,7 @@ function HomeStack() {
       <Stack.Screen name={ROUTES.EMAIL_CONFIRMATION} component={EmailConfirmation} />
       <Stack.Screen name={ROUTES.SIGNUP_HOME} component={JSI} />
       <Stack.Screen name={ROUTES.SIGNIN_HOME} component={AuthStack} />
+      <Stack.Screen name={ROUTES.CHECKOUT} component={Checkout} />
     </Stack.Navigator>
   );
 }

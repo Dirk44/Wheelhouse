@@ -22,7 +22,7 @@ function PlayVideoScreen({ route, navigation }) {
   const [status, setStatus] = React.useState({});
   const [episode, setEpisode] = React.useState({});
   const { videoUrl, videoPoster, videoTitle } = route.params;
-  console.log(videoTitle);
+  // console.log(videoTitle);
   // useEffect(() => {
   //   return () => {
   //     console.log("component unmounted");
@@ -35,19 +35,14 @@ function PlayVideoScreen({ route, navigation }) {
     <SafeAreaView style={playVideoScreenStyles.container}>
       <NavBar />
       <ScrollView>
-        <ImageBackground
-          style={playVideoScreenStyles.background}
-          source={require("../../assets/videoPlayerBg.jpg")}
-        >
+        <ImageBackground style={playVideoScreenStyles.background} source={require("../../assets/videoPlayerBg.jpg")}>
           <Image
             style={playVideoScreenStyles.gladiatorLogo}
             source={require("../../assets/gladiatorsLogoSimple.png")}
           />
 
           <View style={playVideoScreenStyles.activatedText}>
-            <Text style={playVideoScreenStyles.rentText}>
-              YOUR RENTAL HAS BEEN ACTIVATED!
-            </Text>
+            <Text style={playVideoScreenStyles.rentText}>YOUR RENTAL HAS BEEN ACTIVATED!</Text>
 
             <Text style={playVideoScreenStyles.hoursLeft}>
               Once you start an episode, you have{"\n"}
@@ -106,9 +101,7 @@ function PlayVideoScreen({ route, navigation }) {
                 })
               }
             >
-              <Text style={playVideoScreenStyles.buttonText}>
-                PLAY UNCUT VERSION
-              </Text>
+              <Text style={playVideoScreenStyles.buttonText}>PLAY UNCUT VERSION</Text>
             </TouchableOpacity>
           </View>
           <View>
@@ -116,16 +109,11 @@ function PlayVideoScreen({ route, navigation }) {
               style={playVideoScreenStyles.buttonStyleBlack}
               onPress={() => navigation.navigate("Clips")}
             >
-              <Text style={playVideoScreenStyles.buttonText2}>
-                PLAY FAMILY FRIENDLY VERSION
-              </Text>
+              <Text style={playVideoScreenStyles.buttonText2}>PLAY FAMILY FRIENDLY VERSION</Text>
             </TouchableOpacity>
           </View>
           <View style={{ width: "50%", alignItems: "center" }}>
-            <Image
-              style={playVideoScreenStyles.whLogo}
-              source={require("../../assets/wh-logo.png")}
-            ></Image>
+            <Image style={playVideoScreenStyles.whLogo} source={require("../../assets/wh-logo.png")}></Image>
           </View>
         </ImageBackground>
       </ScrollView>

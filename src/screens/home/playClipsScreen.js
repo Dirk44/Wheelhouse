@@ -21,7 +21,7 @@ function PlayClipsScreen({ route, navigation }) {
   const video = React.useRef(null);
   const [status, setStatus] = React.useState({});
   const { videoUrl, videoPoster, videoTitle } = route.params;
-  console.log(videoTitle);
+  // console.log(videoTitle);
   // useEffect(() => {
   //   return () => {
   //     console.log("component unmounted");

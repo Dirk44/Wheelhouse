@@ -27,6 +27,7 @@ export default {
   CLIPS_VIDEO: "Play Clips Screen",
   SIGNUP_HOME: "SignUp Home",
   SIGNIN_HOME: "SignIn Home",
+  CHECKOUT: "checkout",
 
   //Drawer
   // HOME_DRAWER: "Home",

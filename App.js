@@ -1,13 +1,19 @@
 import "react-native-gesture-handler";
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { StatusBar, Keyboard, TouchableWithoutFeedback } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
+import { QueryClientProvider } from "react-query";
+// import { useCookies } from "react-cookie";
 
 // import { AuthStack } from "./app/routes";
 import { DrawerNav, HomeStack } from "./src/navigation";
 import { LoadingScreen } from "./src/screens";
+import queryClient from "./src/utils/queryClient";
+import { AuthProvider } from "./src/utils/contexts/AuthProvider";
+import { UserProvider } from "./src/utils/contexts/UserProvider";
+// import { useAuth, AuthProvider } from "./src/utils/contexts/AuthContext";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -67,12 +73,18 @@ const App = () => {
 
   return (
     <>
-      <StatusBar barStyle="light-content" translucent={true} backgroundColor="black" />
-      <DismissKeyboard>
-        <NavigationContainer linking={linking}>
-          <DrawerNav />
-        </NavigationContainer>
-      </DismissKeyboard>
+      <QueryClientProvider client={queryClient}>
+        <AuthProvider>
+          <UserProvider>
+            <StatusBar barStyle="light-content" translucent={true} backgroundColor="black" />
+            <DismissKeyboard>
+              <NavigationContainer linking={linking}>
+                <DrawerNav />
+              </NavigationContainer>
+            </DismissKeyboard>
+          </UserProvider>
+        </AuthProvider>
+      </QueryClientProvider>
     </>
   );
 };
