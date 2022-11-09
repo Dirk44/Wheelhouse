@@ -22,6 +22,7 @@
     "expo-av": "^12.0.4",
     "expo-checkbox": "^2.2.0",
     "expo-font": "^10.2.1",
+    "expo-linking": "~3.2.2",
     "expo-splash-screen": "~0.16.2",
     "expo-status-bar": "~1.4.0",
     "graphql-request": "^5.0.0",
@@ -40,8 +41,7 @@
     "react-navigation": "^4.4.4",
     "react-navigation-stack": "^2.10.4",
     "react-query": "^3.39.2",
-    "react-responsive": "^9.0.0",
-    "expo-linking": "~3.2.2"
+    "react-responsive": "^9.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

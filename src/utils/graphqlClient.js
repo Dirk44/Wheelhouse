@@ -1,8 +1,12 @@
 import { GraphQLClient } from "graphql-request";
+// import { useCookies } from "react-cookie";
 
 function getCookie(name) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
+  // const [cookies] = useCookies();
+  // return cookies.jsis;
+  console.log("document.cookie", document.cookie);
+  let value = `; ${document.cookie}`;
+  let parts = value.split(`; ${name}=`);
   if (parts.length === 2) return parts.pop().split(";").shift();
 }
 

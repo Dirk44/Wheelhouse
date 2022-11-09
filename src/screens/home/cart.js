@@ -1,5 +1,5 @@
 import { NavigationContainer } from "@react-navigation/native";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ImageBackground, SafeAreaView, ScrollView, View, Image, Pressable, Text } from "react-native";
 import { useMutation } from "react-query";
 import { useNavigation } from "@react-navigation/native";
@@ -10,25 +10,45 @@ import { checkboxStyles, cartStyles, upcomingShowsStyles } from "../../styleshee
 import { CartCard, CheckboxComponent, NavBar } from "../../components";
 import { ROUTES } from "../../constants";
 import { useUser } from "../../utils/contexts/UserProvider";
+import { useCookies } from "react-cookie";
 
 function Cart(props) {
+  const [cookies] = useCookies();
+  const [value, setUser] = useState(null);
+  const [loaded, setLoaded] = useState(false);
+
   const createOrder = useMutation((data) => {
     return grapqlClient.request(createOrderQuery, data);
   });
+  // setuser(useUser());
   // const getUserId = useQuery((data) => {
   //   return grapqlClient.request(getUserId, data);
   // });
-
-  const user = useUser();
+  useEffect(() => {
+    if (!loaded) {
+      if (cookies && cookies.jsis) {
+        const user = window.jsi.getSession();
+        if (user) {
+          setUser(user.session.user.id);
+        } else {
+          setUser(false);
+        }
+      } else {
+        setUser(false);
+      }
+      setLoaded(true);
+    }
+  }, [cookies, loaded, setLoaded, setUser]);
   const checkout = () => {
-    console.log("user", user);
-    if (!user) {
+    grapqlClient.setHeader("Web-Token", cookies.jsis);
+    console.log("user", value);
+    if (!value) {
       navigation.navigate(ROUTES.SIGNUP_HOME);
       return;
     }
     createOrder.mutate(
       {
-        userId: user,
+        userId: value,
         // userId: userId.data.getUserByJsiId.id,
         itemId: "catalogue_1",
         quantity: 1,
