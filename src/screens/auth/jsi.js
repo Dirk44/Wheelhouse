@@ -47,7 +47,7 @@ const JSI = () => {
       >
         <View
           style={{
-            marginTop: 100,
+            marginTop: 25,
           }}
         >
           <div id="jsi_menu_slot">Does this work</div>
