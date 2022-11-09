@@ -5,16 +5,23 @@ import { useCookies } from "react-cookie";
 import { WebView } from "react-native-webview";
 import { NavBar } from "../../components";
 import { googleSignInStyles } from "../../stylesheets";
+import { useUser } from "../../utils/contexts/UserProvider";
+import { useAuth } from "../../utils/contexts/AuthProvider";
 
 const JSI = () => {
   const [isChecked, setChecked] = useState(false);
   const [cookies] = useCookies();
   const [sessionValid, setSessionValid] = useState(false);
   const [newUser, setNewUser] = useState(false);
+  // const [auth, setAuth] = useAuth();
+  // const [user, setUser] = useUser();
 
   useEffect(() => {
     if (cookies && cookies.jsis) {
       setSessionValid(true);
+      // setAuth(cookies.jsis);
+      // setUser(cookies.jsis);
+
       // AuthContext.setAuth(cookies.jsis);
     } else {
       window.signedUp = () => {
