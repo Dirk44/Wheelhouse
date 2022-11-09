@@ -18,9 +18,7 @@ const episodeStyles = ScaledSheet.create({
   },
   buttonContainer: {
     flex: 0.4,
-    // marginTop: "-150@s",
     overflow: "visible",
-    // backgroundColor: "red",
   },
   buttonStyle: {
     justifyContent: "center",
