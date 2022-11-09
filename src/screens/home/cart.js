@@ -20,7 +20,7 @@ function Cart(props) {
   // });
 
   const user = useUser();
-  const checkout = (user) => {
+  const checkout = () => {
     console.log("user", user);
     if (!user) {
       navigation.navigate(ROUTES.SIGNUP_HOME);
@@ -65,7 +65,7 @@ function Cart(props) {
             <Pressable
               style={cartStyles.buttonStyle}
               onPress={() => {
-                checkout(user);
+                checkout();
               }}
             >
               <Text style={cartStyles.buttonText}>CHECKOUT</Text>
