@@ -29,8 +29,8 @@ export default {
   SIGNIN_HOME: "SignIn Home",
 
   //Drawer
-  HOME_DRAWER: "Home Drawer",
-  SIGNUP_DRAWER: "SignUp Drawer",
-  GLADIATORS_DRAWER: "Gladiators Drawer",
-  STORE_DRAWER: "Store Drawer",
+  // HOME_DRAWER: "Home",
+  SIGNUP_DRAWER: "SignUp",
+  GLADIATORS_DRAWER: "Gladiators",
+  STORE_DRAWER: "Store",
 };

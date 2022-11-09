@@ -12,39 +12,41 @@ import { LoadingScreen } from "./src/screens";
 SplashScreen.preventAutoHideAsync();
 
 const DismissKeyboard = ({ children }) => (
-  <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-    {children}
-  </TouchableWithoutFeedback>
+  <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>{children}</TouchableWithoutFeedback>
 );
 
 const linking = {
   prefixes: ["https://wheelhouse.com", "wheelhouse://"],
   config: {
     screens: {
-      Home: " ",
-      SignIn: ":id/signin",
-      SignUp: ":id/signup",
-      ForgotPassword: ":id/forgotpassword",
-      ConfirmAccount: ":id/confirmaccount",
-      ResetPassword: ":id/resetpassword",
-      SignOut: ":id/signout",
-      UpcomingShows: ":id/upcomingshows",
-      Clips: ":id/clips",
-      Store: ":id/store",
-      WaitList: ":id/waitlist",
-      PlayVideoScreen: ":id/playvideoscreen",
-      PlayClipsScreen: ":id/playclipsscreen",
-      RentSeries: ":id/rentseries",
-      GladiatorsLanding: ":id/gladiatorslanding",
-      Episodes: ":id/episodes",
-      Cart: ":id/cart",
-      ThankYou: ":id/thankyou",
-      EmailConfirmation: ":id/emailconfirmation",
+
+      Home: "Home",
+      SignIn: "signin",
+      SignUp: "signup",
+      ForgotPassword: "forgotpassword",
+      ConfirmAccount: "confirmaccount",
+      ResetPassword: "resetpassword",
+      SignOut: "signout",
+      UpcomingShows: "upcomingshows",
+      Clips: "clips",
+      Store: "store",
+      WaitList: "waitlist",
+      PlayVideoScreen: "playvideoscreen",
+      PlayClipsScreen: "playclipsscreen",
+      RentSeries: "rentseries",
+      GladiatorsLanding: "gladiatorslanding",
+      Episodes: "episodes",
+      Cart: "cart",
+      ThankYou: "thankyou",
+      EmailConfirmation: "emailconfirmation",
+
     },
   },
 };
 
-const App = (props) => {
+
+const App = () => {
+
   const [fontsLoaded] = useFonts({
     HelveticaRegular: require("./src/assets/fonts/Yantramanav-Black.ttf"),
     Helvetica87Bold: require("./src/assets/fonts/Montserrat-Black.ttf"),
@@ -57,6 +59,7 @@ const App = (props) => {
     async function prepare() {
       await SplashScreen.preventAutoHideAsync();
     }
+
     prepare();
   }, []);
 
@@ -68,11 +71,7 @@ const App = (props) => {
 
   return (
     <>
-      <StatusBar
-        barStyle="light-content"
-        translucent={true}
-        backgroundColor="black"
-      />
+      <StatusBar barStyle="light-content" translucent={true} backgroundColor="black" />
       <DismissKeyboard>
         <NavigationContainer linking={linking}>
           <DrawerNav />
