@@ -18,8 +18,9 @@ const episodeStyles = ScaledSheet.create({
   },
   buttonContainer: {
     flex: 0.4,
-    marginTop: "-150@s",
+    // marginTop: "-150@s",
     overflow: "visible",
+    // backgroundColor: "red",
   },
   buttonStyle: {
     justifyContent: "center",
@@ -30,7 +31,7 @@ const episodeStyles = ScaledSheet.create({
     height: "35@s",
     width: "220@s",
     borderRadius: "4@s",
-    marginTop: "-120@s",
+    // marginTop: "-120@s",
   },
   buttonText: {
     color: "#0aeeb5",
@@ -66,14 +67,14 @@ const episodeStyles = ScaledSheet.create({
   whLogo: {
     width: "90%",
     height: "100@s",
-    marginTop: "-50@s",
+    // marginTop: "-50@s",
     marginRight: "15@s",
   },
   whLogoContainer: {
     width: "50%",
     height: "60@s",
     alignItems: "center",
-    marginTop: "-70@s",
+    // marginTop: "-70@s",
   },
 });
 
