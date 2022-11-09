@@ -31,8 +31,6 @@ function HomeStack() {
       initialRouteName={ROUTES.HOME}
       screenOptions={{ headerShown: false }}
     >
-      {/* <Stack.Navigator linking={linking} initialRouteName={ROUTES.HOME} screenOptions={{ headerShown: false }}> */}
-
       <Stack.Screen
         name={ROUTES.HOME}
         component={HomePage}
