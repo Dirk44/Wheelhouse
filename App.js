@@ -5,6 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
 import { QueryClientProvider } from "react-query";
+import * as Linking from "expo-linking";
 // import { useCookies } from "react-cookie";
 
 // import { AuthStack } from "./app/routes";
@@ -22,10 +23,9 @@ const DismissKeyboard = ({ children }) => (
 );
 
 const linking = {
-  prefixes: ["https://wheelhouse.com", "wheelhouse://"],
+  prefixes: [Linking.createURL("/"), "https://wheelhouse.com", "wheelhouse://", "http://localhost:19006/"],
   config: {
     screens: {
-
       Home: "Home",
       SignIn: "signin",
       SignUp: "signup",
@@ -45,14 +45,11 @@ const linking = {
       Cart: "cart",
       ThankYou: "thankyou",
       EmailConfirmation: "emailconfirmation",
-
     },
   },
 };
 
-
 const App = () => {
-
   const [fontsLoaded] = useFonts({
     HelveticaRegular: require("./src/assets/fonts/Yantramanav-Black.ttf"),
     Helvetica87Bold: require("./src/assets/fonts/Montserrat-Black.ttf"),
