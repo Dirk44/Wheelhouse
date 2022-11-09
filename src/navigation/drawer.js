@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Dimensions } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { useCookies } from "react-cookie";
+// import { CommonActions } from "@react-navigation/native";
 
 import {
   HomePage,
@@ -25,11 +26,7 @@ import {
 import { NavBar } from "../components/";
 import { ROUTES } from "../constants";
 import HomeStack from "../navigation/homeStack";
-import {
-  CommonActions,
-  NavigationContainer,
-  useNavigation,
-} from "@react-navigation/native";
+import { CommonActions, NavigationContainer, useNavigation } from "@react-navigation/native";
 
 const WIDTH = Dimensions.get("window").width;
 
@@ -41,28 +38,26 @@ const navigationOptions = () => {
 
 const Drawer = createDrawerNavigator();
 
-const DrawerNav = () => {
+const DrawerNav = (props) => {
   const navigation = useNavigation();
   const [auth] = useCookies();
   const [sessionValid, setSessionValid] = useState(false);
+  const options = {
+    drawerInactiveBackgroundColor: "transparent",
+    // drawerActiveBackgroundColor: "#transparent",
+    drawerActiveTintColor: "white",
+    drawerInactiveTintColor: "grey",
+
+    headerShown: false,
+    swipeEdgeWidth: 0,
+    drawerStyle: {
+      width: WIDTH * 0.6,
+      backgroundColor: "#191919",
+    },
+  };
 
   return auth.jsis != null ? (
-    <Drawer.Navigator
-      initialRouteName={ROUTES.HOME}
-      screenOptions={{
-        drawerInactiveBackgroundColor: "transparent",
-        // drawerActiveBackgroundColor: "#transparent",
-        drawerActiveTintColor: "white",
-        drawerInactiveTintColor: "grey",
-
-        headerShown: false,
-        swipeEdgeWidth: 0,
-        drawerStyle: {
-          width: WIDTH * 0.6,
-          backgroundColor: "#191919",
-        },
-      }}
-    >
+    <Drawer.Navigator initialRouteName={ROUTES.HOME} screenOptions={options}>
       <Drawer.Screen
         name={ROUTES.HOME}
         component={HomeStack}
@@ -105,18 +100,7 @@ const DrawerNav = () => {
       />
     </Drawer.Navigator>
   ) : (
-    <Drawer.Navigator
-      initialRouteName={ROUTES.HOME}
-      screenOptions={{
-        // unmountOnBlur: true,
-        headerShown: false,
-        swipeEdgeWidth: 0,
-        drawerStyle: {
-          width: WIDTH * 0.6,
-          backgroundColor: "#c6cbef",
-        },
-      }}
-    >
+    <Drawer.Navigator initialRouteName={ROUTES.HOME} screenOptions={options}>
       <Drawer.Screen
         name={ROUTES.HOME}
         component={HomeStack}
