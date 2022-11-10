@@ -94,14 +94,14 @@ const DrawerNav = (props) => {
           title: "GLADIATORS OF STEEL",
         }}
       />
-      <Drawer.Screen
+      {/* <Drawer.Screen
         name={ROUTES.STORE_DRAWER}
         component={Store}
         options={{
           navigationOptions: navigationOptions,
           title: "STORE",
         }}
-      />
+      /> */}
       <Drawer.Screen
         name={ROUTES.EPISODES}
         component={Episodes}
@@ -110,6 +110,14 @@ const DrawerNav = (props) => {
           title: "EPISODES",
         }}
       />
+      {/* <Drawer.Screen
+        name={ROUTES.THANKYOU}
+        component={ThankYou}
+        options={{
+          navigationOptions: navigationOptions,
+          title: "THANKYOU",
+        }}
+      /> */}
     </Drawer.Navigator>
   ) : (
     <Drawer.Navigator initialRouteName={ROUTES.HOME} screenOptions={options}>
@@ -145,14 +153,14 @@ const DrawerNav = (props) => {
           title: "GLADIATORS OF STEEL",
         }}
       />
-      <Drawer.Screen
+      {/* <Drawer.Screen
         name={ROUTES.STORE_DRAWER}
         component={Store}
         options={{
           navigationOptions: navigationOptions,
           title: "STORE",
         }}
-      />
+      /> */}
       <Drawer.Screen
         name={ROUTES.EPISODES}
         component={Episodes}
@@ -161,6 +169,14 @@ const DrawerNav = (props) => {
           title: "EPISODES",
         }}
       />
+      {/* <Drawer.Screen
+        name={ROUTES.THANKYOU}
+        component={ThankYou}
+        options={{
+          navigationOptions: navigationOptions,
+          title: "THANKYOU",
+        }}
+      /> */}
     </Drawer.Navigator>
   );
 };
