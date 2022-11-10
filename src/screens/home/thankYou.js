@@ -48,7 +48,7 @@ const ThankYou = () => {
                   style={thankYouStyles.buttonStyle}
                   onPress={() => navigation.navigate(ROUTES.EPISODES)}
                 >
-                  <Text style={thankYouStyles.buttonText}>VIEW EPISODES</Text>
+                  <Text style={thankYouStyles.buttonText}>BACK TO HOME</Text>
                 </TouchableOpacity>
               </View>
             </View>
@@ -56,7 +56,7 @@ const ThankYou = () => {
           {/* <View styles={thankYouStyles.whLogoContainerSmall}> */}
           <View style={thankYouStyles.emailSignupContainer}>
             <Text style={thankYouStyles.signupText}>
-              SIGN UP FOR EMAILS ABOUT EXLUSIVE OFFERS AND UPCOMING CONTENT
+              {/* SIGN UP FOR EMAILS ABOUT EXLUSIVE OFFERS AND UPCOMING CONTENT */}
             </Text>
           </View>
           <Image
