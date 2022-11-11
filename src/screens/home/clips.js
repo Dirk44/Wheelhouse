@@ -5,15 +5,22 @@ import {
   Image,
   ScrollView,
   View,
+  TouchableOpacity,
+  Text,
 } from "react-native";
 
 import { clipsStyles } from "../../stylesheets";
 import { ClipsCard, MenuText, NavBar } from "../../components";
 import movies from "../../components/movies.json";
+import { ROUTES } from "../../constants";
 
-import { NavigationContainerRefContext } from "@react-navigation/native";
+import {
+  NavigationContainerRefContext,
+  useNavigation,
+} from "@react-navigation/native";
 
 function Clips() {
+  const navigation = useNavigation();
   // const [clickState, setClickState] = useState({
   //   style: (borderColor = "#07fbb9"),
   // });
@@ -48,6 +55,17 @@ function Clips() {
               );
             })}
           </View>
+          <View style={clipsStyles.buttonContainer}>
+            <TouchableOpacity
+              style={clipsStyles.buttonStyle}
+              onPress={() => navigation.navigate(ROUTES.RENTAL)}
+            >
+              <Text style={clipsStyles.buttonText}>PRE-ORDER SERIES</Text>
+            </TouchableOpacity>
+          </View>
+          <Text style={clipsStyles.preOrderText}>
+            PRE-ORDER SERIES AND SAVE $5
+          </Text>
           {/* </View> */}
 
           {/* <View

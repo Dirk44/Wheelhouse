@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   ScrollView,
   Text,
@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   View,
   Button,
+  Pressable,
 } from "react-native";
 
 import { useNavigation } from "@react-navigation/native";
@@ -15,19 +16,64 @@ import { rentSeriesStyles } from "../../stylesheets";
 import { NavBar } from "../../components";
 import { ROUTES } from "../../constants";
 
-// import Amplify from "aws-amplify";
-// import config from "../../src/aws-exports";
-
-// Amplify.configure({
-//   ...config,
-//   Analytics: {
-//     disabled: true,
-//   },
-// });
+import { useMutation } from "react-query";
+import grapqlClient from "../../utils/graphqlClient";
+import createOrderQuery from "../../utils/queries/createOrder";
+import { useCookies } from "react-cookie";
+import Checkout from "./checkout";
 
 const RentSeries = (props) => {
+  const [cookies] = useCookies();
+  const [value, setUser] = useState(null);
+  const [loaded, setLoaded] = useState(false);
+
+  const createOrder = useMutation((data) => {
+    return grapqlClient.request(createOrderQuery, data);
+  });
+
+  useEffect(() => {
+    if (!loaded) {
+      if (cookies && cookies.jsis) {
+        const user = window.jsi.getSession();
+        if (user) {
+          setUser(user.session.user.id);
+        } else {
+          setUser(false);
+        }
+      } else {
+        setUser(false);
+      }
+      setLoaded(true);
+    }
+  }, [cookies, loaded, setLoaded, setUser]);
+  const checkout = () => {
+    grapqlClient.setHeader("Web-Token", cookies.jsis);
+    console.log("user", value);
+    if (!value) {
+      navigation.navigate(ROUTES.SIGNUP_HOME);
+      return;
+    }
+    createOrder.mutate(
+      {
+        userId: value,
+        // userId: userId.data.getUserByJsiId.id,
+        itemId: "catalogue_1",
+        quantity: 1,
+      },
+      {
+        onSuccess: (data) => {
+          // console.log(data);
+          navigation.navigate(ROUTES.CHECKOUT, { src: data.createOrder });
+          // return `<iframe src="${data.createOrder}">
+
+          // </iframe>`;
+          // navigation.navigate(data.data.createOrder);
+        },
+      }
+    );
+  };
   const navigation = useNavigation();
-  const [auth, setAuth] = useState(null);
+  // const [auth, setAuth] = useState(null);
   return (
     <SafeAreaView style={rentSeriesStyles.container}>
       <NavBar />
@@ -49,19 +95,17 @@ const RentSeries = (props) => {
             />
           </View>
           <View>
-            <TouchableOpacity
+            <Pressable
               // style={rentSeriesStyles.buttonStyle}
               onPress={() => {
-                !auth
-                  ? navigation.navigate(ROUTES.CART)
-                  : navigation.navigate(ROUTES.SIGNIN_HOME);
+                checkout();
               }}
             >
               <Image
                 style={rentSeriesStyles.buttonImage}
                 source={require("../../assets/preOrderBtn.png")}
               />
-            </TouchableOpacity>
+            </Pressable>
           </View>
           <View style={rentSeriesStyles.dolbyContainer}>
             <Image
@@ -69,7 +113,7 @@ const RentSeries = (props) => {
               source={require("../../assets/4kDolbyDigital.png")}
             />
           </View>
-          <View style={{ width: "80%", marginTop: -50 }}>
+          <View style={{ width: "80%", marginTop: -50, alignItems: "center" }}>
             <Image
               style={rentSeriesStyles.worldPremiereText}
               source={require("../../assets/worldPremiereEventText.png")}
