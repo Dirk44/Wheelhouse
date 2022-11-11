@@ -89,9 +89,9 @@ const rentSeriesStyles = ScaledSheet.create({
     // overflow: "",
   },
   worldPremiereText: {
-    width: "100%",
-    height: "111@s",
-    marginTop: "15@s",
+    width: "280@s",
+    height: "92@s",
+    marginTop: "10@s",
   },
 });
 

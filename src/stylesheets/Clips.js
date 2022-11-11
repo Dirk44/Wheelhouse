@@ -19,6 +19,30 @@ const clipsStyles = ScaledSheet.create({
     justifyContent: "center",
     paddingTop: "15%",
   },
+  buttonContainer: {
+    width: "100%",
+    height: "7%",
+    alignItems: "center",
+  },
+  buttonStyle: {
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#0aeeb5",
+    height: "30@s",
+    width: "190@s",
+    borderRadius: "4@s",
+    marginTop: "20@s",
+    shadowColor: "black",
+    shadowOffset: { width: "10@s", height: "10@s" },
+    shadowOpacity: "0.3@s",
+    shadowRadius: "6@s",
+  },
+  buttonText: {
+    color: "black",
+    fontSize: "14@s",
+    fontWeight: "400",
+    letterSpacing: 2,
+  },
   gladLogoContainer: {
     // flex: 1,
     width: "100%",
@@ -47,6 +71,14 @@ const clipsStyles = ScaledSheet.create({
     // borderWidth: 2,
     // borderColor: "white",
     // backgroundColor: "red",
+  },
+  preOrderText: {
+    fontSize: "14@s",
+    color: "white",
+    marginTop: "10@s",
+    fontFamily: "Helvetica",
+    fontWeight: "600",
+    marginTop: "18@s",
   },
 
   whLogo: {

@@ -52,7 +52,7 @@ const clipsCardStyles = ScaledSheet.create({
     borderRadius: 2,
     shadowColor: "black",
     shadowOffset: { width: "10@s", height: "10@s" },
-    shadowOpacity: "0.5@s",
+    shadowOpacity: "0.3@s",
     shadowRadius: "6@s",
   },
 });
