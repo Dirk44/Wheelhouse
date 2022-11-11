@@ -37,13 +37,7 @@ const HomePage = () => {
               style={homePageStyles.carsImage}
             />
           </View>
-          <View>
-            <Text style={homePageStyles.text}>
-              WHEELHOUSE is the home for exclusive high-quality motorsports
-              content. With new shows in the pipeline, WHEELHOUSE proudly
-              presents the six part Limited-Series, GLADIATORS OF STEEL
-            </Text>
-          </View>
+
           <View>
             <TouchableOpacity
               // style={{ flex: 1 }}
@@ -71,21 +65,20 @@ const HomePage = () => {
                 navigation.navigate(ROUTES.SIGNUP_HOME);
               }}
             >
-              <Text style={homePageStyles.buttonText}>SIGN UP</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={homePageStyles.buttonStyle}
-              onPress={() => {
-                navigation.navigate(ROUTES.SIGNUP_HOME);
-              }}
-            >
-              <Text style={homePageStyles.buttonText}>LOGIN</Text>
+              <Text style={homePageStyles.buttonText}>GET STARTED</Text>
             </TouchableOpacity>
           </View>
           <Image
             style={homePageStyles.redline}
             source={require("../../assets/redBar.png")}
           />
+          <View>
+            <Text style={homePageStyles.text}>
+              WHEELHOUSE is the home for exclusive high-quality motorsports
+              content. With new shows in the pipeline, WHEELHOUSE proudly
+              presents the six part Limited-Series, GLADIATORS OF STEEL
+            </Text>
+          </View>
         </ImageBackground>
       </ScrollView>
     </SafeAreaView>

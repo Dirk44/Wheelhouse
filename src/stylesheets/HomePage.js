@@ -58,7 +58,7 @@ const homePageStyles = ScaledSheet.create({
     color: "#07fbb9",
     fontWeight: "800",
     fontSize: "14@s",
-    marginTop: "20@s",
+    // marginTop: "20@s",
     letterSpacing: 1,
   },
   gladiatorsLogo: {
@@ -83,7 +83,7 @@ const homePageStyles = ScaledSheet.create({
     paddingLeft: "30@s",
     paddingRight: "30@s",
     textAlign: "center",
-    // marginTop: "30@s",
+    marginTop: "30@s",
   },
   whLogo: {
     width: "300@s",
