@@ -1,6 +1,14 @@
 import Checkbox from "expo-checkbox";
 import React, { useState, useEffect } from "react";
-import { ImageBackground, SafeAreaView, ScrollView, View, Text, Image, TouchableOpacity } from "react-native";
+import {
+  ImageBackground,
+  SafeAreaView,
+  ScrollView,
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 import { useCookies } from "react-cookie";
 import { WebView } from "react-native-webview";
 import { NavBar } from "../../components";
@@ -21,16 +29,20 @@ const Checkout = (props) => {
             width: "100%",
             height: 900,
             flex: 1,
-            marginTop: 25,
+            // marginTop: 25,
           }}
         >
-          <iframe
+          <View
+            source={{ uri: props.route.params.src }}
+            style={{ width: "100%", height: 800 }}
+          />
+          {/* <View
             style={{
               position: "relative",
               height: "100%",
             }}
             src={props.route.params.src}
-          ></iframe>
+          ></View> */}
         </View>
       </ImageBackground>
       {/* </ScrollView> */}
