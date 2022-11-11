@@ -29,7 +29,6 @@ const episodeStyles = ScaledSheet.create({
     height: "35@s",
     width: "220@s",
     borderRadius: "4@s",
-    // marginTop: "-120@s",
   },
   buttonText: {
     color: "#0aeeb5",
