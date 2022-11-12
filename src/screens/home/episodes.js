@@ -19,6 +19,12 @@ function Episodes() {
       <ScrollView>
         <ImageBackground
           style={episodeStyles.background}
+          source={{
+            uri: "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/tempEpisodesPage.jpg",
+          }}
+        >
+          {/* <ImageBackground
+          style={episodeStyles.background}
           source={require("../../assets/episodes/episodesBg.jpg")}
         >
           <View style={episodeStyles.gladiatorsLogoContainer}>
@@ -49,22 +55,23 @@ function Episodes() {
               );
             })}
           </View>
-          {/* <View style={episodeStyles.buttonContainer}>
+          <View style={episodeStyles.buttonContainer}>
             <TouchableOpacity
               style={episodeStyles.buttonStyle}
-              onPress={() => {
-                navigation.navigate("SignUp");
-              }}
+              // onPress={() => {
+              //   navigation.navigate();
+              // }}
             >
               <Text style={episodeStyles.buttonText}>VIEW BONUS CONTENT</Text>
             </TouchableOpacity>
-          </View> */}
+          </View>
           <View style={episodeStyles.whLogoContainer}>
             <Image
               style={episodeStyles.whLogo}
               source={require("../../assets/wh-logo.png")}
             />
           </View>
+        </ImageBackground> */}
         </ImageBackground>
       </ScrollView>
     </SafeAreaView>

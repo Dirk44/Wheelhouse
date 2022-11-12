@@ -27,10 +27,11 @@ import { NavBar } from "../components/";
 import { ROUTES } from "../constants";
 import HomeStack from "../navigation/homeStack";
 import {
-  CommonActions,
-  NavigationContainer,
+  // CommonActions,
+  // NavigationContainer,
   useNavigation,
 } from "@react-navigation/native";
+import { CommonActions } from "@react-navigation/native";
 
 const WIDTH = Dimensions.get("window").width;
 
@@ -68,14 +69,6 @@ const DrawerNav = (props) => {
       <Drawer.Screen
         name={ROUTES.HOME_DRAWER}
         component={HomeStack}
-        // onPress={() =>
-        //   navigation.dispatch(
-        //     CommonActions.reset({
-        //       index: 0,
-        //       routes: [{ name: ROUTES.HOME }],
-        //     })
-        //   )
-        // }
         options={{
           navigationOptions: navigationOptions,
           title: "HOME",

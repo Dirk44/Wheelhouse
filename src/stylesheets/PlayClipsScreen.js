@@ -9,7 +9,7 @@ const playClipsScreenStyles = ScaledSheet.create({
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   background: {
-    flex: 1,
+    // flex: 1,
     width: "100%",
     height: "700@s",
     marginTop: -20,
@@ -71,11 +71,14 @@ const playClipsScreenStyles = ScaledSheet.create({
   },
   playerWindow: {
     marginTop: "20%",
-    width: "75%",
-    height: "auto",
-    borderWidth: 2,
-    borderColor: "white",
-    borderRadius: 2,
+    width: "68%",
+    aspectRatio: 16 / 9,
+    justifyContent: "center",
+    alignItems: "center",
+    // borderWidth: 2,
+    // borderColor: "white",
+    // borderRadius: 2,
+    // backgroundColor: "red",
   },
   rentText: {
     color: "#0aeeb5",
@@ -100,7 +103,7 @@ const playClipsScreenStyles = ScaledSheet.create({
   whLogo: {
     width: "75%",
     height: "70@s",
-    marginTop: "100@s",
+    marginTop: "200@s",
   },
 });
 

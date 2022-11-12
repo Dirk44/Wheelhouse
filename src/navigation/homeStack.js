@@ -18,6 +18,7 @@ import {
   JSI,
   EmailConfirmation,
   Checkout,
+  PlayTrailerScreen,
 } from "../screens";
 import { ROUTES } from "../constants";
 import AuthStack from "../navigation/AuthStack";
@@ -49,6 +50,7 @@ function HomeStack() {
       <Stack.Screen name={ROUTES.WAITLIST} component={WaitList} />
       <Stack.Screen name={ROUTES.VIDEO} component={PlayVideoScreen} />
       <Stack.Screen name={ROUTES.CLIPS_VIDEO} component={PlayClipsScreen} />
+      <Stack.Screen name={ROUTES.TRAILER_VIDEO} component={PlayTrailerScreen} />
       <Stack.Screen name={ROUTES.CART} component={Cart} />
       <Stack.Screen name={ROUTES.THANKYOU} component={ThankYou} />
       <Stack.Screen
