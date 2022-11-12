@@ -21,6 +21,7 @@ function PlayClipsScreen({ route, navigation }) {
   const video = React.useRef(null);
   const [status, setStatus] = React.useState({});
   const { videoUrl, videoPoster, videoTitle } = route.params;
+
   // console.log(videoTitle);
   // useEffect(() => {
   //   return () => {
@@ -34,7 +35,10 @@ function PlayClipsScreen({ route, navigation }) {
     <SafeAreaView style={playClipsScreenStyles.container}>
       <NavBar />
       <ScrollView>
-        <ImageBackground style={playClipsScreenStyles.background} source={require("../../assets/videoPlayerBg.jpg")}>
+        <ImageBackground
+          style={playClipsScreenStyles.background}
+          source={require("../../assets/videoPlayerBg.jpg")}
+        >
           <Image
             style={playClipsScreenStyles.gladiatorLogo}
             source={require("../../assets/gladiatorsLogoSimple.png")}
@@ -50,7 +54,26 @@ function PlayClipsScreen({ route, navigation }) {
 
           {/* <VideoPlayer /> */}
           <View style={playClipsScreenStyles.playerWindow}>
-            <Video
+            <iframe
+              src="https://player.vimeo.com/video/770109783?h=ac514c9c6c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              title="GLADIATORS OF STEEL CLIP 4k"
+            ></iframe>
+
+            <iframe
+              src="https://player.vimeo.com/video/770106930?h=3b37407d38&amp;title=0&amp;byline=0&amp;portrait=0&amp;speed=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              width="3840"
+              height="2160"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              title="GLADIATORS OF STEEL TRAILER 4k"
+            ></iframe>
+            {/* <Video
               ref={video}
               style={playClipsScreenStyles.video}
               source={{
@@ -66,21 +89,13 @@ function PlayClipsScreen({ route, navigation }) {
               usePoster
               resizeMode="contain"
               // onPlaybackStatusUpdate={(status) => setStatus(() => status)}
-            />
-            {/* <View style={playClipsScreenStyles.buttons}>
-              <Button
-                title={status.isPlaying ? "Pause" : "Play"}
-                onPress={() =>
-                  status.isPlaying
-                    ? video.current.pauseAsync()
-                    : video.current.playAsync()
-                }
-              />
-            </View> */}
+            /> */}
           </View>
-          <View>
+
+          {/* <View>
             <Text style={playClipsScreenStyles.titleText}>{videoTitle}</Text>
-          </View>
+          </View> */}
+
           {/* <View>
             <TouchableOpacity
               style={playClipsScreenStyles.buttonStyle}
@@ -106,7 +121,10 @@ function PlayClipsScreen({ route, navigation }) {
             </TouchableOpacity>
           </View> */}
           <View style={{ width: "50%", alignItems: "center" }}>
-            <Image style={playClipsScreenStyles.whLogo} source={require("../../assets/wh-logo.png")}></Image>
+            <Image
+              style={playClipsScreenStyles.whLogo}
+              source={require("../../assets/wh-logo.png")}
+            ></Image>
           </View>
         </ImageBackground>
       </ScrollView>

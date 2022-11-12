@@ -66,6 +66,7 @@ const episodeStyles = ScaledSheet.create({
     width: "50%",
     height: "60@s",
     alignItems: "center",
+    // backgroundColor: "red",
   },
 });
 

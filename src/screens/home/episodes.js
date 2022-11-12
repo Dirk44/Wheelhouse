@@ -49,16 +49,16 @@ function Episodes() {
               );
             })}
           </View>
-          {/* <View style={episodeStyles.buttonContainer}>
+          <View style={episodeStyles.buttonContainer}>
             <TouchableOpacity
               style={episodeStyles.buttonStyle}
-              onPress={() => {
-                navigation.navigate("SignUp");
-              }}
+              // onPress={() => {
+              //   navigation.navigate();
+              // }}
             >
               <Text style={episodeStyles.buttonText}>VIEW BONUS CONTENT</Text>
             </TouchableOpacity>
-          </View> */}
+          </View>
           <View style={episodeStyles.whLogoContainer}>
             <Image
               style={episodeStyles.whLogo}
