@@ -17,10 +17,10 @@ import { NavBar } from "../../components";
 // import movies from "../components/movies.json";
 import { playClipsScreenStyles } from "../../stylesheets";
 
-function PlayClipsScreen({ route, navigation }) {
-  const video = React.useRef(null);
-  const [status, setStatus] = React.useState({});
-  const { videoUrl, videoPoster, videoTitle } = route.params;
+function PlayTrailerScreen({ route, navigation }) {
+  //   const video = React.useRef(null);
+  //   const [status, setStatus] = React.useState({});
+  //   const { videoUrl, videoPoster, videoTitle } = route.params;
 
   // console.log(videoTitle);
   // useEffect(() => {
@@ -55,15 +55,14 @@ function PlayClipsScreen({ route, navigation }) {
           {/* <VideoPlayer /> */}
           <View style={playClipsScreenStyles.playerWindow}>
             <iframe
-              src="https://player.vimeo.com/video/770109783?h=ac514c9c6c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              src="https://player.vimeo.com/video/770106930?h=3b37407d38&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
               width="3840"
               height="2160"
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
-              title="GLADIATORS OF STEEL CLIP 4k"
+              title="GLADIATORS OF STEEL TRAILER 4k"
             ></iframe>
-
             {/* <Video
               ref={video}
               style={playClipsScreenStyles.video}
@@ -123,4 +122,4 @@ function PlayClipsScreen({ route, navigation }) {
   );
 }
 
-export default PlayClipsScreen;
+export default PlayTrailerScreen;

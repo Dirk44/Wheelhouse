@@ -19,6 +19,12 @@ function Episodes() {
       <ScrollView>
         <ImageBackground
           style={episodeStyles.background}
+          source={{
+            uri: "https://amplify-wheelhouse-dev-82159-deployment.s3.amazonaws.com/WheelHouse+App+Assets/tempEpisodesPage.jpg",
+          }}
+        >
+          {/* <ImageBackground
+          style={episodeStyles.background}
           source={require("../../assets/episodes/episodesBg.jpg")}
         >
           <View style={episodeStyles.gladiatorsLogoContainer}>
@@ -65,6 +71,7 @@ function Episodes() {
               source={require("../../assets/wh-logo.png")}
             />
           </View>
+        </ImageBackground> */}
         </ImageBackground>
       </ScrollView>
     </SafeAreaView>

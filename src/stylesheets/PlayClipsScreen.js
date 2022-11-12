@@ -12,7 +12,7 @@ const playClipsScreenStyles = ScaledSheet.create({
     // flex: 1,
     width: "100%",
     height: "700@s",
-    // marginTop: -20,
+    marginTop: -20,
     // justifyContent: "center",
     alignItems: "center",
   },
@@ -71,8 +71,10 @@ const playClipsScreenStyles = ScaledSheet.create({
   },
   playerWindow: {
     marginTop: "20%",
-    width: "80%",
+    width: "68%",
     aspectRatio: 16 / 9,
+    justifyContent: "center",
+    alignItems: "center",
     // borderWidth: 2,
     // borderColor: "white",
     // borderRadius: 2,
@@ -101,7 +103,7 @@ const playClipsScreenStyles = ScaledSheet.create({
   whLogo: {
     width: "75%",
     height: "70@s",
-    marginTop: "100@s",
+    marginTop: "200@s",
   },
 });
 

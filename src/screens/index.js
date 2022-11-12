@@ -6,6 +6,7 @@ export { default as Store } from "./home/store";
 export { default as WaitList } from "./home/waitList";
 export { default as PlayVideoScreen } from "./home/playVideoScreen";
 export { default as PlayClipsScreen } from "./home/playClipsScreen";
+export { default as PlayTrailerScreen } from "./home/playTrailerScreen";
 export { default as RentSeries } from "./home/rentSeries";
 export { default as GladiatorsLanding } from "./home/gladiatorsLanding";
 export { default as Episodes } from "./home/episodes";

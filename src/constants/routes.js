@@ -24,6 +24,7 @@ export default {
   THANKYOU: "Thank You",
   LOADINGSCREEN: "Loading Screen",
   VIDEO: "Play Video Screen",
+  TRAILER_VIDEO: "Play Trailer Video",
   CLIPS_VIDEO: "Play Clips Screen",
   SIGNUP_HOME: "SignUp Home",
   SIGNIN_HOME: "SignIn Home",
