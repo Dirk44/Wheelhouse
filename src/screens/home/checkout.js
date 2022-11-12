@@ -29,20 +29,16 @@ const Checkout = (props) => {
             width: "100%",
             height: 900,
             flex: 1,
-            // marginTop: 25,
+            marginTop: 20,
           }}
         >
-          <View
-            source={{ uri: props.route.params.src }}
-            style={{ width: "100%", height: 800 }}
-          />
-          {/* <View
+          <iframe
             style={{
               position: "relative",
               height: "100%",
             }}
             src={props.route.params.src}
-          ></View> */}
+          ></iframe>
         </View>
       </ImageBackground>
       {/* </ScrollView> */}

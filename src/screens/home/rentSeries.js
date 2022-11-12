@@ -7,9 +7,7 @@ import {
   Image,
   TouchableOpacity,
   View,
-  Button,
   Pressable,
-  Linking,
 } from "react-native";
 
 import { useNavigation } from "@react-navigation/native";
@@ -96,7 +94,7 @@ const RentSeries = (props) => {
             />
           </View>
           <View>
-            <Pressable
+            <TouchableOpacity
               // style={rentSeriesStyles.buttonStyle}
               onPress={() => {
                 checkout();
@@ -106,7 +104,7 @@ const RentSeries = (props) => {
                 style={rentSeriesStyles.buttonImage}
                 source={require("../../assets/preOrderBtn.png")}
               />
-            </Pressable>
+            </TouchableOpacity>
           </View>
           <View style={rentSeriesStyles.dolbyContainer}>
             <Image

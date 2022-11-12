@@ -30,7 +30,7 @@ export default {
   CHECKOUT: "checkout",
 
   //Drawer
-  // HOME_DRAWER: "Home",
+  HOME_DRAWER: "Home Drawer",
   SIGNUP_DRAWER: "SignUp",
   GLADIATORS_DRAWER: "Gladiators",
   STORE_DRAWER: "Store",
