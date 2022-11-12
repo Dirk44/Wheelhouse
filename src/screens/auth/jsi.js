@@ -1,6 +1,14 @@
 import Checkbox from "expo-checkbox";
 import React, { useState, useEffect } from "react";
-import { ImageBackground, SafeAreaView, ScrollView, View, Text, Image, TouchableOpacity } from "react-native";
+import {
+  ImageBackground,
+  SafeAreaView,
+  ScrollView,
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 import { useCookies } from "react-cookie";
 import { WebView } from "react-native-webview";
 import { NavBar } from "../../components";
@@ -8,8 +16,11 @@ import { googleSignInStyles } from "../../stylesheets";
 import { useUser } from "../../utils/contexts/UserProvider";
 import { useAuth } from "../../utils/contexts/AuthProvider";
 import graphqlClient from "../../utils/graphqlClient";
+import { useNavigation } from "@react-navigation/native";
+import { ROUTES } from "../../constants";
 
 const JSI = () => {
+  const navigation = useNavigation();
   const [isChecked, setChecked] = useState(false);
   const [cookies] = useCookies();
   const [sessionValid, setSessionValid] = useState(false);
@@ -26,6 +37,7 @@ const JSI = () => {
       // window.location.reload(false);
 
       // AuthContext.setAuth(cookies.jsis);
+      navigation.navigate(ROUTES.HOME_DRAWER);
     } else {
       window.signedUp = () => {
         setNewUser(true);

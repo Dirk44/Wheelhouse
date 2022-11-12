@@ -61,9 +61,12 @@ const DrawerNav = (props) => {
   };
 
   return auth.jsis != null ? (
-    <Drawer.Navigator initialRouteName={ROUTES.HOME} screenOptions={options}>
+    <Drawer.Navigator
+      initialRouteName={ROUTES.HOME_DRAWER}
+      screenOptions={options}
+    >
       <Drawer.Screen
-        name={ROUTES.HOME}
+        name={ROUTES.HOME_DRAWER}
         component={HomeStack}
         // onPress={() =>
         //   navigation.dispatch(
@@ -107,7 +110,7 @@ const DrawerNav = (props) => {
   ) : (
     <Drawer.Navigator initialRouteName={ROUTES.HOME} screenOptions={options}>
       <Drawer.Screen
-        name={ROUTES.HOME}
+        name={ROUTES.HOME_DRAWER}
         component={HomeStack}
         // onPress={() =>
         //   navigation.dispatch(

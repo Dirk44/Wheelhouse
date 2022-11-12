@@ -19,11 +19,18 @@ import { UserProvider } from "./src/utils/contexts/UserProvider";
 SplashScreen.preventAutoHideAsync();
 
 const DismissKeyboard = ({ children }) => (
-  <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>{children}</TouchableWithoutFeedback>
+  <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+    {children}
+  </TouchableWithoutFeedback>
 );
 
 const linking = {
-  prefixes: [Linking.createURL("/"), "https://wheelhouse.com", "wheelhouse://", "http://localhost:19006/"],
+  prefixes: [
+    Linking.createURL("/"),
+    "https://wheelhousetv.com",
+    "wheelhouse://",
+    "http://localhost:19006/",
+  ],
   config: {
     screens: {
       Home: "Home",
@@ -77,7 +84,11 @@ const App = () => {
       <QueryClientProvider client={queryClient}>
         <AuthProvider>
           <UserProvider>
-            <StatusBar barStyle="light-content" translucent={true} backgroundColor="black" />
+            <StatusBar
+              barStyle="light-content"
+              translucent={true}
+              backgroundColor="black"
+            />
             <DismissKeyboard>
               <NavigationContainer linking={linking}>
                 <DrawerNav />
